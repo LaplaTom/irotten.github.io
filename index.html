@@ -25,7 +25,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="I&#39;m LaplaTom" type="application/atom+xml">
+<link rel="alternative" href="atom.xml" title="I&#39;m LaplaTom" type="application/atom+xml">
 
 
 
@@ -147,13 +147,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-18T07:51:02.000Z">2019-05-18</time>
+                <time class="level-item has-text-grey" datetime="2019-05-18T13:35:47.000Z">2019-05-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/杂七杂八/">杂七杂八</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 8 个字)
+                    4 分钟 读完 (大约 571 个字)
                 </span>
                 
                 
@@ -162,11 +166,18 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/05/18/text/">text</a>
+                <a class="has-link-black-ter" href="/2019/05/18/scoop/">scoop快速开始</a>
             
         </h1>
         <div class="content">
-            <p><strong>This is text.</strong><br><strong><em>这是个测试</em></strong></p>
+            <h3 id="写在之前"><a href="#写在之前" class="headerlink" title="写在之前"></a>写在之前</h3><p>众所周知，在Windows下安装各种软件都是非常非常非常非常麻烦的，而且用学校的网，就算你挂着某个东西，你也不一定能下载下来。由于生活所需，朕苦于安装anaconda，心态都被被打崩了，这时hao哥给我推荐了scoop，用完之后，感觉良好，坑踩完了之后写着记一下，以便之后不会在踩坑。</p>
+<h3 id="安装条件"><a href="#安装条件" class="headerlink" title="安装条件"></a>安装条件</h3><p>首先你要进入powershell界面，没错就是那个PS开头的那个界面，你要确保你的powershell版本是大于等于3的，你可以输入这串代码来查看你的版本：<br><code>$psversiontable.psversion.major # should be &gt;= 3</code><br>确认你已经允许powershell执行本地脚本：<br><code>et-executionpolicy remotesigned -scope currentuser</code></p>
+<h3 id="安装scoop"><a href="#安装scoop" class="headerlink" title="安装scoop"></a>安装scoop</h3><p>在powershell中运行：<br><code>iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code><br>如果你要自定义安装目录可以(假设目标目录为 <strong>C:\scoop</strong>)：<br><code>$env:SCOOP=&#39;C:\scoop&#39;
+[environment]::setEnvironmentVariable(&#39;SCOOP&#39;,$env:SCOOP,&#39;User&#39;)
+iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code><br>这样子基本上应该是success了，如果有报错自行百度= =</p>
+<h3 id="使用scoop"><a href="#使用scoop" class="headerlink" title="使用scoop"></a>使用scoop</h3><p>scoop这种傻瓜型软件你可以在help界面看到大部分操作清单，调用方式为:<br><code>scoop help</code><br>你若要搜索软件可以直接：<br><code>scoop search &lt;软件名&gt;</code><br>安装软件的话：<br><code>scoop install &lt;软件名&gt;</code><br>如果提示<em>Couldn’t find manifest for ‘&lt;软件名&gt;’</em>.这时候就需要用<em>bucket</em>，Manage Scoop buckets，是管理可以用scoop下载APP的列表，因为scoop自带的下载APP比较少一些其他第三方的软件需要添加bucket中，scoop提供了一个extras的app列表，来提供更多常用的软件下载，用如下方法添加：<br><code>scoop bucket add extras https://github.com/lukesampson/scoop-extras.git</code><br>添加成功后就能下载软件了<br><code>scoop install extras/anaconda</code><br>若你要自定义安装软件的位置的话，可以选择这个方法(假设安装目录为：C:\apps)：<br> <code>$env:SCOOP_GLOBAL=&#39;c:\apps&#39;
+[environment]::setEnvironmentVariable(&#39;SCOOP_GLOBAL&#39;,$env:SCOOP_GLOBAL,&#39;Machine&#39;)
+scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮你安装和配好环境，那是相当的厉害。</p>
 
         </div>
         
@@ -284,7 +295,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        1
                     </p>
                 </div>
             </div>
@@ -294,7 +305,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        0
+                        1
                     </p>
                 </div>
             </div>
@@ -391,13 +402,30 @@
                 分类
             </h3>
             <ul class="menu-list">
-            
+            <li>
+        <a class="level is-marginless" href="/categories/杂七杂八/">
+            <span class="level-start">
+                <span class="level-item">杂七杂八</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
             </ul>
         </div>
     </div>
 </div>
     
         
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/scoop/" style="font-size: 10px;">scoop</a>
+    </div>
+</div>
+
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
@@ -411,18 +439,18 @@
         
         <article class="media">
             
-            <a href="/2019/05/18/text/" class="media-left">
+            <a href="/2019/05/18/scoop/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="text">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="scoop快速开始">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-18T07:51:02.000Z">2019-05-18</time></div>
-                    <a href="/2019/05/18/text/" class="has-link-black-ter is-size-6">text</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-18T13:35:47.000Z">2019-05-18</time></div>
+                    <a href="/2019/05/18/scoop/" class="has-link-black-ter is-size-6">scoop快速开始</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/杂七杂八/">杂七杂八</a>
                     </p>
                 </div>
             </div>
@@ -482,6 +510,13 @@
                 标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/scoop/">
+                        <span class="tag">scoop</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
             </div>
         </div>
@@ -508,18 +543,18 @@
         
         <article class="media">
             
-            <a href="/2019/05/18/text/" class="media-left">
+            <a href="/2019/05/18/scoop/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="text">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="scoop快速开始">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-18T07:51:02.000Z">2019-05-18</time></div>
-                    <a href="/2019/05/18/text/" class="has-link-black-ter is-size-6">text</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-18T13:35:47.000Z">2019-05-18</time></div>
+                    <a href="/2019/05/18/scoop/" class="has-link-black-ter is-size-6">scoop快速开始</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/杂七杂八/">杂七杂八</a>
                     </p>
                 </div>
             </div>
@@ -579,6 +614,13 @@
                 标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/scoop/">
+                        <span class="tag">scoop</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
             </div>
         </div>
