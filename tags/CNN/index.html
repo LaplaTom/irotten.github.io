@@ -3,7 +3,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>标签: scoop - I&#39;m LaplaTom</title>
+<title>标签: CNN - I&#39;m LaplaTom</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -11,7 +11,7 @@
     <meta name="description" content="这是LCQ的个人小网站，然后。。没了= =">
 <meta property="og:type" content="website">
 <meta property="og:title" content="I&#39;m LaplaTom">
-<meta property="og:url" content="http://yoursite.com/tags/scoop/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/CNN/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
 <meta property="og:description" content="这是LCQ的个人小网站，然后。。没了= =">
 <meta property="og:locale" content="zh-CN">
@@ -145,7 +145,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">scoop</a></li>
+            <li class="is-active"><a href="#" aria-current="page">CNN</a></li>
         </ul>
         </nav>
     </div>
@@ -157,17 +157,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-18T13:35:47.000Z">2019-05-18</time>
+                <time class="level-item has-text-grey" datetime="2019-05-25T07:16:05.000Z">2019-05-25</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/杂七杂八/">杂七杂八</a>
+                <a class="has-link-grey -link" href="/categories/深度学习/">深度学习</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 571 个字)
+                    14 分钟 读完 (大约 2118 个字)
                 </span>
                 
                 
@@ -176,18 +176,41 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/05/18/scoop/">scoop快速开始</a>
+                <a class="has-link-black-ter" href="/2019/05/25/week1-cnn/">【学习笔记】week1-cnn</a>
             
         </h1>
         <div class="content">
-            <h3 id="写在之前"><a href="#写在之前" class="headerlink" title="写在之前"></a>写在之前</h3><p>众所周知，在Windows下安装各种软件都是非常非常非常非常麻烦的，而且用学校的网，就算你挂着某个东西，你也不一定能下载下来。由于生活所需，朕苦于安装anaconda，心态都被被打崩了，这时hao哥给我推荐了scoop，用完之后，感觉良好，坑踩完了之后写着记一下，以便之后不会在踩坑。</p>
-<h3 id="安装条件"><a href="#安装条件" class="headerlink" title="安装条件"></a>安装条件</h3><p>首先你要进入powershell界面，没错就是那个PS开头的那个界面，你要确保你的powershell版本是大于等于3的，你可以输入这串代码来查看你的版本：<br><code>$psversiontable.psversion.major # should be &gt;= 3</code><br>确认你已经允许powershell执行本地脚本：<br><code>et-executionpolicy remotesigned -scope currentuser</code></p>
-<h3 id="安装scoop"><a href="#安装scoop" class="headerlink" title="安装scoop"></a>安装scoop</h3><p>在powershell中运行：<br><code>iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code><br>如果你要自定义安装目录可以(假设目标目录为 <strong>C:\scoop</strong>)：<br><code>$env:SCOOP=&#39;C:\scoop&#39;
-[environment]::setEnvironmentVariable(&#39;SCOOP&#39;,$env:SCOOP,&#39;User&#39;)
-iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code><br>这样子基本上应该是success了，如果有报错自行百度= =</p>
-<h3 id="使用scoop"><a href="#使用scoop" class="headerlink" title="使用scoop"></a>使用scoop</h3><p>scoop这种傻瓜型软件你可以在help界面看到大部分操作清单，调用方式为:<br><code>scoop help</code><br>你若要搜索软件可以直接：<br><code>scoop search &lt;软件名&gt;</code><br>安装软件的话：<br><code>scoop install &lt;软件名&gt;</code><br>如果提示<em>Couldn’t find manifest for ‘&lt;软件名&gt;’</em>.这时候就需要用<em>bucket</em>，Manage Scoop buckets，是管理可以用scoop下载APP的列表，因为scoop自带的下载APP比较少一些其他第三方的软件需要添加bucket中，scoop提供了一个extras的app列表，来提供更多常用的软件下载，用如下方法添加：<br><code>scoop bucket add extras https://github.com/lukesampson/scoop-extras.git</code><br>添加成功后就能下载软件了<br><code>scoop install extras/anaconda</code><br>若你要自定义安装软件的位置的话，可以选择这个方法(假设安装目录为：C:\apps)：<br> <code>$env:SCOOP_GLOBAL=&#39;c:\apps&#39;
-[environment]::setEnvironmentVariable(&#39;SCOOP_GLOBAL&#39;,$env:SCOOP_GLOBAL,&#39;Machine&#39;)
-scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮你安装和配好环境，那是相当的厉害。</p>
+            <p>###写在之前<br>我之所以开这个博客就是为了记一下我个人的学习笔记，因为最近学的信息量太多，小脑瓜又不一定记得住，所以写了个弄个这个博客。。。。言归正传，我在第一周主要了解CNN的大概模型，学着学着发现缺的非常之多，所以今天这个主要是写CNN（convolution neural network，卷积神经网络），主要是以李宏毅的深度学习视频为主，还参考了网上大佬的<a href="https://www.cns.com/XDU-Lakers/p/10642159.html" target="_blank" rel="noopener">学习笔记</a>，另外，本周只是个大概，具体的实验结果和细节以及数学公式之后在说= =</p>
+<h2 id="卷积神经网络（CNN）"><a href="#卷积神经网络（CNN）" class="headerlink" title="卷积神经网络（CNN）"></a>卷积神经网络（CNN）</h2><p>卷积神经网络（Convolutional Neural Networks, CNN）是一类包含卷积计算且具有深度结构的前馈神经网络（Feedforward Neural Networks），是深度学习（deep learning）的代表算法之一，被大量应用于计算机视觉、图片处理等领域。</p>
+<h3 id="CNN的基本结构"><a href="#CNN的基本结构" class="headerlink" title="CNN的基本结构"></a>CNN的基本结构</h3><p>网络的一般结构为：</p>
+<pre><code>输入层 -&gt; 卷积层 -&gt; 激活函数 -&gt; 池化层 -&gt; 全连接层 -&gt; 输出层
+
+输入层(INPUT)：顾名思义，用于输入数据
+
+卷积层(CONV)：使用卷积核对样本数据进行扫描，提取特征值和特征映射
+
+激活函数(RELU)：归一化识别高频特征
+
+池化层(POOL)：对卷积后的特征图进行采样处理，减少数据运算量
+
+全连接层(FC)：进行重新拟合，减少特征信息的损失
+
+输出层(OUTPUT)：用于输出结果
+</code></pre><h3 id="CNN的各层解析"><a href="#CNN的各层解析" class="headerlink" title="CNN的各层解析"></a>CNN的各层解析</h3><h4 id="1-卷积层"><a href="#1-卷积层" class="headerlink" title="1.卷积层"></a>1.卷积层</h4><p>卷积说白了其实就是一种神经网络的连接方式，就是因为这种卷积的方式，才使得CNN的参数要比全连接神经网络的参数少得多。</p>
+<h5 id="（1）对于黑白图片，其通道数为1，其卷积方式如下："><a href="#（1）对于黑白图片，其通道数为1，其卷积方式如下：" class="headerlink" title="（1）对于黑白图片，其通道数为1，其卷积方式如下："></a>（1）对于黑白图片，其通道数为1，其卷积方式如下：</h5><p><img src="images/blog//1179840-20190402145723446-262523745.png" alt><br><img src="images/blog//1179840-20190402145733244-193372171.png" alt><br><img src="images/blog//1179840-20190402145744544-1783168931.png" alt><br>PS(个人注解)：在第一图中，卷积核的权值是自由确定的，因为在训练过程中，模型会自行对权值进行修改，根据反向传播（之后会写的），自定义的大小会影响调整的速度。</p>
+<h5 id="（2）对于彩色图片，其通道数为3（RGB三原色），其卷积方式如下："><a href="#（2）对于彩色图片，其通道数为3（RGB三原色），其卷积方式如下：" class="headerlink" title="（2）对于彩色图片，其通道数为3（RGB三原色），其卷积方式如下："></a>（2）对于彩色图片，其通道数为3（RGB三原色），其卷积方式如下：</h5><p><img src="images/blog//1179840-20190402150050531-1436634212.png" alt><br>PS(个人注解)：彩色的卷积方式和黑白的本质上是一样的，就是拿卷积核进行扫描，然后因为是彩色的，具有RBG三通道，故卷积核也要是三层的（其目的是为了同时对RGB同时扫描），具体的卷积过程可以参考<a href="http://cs231n.github.io/assets/conv-demo/index.html" target="_blank" rel="noopener">本网址= =补0扫描，步数为2</a></p>
+<h5 id="（3）卷积和全连接方式的对比，体现出利用卷积的连接方式比全连接方式所需的参数更少。（我差点忘了李宏毅讲过这里-）"><a href="#（3）卷积和全连接方式的对比，体现出利用卷积的连接方式比全连接方式所需的参数更少。（我差点忘了李宏毅讲过这里-）" class="headerlink" title="（3）卷积和全连接方式的对比，体现出利用卷积的连接方式比全连接方式所需的参数更少。（我差点忘了李宏毅讲过这里= - =）"></a>（3）卷积和全连接方式的对比，体现出利用卷积的连接方式比全连接方式所需的参数更少。（我差点忘了李宏毅讲过这里= - =）</h5><p><img src="images/blog//1179840-20190402150440951-1795015825.png" alt><br>刚开始看这图其实我并不是很了解的= =，然后看到下面这图，回想起李宏毅的话，我终于了解卷积核全连接的区别了= =<br><img src="images/blog//1179840-20190402150555780-1282497641.png" alt><br><img src="images/blog//1179840-20190402150621723-1047939121.png" alt><br>刚开始我是当做这是讲卷积的代码实现思路来着= =然后看了大佬的博客有点小明白了= =所以代码实现我。。还是看JAVA去吧- -</p>
+<h5 id="（4）卷积层和激励层通常合并在一起称为“卷积层”"><a href="#（4）卷积层和激励层通常合并在一起称为“卷积层”" class="headerlink" title="（4）卷积层和激励层通常合并在一起称为“卷积层”"></a>（4）卷积层和激励层通常合并在一起称为“卷积层”</h5><p>激励层，我们俗称“激活函数”，它主要对卷积之后的结果进行一个<strong>非线性映射</strong>，说白了就是讲卷积之后的输出进行函数运算使其值在[0~1]区间内，我们一般使用RELU函数进行运算，基本上激励层是在卷积之后进行（但李宏毅貌似没讲= =还是忘了。。<br>PS：函数的运算使其在[0~1]之间，称为“归一化”。其就是找出高频特征。</p>
+<h4 id="2-池化层"><a href="#2-池化层" class="headerlink" title="2.池化层"></a>2.池化层</h4><p>池化层又称采样层，它的作用是减小数据处理量同时保留有用信息</p>
+<p>当输入经过卷积层时，若感受视野比较小（就是卷积核比较小），步长stride（步长代表着卷积核一次移动几格，基本是为1)比较小，得到的feature map （特征图）还是比较大，可以通过池化层来对每一个 feature map 进行降维操作，输出的深度（这应该说是维度的深度，即扫描之后有几张图）还是不变的，依然为 feature map 的个数。</p>
+<p>池化层也有一个“池化视野（filter）”来对feature map矩阵进行扫描，对“池化视野”中的矩阵值进行计算，一般有两种计算方式：<br>     <font size="4"><br>      Max pooling：取“池化视野”矩阵中的最大值我是尺寸</font><br>     <font size="4"><br>      Average pooling：取“池化视野”矩阵中的平均值</font></p>
+<p>以Max pooling为例，见下图：<br><img src="images/blog//1179840-20190402152950123-1997844778.png" alt><br><img src="images/blog//1179840-20190402153034884-1315865991.png" alt><br><img src="images/blog//1179840-20190402153042309-614475647.png" alt><br>PS（个人注解）：采样核的定义可以自己定义，在JAVA当中必须能整除，而李宏毅视频中可以不整除，这个需注意~</p>
+<h4 id="3-全连接层"><a href="#3-全连接层" class="headerlink" title="3.全连接层"></a>3.全连接层</h4><p><strong>作用</strong>：<font color="blue">把所有局部特征结合变成全局特征，用来计算最后每一类的得分</font><br>换句话说全连接层就是把卷积层和池化层的输出展开成一维形式，在后面接上与普通网络结构相同的回归网络或者分类网络，一般接在池化层后面，如图所示;<br><img src="images/blog//1179840-20190410190248547-495769126.png" alt><br>没啥好说的，就是拉直后通过分类网络将其分为所需要的几个类，通过输出层根据softmax函数啥的输出= =</p>
+<h3 id="具体代码啥的"><a href="#具体代码啥的" class="headerlink" title="具体代码啥的"></a>具体代码啥的</h3><p>对于手写数字识别，我发现GitHub有个例子，<a href="https://erkaman.github.io/regl-cnn/src/demo.html" target="_blank" rel="noopener">点此</a>，现场体验。<br>接下来是一些有用的图片= =<br><img src="images/blog//1179840-20190410190646361-1636275405.png" alt><br><img src="images/blog//1179840-20190410190659006-1811620324.png" alt><br><img src="images/blog//1179840-20190410190708928-1530116644.png" alt><br>PS(个人注解)：这是计算神经元的个数，在convolution2D(x,y,z)中，y,z分别代表卷积核的长和宽，x代表扫描的维度（可以认为一次扫了几遍），需注意的是x容易被忽视= =</p>
+<h3 id="CNN的主要特点（算了，有总比没有好"><a href="#CNN的主要特点（算了，有总比没有好" class="headerlink" title="CNN的主要特点（算了，有总比没有好= ="></a>CNN的主要特点（算了，有总比没有好= =</h3><p>这里主要讨论CNN相比与传统的神经网络的不同之处，CNN主要有三大特色，分别是局部感知、权重共享和多卷积核</p>
+<h5 id="1-局部感知"><a href="#1-局部感知" class="headerlink" title="1.局部感知"></a>1.局部感知</h5><p>局部感知就是我们上面说的感受野，实际上就是卷积核和图像卷积的时候，每次卷积核所覆盖的像素只是一小部分，是局部特征，所以说是局部感知。CNN是一个从局部到整体的过程（局部到整体的实现是在全连通层），而传统的神经网络是整体的过程。</p>
+<h5 id="2-权重共享"><a href="#2-权重共享" class="headerlink" title="2.权重共享"></a>2.权重共享</h5><p>传统的神经网络的参数量是非常巨大的，比如1000X1000像素的图片，映射到和自己相同的大小，需要（1000X1000）的平方，也就是10的12次方，参数量太大了，而CNN除全连接层外，卷积层的参数完全取决于滤波器的设置大小，比如10x10的滤波器，这样只有100个参数，当然滤波器的个数不止一个，也就是下面要说的多卷积核。但与传统的神经网络相比，参数量小，计算量小。整个图片共享一组滤波器的参数。</p>
+<h5 id="3-多卷积核"><a href="#3-多卷积核" class="headerlink" title="3.多卷积核"></a>3.多卷积核</h5><p>一种卷积核代表的是一种特征，为获得更多不同的特征集合，卷积层会有多个卷积核，生成不同的特征，这也是为什么卷积后的图片的高，每一个图片代表不同的特征。</p>
 
         </div>
         
