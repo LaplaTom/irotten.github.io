@@ -1,0 +1,1 @@
+const live2d_path = "/live2d-widget/";
