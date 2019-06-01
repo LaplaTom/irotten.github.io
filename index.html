@@ -147,6 +147,92 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-01T11:03:03.000Z">2019-06-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/深度学习/">深度学习</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12 分钟 读完 (大约 1862 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/01/week2/">【学习笔记】week2-基础</a>
+            
+        </h1>
+        <div class="content">
+            <p><strong>写在之前</strong><br>这次主要是基础，以及一些数学公式= =，参照《卷积神经网络的Python实现》以及李宏毅的视频~~</p>
+<p><strong>= 正文 =</strong>  </p>
+<h3 id="批次（batch）"><a href="#批次（batch）" class="headerlink" title="批次（batch）"></a>批次（batch）</h3><p>定义：批量更新的大小，直白的说就是每次训练是拿多少个样本进行训练。</p>
+<p>当数据集较小时，可以采用 <strong>全数据集（Full Batch Learning）</strong> 的形式，这样训练的方向代表着样本总体的方向，使训练结果更加准确；并且Full Batch Learning可以使用<strong>弹性反向传播算法(RProp)</strong> 只基于梯度符号并且针对性单独更新因为不同权重的梯度值导致的权值。<br>当数据集较大时，以上的好处便不存在了；其一，随着数据集的海量增长和内存限制，一次性载入所有的数据进来变得越来越不可行。其二，以 Rprop 的方式迭代，会由于各个 Batch 之间的采样差异性，各次梯度修正值相互抵消，无法修正。这才有了后来<strong>均方根反向传播(RMSProp)</strong> 的妥协方案。</p>
+<pre><code>弹性反向传播(RProp)和均方根反向传播(RMSProp)都是一种权值更新算法，类似于SGD算法，其中，RMSProp是RProp算法的改良版。（自觉百度）</code></pre><h4 id="当Batch-Size-1时"><a href="#当Batch-Size-1时" class="headerlink" title="当Batch_Size==1时"></a>当Batch_Size==1时</h4><p>当每次只训练一次样本时，即Batch_Size = 1。这就是<strong>在线学习（Online Learning）</strong> 。训练的结果难以达到收敛，其原因是Online Leaning训练的每一个样本都存在各自的特性性，不能代表其种类的特征性，导致在训练的时候朝着各自的方向修正，效果如图所示<br><img src="../blog/20151112195814221.png" alt="Batch_Size==1"></p>
+<h4 id="当Batch-Size盲目增大，又不等于全部时"><a href="#当Batch-Size盲目增大，又不等于全部时" class="headerlink" title="当Batch_Size盲目增大，又不等于全部时"></a>当Batch_Size盲目增大，又不等于全部时</h4><p>1.内存利用率提高了，但是内存容量可能撑不住了。<br>2.跑完一次 epoch（全数据集）所需的迭代次数减少，要想达到相同的精度，其所花费的时间大大增加了，从而对参数的修正也就显得更加缓慢。<br>3.Batch_Size 增大到一定程度，其确定的下降方向已经基本不再变化。  </p>
+<h4 id="当Batch-Size为合理大小时"><a href="#当Batch-Size为合理大小时" class="headerlink" title="当Batch_Size为合理大小时"></a>当Batch_Size为合理大小时</h4><p>1.内存利用率提高了，大矩阵乘法的并行化效率提高。<br>2.跑完一次 epoch（全数据集）所需的迭代次数减少，对于相同数据量的处理速度进一步加快。<br>3.在一定范围内，一般来说 Batch_Size 越大，其确定的下降方向越准，引起训练震荡越小  </p>
+<h4 id="以上总结："><a href="#以上总结：" class="headerlink" title="以上总结："></a>以上总结：</h4><p>这就是批梯度下降法（Mini-batches Learning）。因为如果数据集足够充分，那么用一半（甚至少得多）的数据训练算出来的梯度与用全部数据训练出来的梯度是几乎一样的。  </p>
+<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>损失函数（loss function，也叫代价函数，cost function）用来评价分值向量的好坏。分值向量与真实标签之间的差异越大，损失函数值就越大，反之则越小。<br>损失函数是深度学习的核心部分，通过它，可以将所要求的参数调整为需要的大小，其数学公式为:   </p>
+<pre><code>x1=x0-L_R*L_F(x0)
+(其中x0，x1分别是调整前后的值，L_R为学习率，L_F为损失函数)</code></pre><h4 id="常用的损失函数"><a href="#常用的损失函数" class="headerlink" title="常用的损失函数"></a>常用的损失函数</h4><p>而目前我们常用的损失函数有<br><img src="../blog/lossfunction.png" alt="损失函数"><br><img src="../blog/costfunction.png" alt="代价函数"><br>以上来自此<a href="https://www.cnblogs.com/lliuye/p/9549881.html" target="_blank" rel="noopener">博客</a>（md的数学公式是真的烦，我之后在弄，顺便把图像也弄一下）</p>
+<h3 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h3><h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p>根据奥卡姆剃刀法则，神经网络采用的是最简单的线性模型 f(x) = wx+b, 并且线性模型的组合仍然为线性模型。但我们要解决的大部分问题又不仅仅是一个线性问题，因此在线性模型中增加非线性元素就显得尤其重要了。激活函数正是增加非线性的一个重要手段。</p>
+<h4 id="常用的激活函数"><a href="#常用的激活函数" class="headerlink" title="常用的激活函数"></a>常用的激活函数</h4><h5 id="sigmoid函数"><a href="#sigmoid函数" class="headerlink" title="sigmoid函数"></a>sigmoid函数</h5><p>函数表达式为<br><img src="../blog/week2/sigmoid.png" width="520%" height="520%"><br>sigmoid是早期使用较多的激活函数，优点为</p>
+<ol>
+<li>输出值为[0, 1], 符合概率分布  </li>
+<li>x靠近0时斜率很大，对应为神经元兴奋区，远离0的区域斜率很小，对应为神经元抑制区  </li>
+</ol>
+<p>但其缺点也较为明显</p>
+<ol>
+<li>x稍微远离0, 导数就接近于0了，这样在反向传播优化w时，无论w取何值，梯度都很小，也就无法对w更新给出指导了，这种现象称为梯度弥散，在网络层级较深时尤其明显。</li>
+<li>需要进行指数计算，比较耗时</li>
+<li>容易造成梯度爆炸和梯度消失的结果</li>
+</ol>
+<h5 id="tanh"><a href="#tanh" class="headerlink" title="tanh"></a>tanh</h5><p>函数表达式为<br><img src="../blog/week2/tanh.png" alt><br>与sigmoid类似，只是Y值的分布是以0为中心，其问题也存在。</p>
+<h5 id="RELU"><a href="#RELU" class="headerlink" title="RELU"></a>RELU</h5><p>函数表达式为<br><img src="../blog/week2/RELU.png" alt><br>relu是当前使用最为频繁的激活函数，在几乎所有的CNN网络均使用relu作为激活函数，它解决了sigmoid和tanh的问题，优点为</p>
+<ol>
+<li>x大于0时，导数为1，在反向传播计算梯度时，不存在梯度弥散问题。</li>
+<li>x&gt;0时，y=x, x&lt;0时，y=0, 计算十分简单。</li>
+</ol>
+<p>针对于relu的x&lt;0部分，出现了一些变种函数，比如ELU和PRELU，均是针对x&lt;0分支的改进，和relu大体相似。</p>
+<h3 id="学习率（Learning-Rate）"><a href="#学习率（Learning-Rate）" class="headerlink" title="学习率（Learning Rate）"></a>学习率（Learning Rate）</h3><p>学习率是指导我们该如何通过损失函数的梯度调整网络权重的超参数。学习率越低，损失函数的变化速度就越慢。虽然使用低学习率可以确保我们不会错过任何局部极小值，但也意味着我们将花费更长的时间来进行收敛，特别是在被困在高原区域的情况下。</p>
+<p>下述公式表示了上面所说的这种关系。<br>new_weight = existing_weight — learning_rate * gradient</p>
+<p>当学习率过小或者学习率过大都会对训练的情况造成很大的影响，如图：<br><img src="../blog/week2/learningrate.png" alt><br>当学习率过小时，虽然能达到拟合，但需要的时间特别长；当学习率过大时，可能收敛不了，故学习率应适中。在实际操作情况下，一般学习率先大后小，先快速下降，后通过减小学习率达到收敛。<br><a href="https://baijiahao.baidu.com/s?id=1591271039698173396&wfr=spider&for=pc" target="_blank" rel="noopener">参考机器之心</a></p>
+<p>####学习率优化算法<br>学习率优化算法，在卷积神经网络一书中主要介绍了以下算法：</p>
+<ul>
+<li>随机梯度下降法</li>
+<li>动量法</li>
+<li>AdaGrad</li>
+<li>。。。。</li>
+</ul>
+<p>具体看书吧= =</p>
+<h4 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h4><p>没啥好讲的，不是很了解= =<br><a href="https://blog.csdn.net/soulmeetliang/article/details/72873209" target="_blank" rel="noopener">这里</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-05-30T11:41:06.000Z">2019-05-30</time>
                 
                 <div class="level-item">
@@ -439,7 +525,7 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </div>
             </div>
@@ -570,7 +656,7 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
                 <span class="level-item">深度学习</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li>
             </ul>
@@ -584,7 +670,7 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CNN/" style="font-size: 10px;">CNN</a> <a href="/tags/intellij-idea/" style="font-size: 10px;">intellij-idea</a> <a href="/tags/scoop/" style="font-size: 10px;">scoop</a>
+        <a href="/tags/CNN/" style="font-size: 20px;">CNN</a> <a href="/tags/intellij-idea/" style="font-size: 10px;">intellij-idea</a> <a href="/tags/scoop/" style="font-size: 10px;">scoop</a>
     </div>
 </div>
 
@@ -598,6 +684,25 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/01/week2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="【学习笔记】week2-基础">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T11:03:03.000Z">2019-06-01</time></div>
+                    <a href="/2019/06/01/week2/" class="has-link-black-ter is-size-6">【学习笔记】week2-基础</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/深度学习/">深度学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -688,6 +793,17 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/05/">
                 <span class="level-start">
                     <span class="level-item">五月 2019</span>
@@ -714,7 +830,7 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CNN/">
                         <span class="tag">CNN</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -757,6 +873,25 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
         
         <article class="media">
             
+            <a href="/2019/06/01/week2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="【学习笔记】week2-基础">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-01T11:03:03.000Z">2019-06-01</time></div>
+                    <a href="/2019/06/01/week2/" class="has-link-black-ter is-size-6">【学习笔记】week2-基础</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/深度学习/">深度学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/05/30/idea/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="intellij-idea快捷键">
@@ -844,6 +979,17 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/05/">
                 <span class="level-start">
                     <span class="level-item">五月 2019</span>
@@ -870,7 +1016,7 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CNN/">
                         <span class="tag">CNN</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
