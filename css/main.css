@@ -1770,7 +1770,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #941b13;
+  background: #ff75e8;
 }
 .feed-link,
 .chat {
@@ -2966,12 +2966,18 @@ ul.breadcrumb li+li:last-child {
   margin-top: 0px;
   margin-bottom: 60px;
   padding: 25px;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
-  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+  -webkit-box-shadow: 0 0 3px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 3px rgba(202,203,204,0.5);
 }
 body {
   background: url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
+}
+* {
+  cursor: url("images/link.cur"), auto !important;
+}
+:active {
+  cursor: url("images/normal.cur"), auto !important;
 }
