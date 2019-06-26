@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>I&#39;m LaplaTom</title>
+  
+  <subtitle>LaplaTom的心灵小屋</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-06-01T11:21:34.088Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>LCQ</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【学习笔记】week2-基础</title>
+    <link href="http://yoursite.com/2019/06/01/week2/"/>
+    <id>http://yoursite.com/2019/06/01/week2/</id>
+    <published>2019-06-01T11:03:03.000Z</published>
+    <updated>2019-06-01T11:21:34.088Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;写在之前&lt;/strong&gt;&lt;br&gt;这次主要是基础，以及一些数学公式= =，参照《卷积神经网络的Python实现》以及李宏毅的视频~~&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;= 正文 =&lt;/strong&gt;  &lt;/p&gt;
+&lt;h3 id=&quot;批次（batch）&quot;&gt;&lt;a hre
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>intellij-idea快捷键</title>
+    <link href="http://yoursite.com/2019/05/30/idea/"/>
+    <id>http://yoursite.com/2019/05/30/idea/</id>
+    <published>2019-05-30T11:41:06.000Z</published>
+    <updated>2019-05-30T11:41:59.601Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;个人常用&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Ctrl+B 快速打开光标处的类或方法  
+Ctrl+F11 数字/默认书签
+Ctrl+Alt+ left/right 返回至上次浏览的位置
+CTRL+E 最近更改的代码
+Ctrl+Alt+h：显示调
+      
+    
+    </summary>
+    
+      <category term="杂七杂八" scheme="http://yoursite.com/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"/>
+    
+    
+      <category term="intellij-idea" scheme="http://yoursite.com/tags/intellij-idea/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【学习笔记】week1-cnn</title>
+    <link href="http://yoursite.com/2019/05/25/week1-cnn/"/>
+    <id>http://yoursite.com/2019/05/25/week1-cnn/</id>
+    <published>2019-05-25T07:16:05.000Z</published>
+    <updated>2019-06-25T02:37:32.590Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;###写在之前&lt;br&gt;我之所以开这个博客就是为了记一下我个人的学习笔记，因为最近学的信息量太多，小脑瓜又不一定记得住，所以写了个弄个这个博客。。。。言归正传，我在第一周主要了解CNN的大概模型，学着学着发现缺的非常之多，所以今天这个主要是写CNN（convolution n
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scoop快速开始</title>
+    <link href="http://yoursite.com/2019/05/18/scoop/"/>
+    <id>http://yoursite.com/2019/05/18/scoop/</id>
+    <published>2019-05-18T13:35:47.000Z</published>
+    <updated>2019-05-18T13:35:47.241Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;写在之前&quot;&gt;&lt;a href=&quot;#写在之前&quot; class=&quot;headerlink&quot; title=&quot;写在之前&quot;&gt;&lt;/a&gt;写在之前&lt;/h3&gt;&lt;p&gt;众所周知，在Windows下安装各种软件都是非常非常非常非常麻烦的，而且用学校的网，就算你挂着某个东西，你也不一定能下载下来
+      
+    
+    </summary>
+    
+      <category term="杂七杂八" scheme="http://yoursite.com/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"/>
+    
+    
+      <category term="scoop" scheme="http://yoursite.com/tags/scoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/05/08/hello-world/"/>
+    <id>http://yoursite.com/2019/05/08/hello-world/</id>
+    <published>2019-05-08T11:44:38.861Z</published>
+    <updated>2019-05-08T11:44:38.862Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
