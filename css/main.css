@@ -1773,7 +1773,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #58ffff;
+  background: #98d4fe;
 }
 .feed-link,
 .chat {
@@ -2979,8 +2979,8 @@ body {
   background-position: 50% 50%;
 }
 * {
-  cursor: url("images/link.cur"), auto !important;
+  cursor: url("images/link.ico"), auto !important;
 }
 :active {
-  cursor: url("images/normal.cur"), auto !important;
+  cursor: url("images/normal.ico"), auto !important;
 }
