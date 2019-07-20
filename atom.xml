@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-20T15:39:03.329Z</updated>
+  <updated>2019-07-20T16:15:01.185Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【学习笔记】池化</title>
+    <link href="http://yoursite.com/2019/07/21/cnn-two-pool/"/>
+    <id>http://yoursite.com/2019/07/21/cnn-two-pool/</id>
+    <published>2019-07-20T16:14:05.000Z</published>
+    <updated>2019-07-20T16:15:01.185Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;写在之前&quot;&gt;&lt;a href=&quot;#写在之前&quot; class=&quot;headerlink&quot; title=&quot;写在之前&quot;&gt;&lt;/a&gt;写在之前&lt;/h3&gt;&lt;p&gt;池化是卷积里面最重要的操作之一= =没啥好写的- -&lt;/p&gt;
+&lt;h3 id=&quot;池化的作用&quot;&gt;&lt;a href=&quot;#池化的作用&quot;
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+  </entry>
   
   <entry>
     <title>【学习笔记】卷积过程的三种模式</title>

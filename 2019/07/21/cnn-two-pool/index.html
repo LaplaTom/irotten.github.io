@@ -142,16 +142,24 @@
 
 
 
-  <meta name="description" content="这是LCQ的个人小网站，然后。。没了= =">
-<meta property="og:type" content="website">
-<meta property="og:title" content="I&#39;m LaplaTom">
-<meta property="og:url" content="http://yoursite.com/tags/CNN/index.html">
+  <meta name="description" content="写在之前池化是卷积里面最重要的操作之一= =没啥好写的- - 池化的作用pooling的结果是使得特征减少，参数减少，减少计算压力。pooling目的是为了保持某种不变性（旋转、平移、伸缩等）。 池化的分类池化的种类主要可分为mean-pooling（平均池化），max-pooling（最大池化）和Stochastic-pooling（随机池化）三种。 ) 特征提取的误差根据相关理论，特征提取的误">
+<meta name="keywords" content="CNN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【学习笔记】池化">
+<meta property="og:url" content="http://yoursite.com/2019/07/21/cnn-two-pool/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
-<meta property="og:description" content="这是LCQ的个人小网站，然后。。没了= =">
+<meta property="og:description" content="写在之前池化是卷积里面最重要的操作之一= =没啥好写的- - 池化的作用pooling的结果是使得特征减少，参数减少，减少计算压力。pooling目的是为了保持某种不变性（旋转、平移、伸缩等）。 池化的分类池化的种类主要可分为mean-pooling（平均池化），max-pooling（最大池化）和Stochastic-pooling（随机池化）三种。 ) 特征提取的误差根据相关理论，特征提取的误">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/07/21/cnn-two-pool/avg_pooling.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/21/cnn-two-pool/max_pooling.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/21/cnn-two-pool/stoc_pooling.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/21/cnn-two-pool/back_avg_pooling.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/21/cnn-two-pool/back_max_pooling.png">
+<meta property="og:updated_time" content="2019-07-20T16:15:01.185Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="I&#39;m LaplaTom">
-<meta name="twitter:description" content="这是LCQ的个人小网站，然后。。没了= =">
+<meta name="twitter:title" content="【学习笔记】池化">
+<meta name="twitter:description" content="写在之前池化是卷积里面最重要的操作之一= =没啥好写的- - 池化的作用pooling的结果是使得特征减少，参数减少，减少计算压力。pooling目的是为了保持某种不变性（旋转、平移、伸缩等）。 池化的分类池化的种类主要可分为mean-pooling（平均池化），max-pooling（最大池化）和Stochastic-pooling（随机池化）三种。 ) 特征提取的误差根据相关理论，特征提取的误">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/21/cnn-two-pool/avg_pooling.png">
 
 
 
@@ -161,7 +169,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/CNN/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/21/cnn-two-pool/">
 
 
 
@@ -171,7 +179,7 @@
   };
 </script>
 
-  <title>标签: CNN | I'm LaplaTom</title>
+  <title>【学习笔记】池化 | I'm LaplaTom</title>
   
 
 
@@ -219,7 +227,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,7 +303,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -371,161 +379,207 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>CNN<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/21/cnn-two-pool/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LCQ">
+      <meta itemprop="description" content="这是LCQ的个人小网站，然后。。没了= =">
+      <meta itemprop="image" content="/images/mei.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="I'm LaplaTom">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/07/21/cnn-two-pool/" itemprop="url">
-            
-              <span itemprop="name">【学习笔记】池化</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">【学习笔记】池化
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-21T00:14:05+08:00" content="2019-07-21">
-          07-21
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-21 00:14:05 / 修改时间：00:15:01" itemprop="dateCreated datePublished" datetime="2019-07-21T00:14:05+08:00">2019-07-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/深度学习/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/20/cnn-three-mode/" itemprop="url">
-            
-              <span itemprop="name">【学习笔记】卷积过程的三种模式</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-20T20:17:26+08:00" content="2019-07-20">
-          07-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/01/week2/" itemprop="url">
-            
-              <span itemprop="name">【学习笔记】week2-基础</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-01T19:03:03+08:00" content="2019-06-01">
-          06-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/05/25/week1-cnn/" itemprop="url">
-            
-              <span itemprop="name">【学习笔记】week1-cnn</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-25T15:16:05+08:00" content="2019-05-25">
-          05-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h3 id="写在之前"><a href="#写在之前" class="headerlink" title="写在之前"></a>写在之前</h3><p>池化是卷积里面最重要的操作之一= =没啥好写的- -</p>
+<h3 id="池化的作用"><a href="#池化的作用" class="headerlink" title="池化的作用"></a>池化的作用</h3><p>pooling的结果是使得特征减少，参数减少，减少计算压力。<br>pooling目的是为了保持某种不变性（旋转、平移、伸缩等）。</p>
+<h3 id="池化的分类"><a href="#池化的分类" class="headerlink" title="池化的分类"></a>池化的分类</h3><p>池化的种类主要可分为mean-pooling（平均池化），max-pooling（最大池化）和Stochastic-pooling（随机池化）三种。</p>
+<p><img src="/2019/07/21/cnn-two-pool/avg_pooling.png" alt="平均池化"><br><img src="/2019/07/21/cnn-two-pool/max_pooling.png" alt="最大池化"><br><img src="/2019/07/21/cnn-two-pool/stoc_pooling.png" alt="随机池化">)</p>
+<h3 id="特征提取的误差"><a href="#特征提取的误差" class="headerlink" title="特征提取的误差"></a>特征提取的误差</h3><p>根据相关理论，特征提取的误差主要来自两个方面：</p>
+<p>（1）邻域大小受限造成的估计值方差增大；<br>（2）卷积层参数误差造成估计均值的偏移。</p>
+<p>一般来说，<br>mean-pooling能减小第一种误差（邻域大小受限造成的估计值方差增大），更多的保留图像的背景信息，<br>max-pooling能减小第二种误差（卷积层参数误差造成估计均值的偏移），更多的保留纹理信息。<br>Stochastic-pooling则介于两者之间，通过对像素点按照数值大小赋予概率，再按照概率进行亚采样，在平均意义上，与mean-pooling近似，在局部意义上，则服从max-pooling的准则。</p>
+<p>LeCun的“Learning Mid-Level Features For Recognition”对前两种pooling方法有比较详细的分析对比，如果有需要可以看下这篇论文。</p>
+<h3 id="pooling的反向传播"><a href="#pooling的反向传播" class="headerlink" title="pooling的反向传播"></a>pooling的反向传播</h3><p>原则：把1个像素的梯度传递给4个像素，但是<strong>需要保证传递的loss（或者梯度）总和不变</strong>。</p>
+<p>对于mean pooling，真的是好简单：假设pooling的窗大小是2x2, 在forward的时候啊，就是在前面卷积完的输出上依次不重合的取2x2的窗平均，得到一个值就是当前mean pooling之后的值。backward的时候，把一个值分成四等分放到前面2x2的格子里面就好了。如下</p>
+<p><img src="/2019/07/21/cnn-two-pool/back_avg_pooling.png" alt="平均池化的反向传播"></p>
+<p>max pooling就稍微复杂一点，forward的时候你只需要把2x2窗子里面那个最大的拿走就好了，backward的时候你要把当前的值放到之前那个最大的位置，其他的三个位置都弄成0。如下<br><img src="/2019/07/21/cnn-two-pool/back_max_pooling.png" alt="最大池化的反向传播"></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CNN/" rel="tag"># CNN</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/20/cnn-three-mode/" rel="next" title="【学习笔记】卷积过程的三种模式">
+                <i class="fa fa-chevron-left"></i> 【学习笔记】卷积过程的三种模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -545,8 +599,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -690,6 +753,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在之前"><span class="nav-number">1.</span> <span class="nav-text">写在之前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#池化的作用"><span class="nav-number">2.</span> <span class="nav-text">池化的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#池化的分类"><span class="nav-number">3.</span> <span class="nav-text">池化的分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征提取的误差"><span class="nav-number">4.</span> <span class="nav-text">特征提取的误差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pooling的反向传播"><span class="nav-number">5.</span> <span class="nav-text">pooling的反向传播</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -816,6 +896,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -831,6 +915,8 @@
 
   
 
+
+  
 
 
   
