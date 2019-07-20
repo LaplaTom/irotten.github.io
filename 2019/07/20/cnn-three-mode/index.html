@@ -142,18 +142,22 @@
 
 
 
-  <meta name="description" content="个人常用 Ctrl+B 快速打开光标处的类或方法   Ctrl+F11 数字/默认书签 Ctrl+Alt+ left/right 返回至上次浏览的位置 CTRL+E 最近更改的代码 Ctrl+Alt+h：显示调用当前方法的所有位置。 CTRL+G 定位行 以下来自http://www.open-open.com/lib/view/open1396578860887.html  ———–自动代码——">
-<meta name="keywords" content="intellij-idea">
+  <meta name="description" content="写在之前在卷积过程中，卷积大致可分为两种模式—–补0模式，不补0模式。。。。然而补0模式可以在进行细分。。本文清晰展示三种模式的不同之处，其实这三种不同模式是对卷积核移动范围的不同限制。 下面设 image的大小是7x7，filter的大小是3x3,step步长为1。 1.full mode橙色部分为image（既：待卷积样本），蓝色部分为filter（既：卷积核）。full模式的意思是从filt">
+<meta name="keywords" content="CNN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="intellij-idea快捷键">
-<meta property="og:url" content="http://yoursite.com/2019/05/30/idea/index.html">
+<meta property="og:title" content="卷积过程的三种模式">
+<meta property="og:url" content="http://yoursite.com/2019/07/20/cnn-three-mode/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
-<meta property="og:description" content="个人常用 Ctrl+B 快速打开光标处的类或方法   Ctrl+F11 数字/默认书签 Ctrl+Alt+ left/right 返回至上次浏览的位置 CTRL+E 最近更改的代码 Ctrl+Alt+h：显示调用当前方法的所有位置。 CTRL+G 定位行 以下来自http://www.open-open.com/lib/view/open1396578860887.html  ———–自动代码——">
+<meta property="og:description" content="写在之前在卷积过程中，卷积大致可分为两种模式—–补0模式，不补0模式。。。。然而补0模式可以在进行细分。。本文清晰展示三种模式的不同之处，其实这三种不同模式是对卷积核移动范围的不同限制。 下面设 image的大小是7x7，filter的大小是3x3,step步长为1。 1.full mode橙色部分为image（既：待卷积样本），蓝色部分为filter（既：卷积核）。full模式的意思是从filt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-30T11:41:59.601Z">
+<meta property="og:image" content="http://yoursite.com/.com//20180515205400757.png">
+<meta property="og:image" content="http://yoursite.com/.com//20180515205624201.png">
+<meta property="og:image" content="http://yoursite.com/.com//20180515205946981.png">
+<meta property="og:updated_time" content="2019-07-20T12:17:27.328Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="intellij-idea快捷键">
-<meta name="twitter:description" content="个人常用 Ctrl+B 快速打开光标处的类或方法   Ctrl+F11 数字/默认书签 Ctrl+Alt+ left/right 返回至上次浏览的位置 CTRL+E 最近更改的代码 Ctrl+Alt+h：显示调用当前方法的所有位置。 CTRL+G 定位行 以下来自http://www.open-open.com/lib/view/open1396578860887.html  ———–自动代码——">
+<meta name="twitter:title" content="卷积过程的三种模式">
+<meta name="twitter:description" content="写在之前在卷积过程中，卷积大致可分为两种模式—–补0模式，不补0模式。。。。然而补0模式可以在进行细分。。本文清晰展示三种模式的不同之处，其实这三种不同模式是对卷积核移动范围的不同限制。 下面设 image的大小是7x7，filter的大小是3x3,step步长为1。 1.full mode橙色部分为image（既：待卷积样本），蓝色部分为filter（既：卷积核）。full模式的意思是从filt">
+<meta name="twitter:image" content="http://yoursite.com/.com//20180515205400757.png">
 
 
 
@@ -163,7 +167,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/30/idea/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/20/cnn-three-mode/">
 
 
 
@@ -173,7 +177,7 @@
   };
 </script>
 
-  <title>intellij-idea快捷键 | I'm LaplaTom</title>
+  <title>卷积过程的三种模式 | I'm LaplaTom</title>
   
 
 
@@ -393,7 +397,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/30/idea/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/cnn-three-mode/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCQ">
@@ -410,7 +414,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">intellij-idea快捷键
+          <h1 class="post-title" itemprop="name headline">卷积过程的三种模式
 
               
             
@@ -436,7 +440,7 @@
                 
               
 
-              <time title="创建时间：2019-05-30 19:41:06 / 修改时间：19:41:59" itemprop="dateCreated datePublished" datetime="2019-05-30T19:41:06+08:00">2019-05-30</time>
+              <time title="创建时间：2019-07-20 20:17:26 / 修改时间：20:17:27" itemprop="dateCreated datePublished" datetime="2019-07-20T20:17:26+08:00">2019-07-20</time>
             
 
             
@@ -458,7 +462,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/杂七杂八/" itemprop="url" rel="index"><span itemprop="name">杂七杂八</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/深度学习/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a></span>
 
                 
                 
@@ -493,38 +497,11 @@
       
 
       
-        <p><strong>个人常用</strong></p>
-<pre><code>Ctrl+B 快速打开光标处的类或方法  
-Ctrl+F11 数字/默认书签
-Ctrl+Alt+ left/right 返回至上次浏览的位置
-CTRL+E 最近更改的代码
-Ctrl+Alt+h：显示调用当前方法的所有位置。
-CTRL+G 定位行</code></pre><hr>
-<p><strong>以下来自<a href="http://www.open-open.com/lib/view/open1396578860887.html" target="_blank" rel="noopener">http://www.open-open.com/lib/view/open1396578860887.html</a></strong></p>
-<ol>
-<li>———–自动代码——– </li>
-</ol>
-<p>Ctrl+Alt+O 优化导入的类和包<br>Alt+Insert 生成代码(如get,set方法,构造函数等)   或者右键（Generate）<br>fori/sout/psvm + Tab<br>Ctrl+Alt+T  生成try catch  或者 Alt+enter<br>CTRL+ALT+T  把选中的代码放在 TRY{} IF{} ELSE{} 里<br>Ctrl + O 重写方法<br>Ctrl + I 实现方法<br>Ctr+shift+U 大小写转化<br>ALT+回车    导入包,自动修正<br>ALT+/       代码提示<br>CTRL+J      自动代码<br>Ctrl+Shift+J，整合两行为一行<br>CTRL+空格   代码提示<br>CTRL+SHIFT+SPACE 自动补全代码<br>CTRL+ALT+L  格式化代码<br>CTRL+ALT+I  自动缩进<br>CTRL+ALT+O  优化导入的类和包<br>ALT+INSERT  生成代码(如GET,SET方法,构造函数等)<br>CTRL+E      最近更改的代码<br>CTRL+ALT+SPACE  类名或接口名提示<br>CTRL+P   方法参数提示<br>CTRL+Q，可以看到当前方法的声明 </p>
-<p>Shift+F6  重构-重命名 (包、类、方法、变量、甚至注释等)<br>Ctrl+Alt+V 提取变量 </p>
-<ol start="2">
-<li>———–查询快捷键——– </li>
-</ol>
-<p>Ctrl＋Shift＋Backspace可以跳转到上次编辑的地<br>CTRL+ALT+ left/right 前后导航编辑过的地方<br>ALT+7  靠左窗口显示当前文件的结构<br>Ctrl+F12 浮动显示当前文件的结构<br>ALT+F7 找到你的函数或者变量或者类的所有引用到的地方<br>CTRL+ALT+F7  找到你的函数或者变量或者类的所有引用到的地方 </p>
-<p>Ctrl+Shift+Alt+N 查找类中的方法或变量<br>双击SHIFT 在项目的所有目录查找文件<br>Ctrl+N   查找类<br>Ctrl+Shift+N 查找文件<br>CTRL+G   定位行<br>CTRL+F   在当前窗口查找文本<br>CTRL+SHIFT+F  在指定窗口查找文本<br>CTRL+R   在 当前窗口替换文本<br>CTRL+SHIFT+R  在指定窗口替换文本<br>ALT+SHIFT+C  查找修改的文件<br>CTRL+E   最近打开的文件<br>F3   向下查找关键字出现位置<br>SHIFT+F3  向上一个关键字出现位置<br>选中文本，按Alt+F3 ，高亮相同文本，F3逐个往下查找相同文本<br>F4   查找变量来源  </p>
-<p>CTRL+SHIFT+O  弹出显示查找内容<br>Ctrl+W 选中代码，连续按会有其他效果<br>F2 或Shift+F2 高亮错误或警告快速定位<br>Ctrl+Up/Down 光标跳转到第一行或最后一行下 </p>
-<p>Ctrl+B 快速打开光标处的类或方法<br>CTRL+ALT+B  找所有的子类<br>CTRL+SHIFT+B  找变量的类  </p>
-<p>Ctrl+Shift+上下键  上下移动代码<br>Ctrl+Alt+ left/right 返回至上次浏览的位置<br>Ctrl+X 剪切行<br>Ctrl+D 复制行<br>Ctrl+/ 或 Ctrl+Shift+/  注释（// 或者/<em>…</em>/ ） </p>
-<p>Ctrl+H 显示类结构图<br>Ctrl+Q 显示注释文档 </p>
-<p>Alt+F1 查找代码所在位置<br>Alt+1 快速打开或隐藏工程面板 </p>
-<p>Alt+ left/right 切换代码视图<br>ALT+ ↑/↓  在方法间快速移动定位<br>CTRL+ALT+ left/right 前后导航编辑过的地方<br>Ctrl＋Shift＋Backspace可以跳转到上次编辑的地<br>Alt+6    查找TODO </p>
-<p>3.———————其他快捷键——————- </p>
-<p>SHIFT+ENTER 另起一行<br>CTRL+Z   倒退(撤销)<br>CTRL+SHIFT+Z  向前(取消撤销)<br>CTRL+ALT+F12  资源管理器打开文件夹<br>ALT+F1   查找文件所在目录位置<br>SHIFT+ALT+INSERT 竖编辑模式<br>CTRL+F4  关闭当前窗口<br>Ctrl+Alt+V，可以引入变量。例如：new String(); 自动导入变量定义<br>Ctrl+~，快速切换方案（界面外观、代码风格、快捷键映射等菜单） </p>
-<p>4.————–svn快捷键————— </p>
-<p>ctrl+k 提交代码到SVN<br>ctrl+t 更新代码 </p>
-<p>5.————–调试快捷键—————<br>其实常用的 就是F8 F7 F9 最值得一提的 就是Drop Frame  可以让运行过的代码从头再来<br>alt+F8        debug时选中查看值<br>Alt+Shift+F9，选择 Debug<br>Alt+Shift+F10，选择 Run<br>Ctrl+Shift+F9，编译<br>Ctrl+Shift+F8，查看断点 </p>
-<p>F7，步入<br>Shift+F7，智能步入<br>Alt+Shift+F7，强制步入<br>F8，步过<br>Shift+F8，步出<br>Alt+Shift+F8，强制步过 </p>
-<p>Alt+F9，运行至光标处<br>Ctrl+Alt+F9，强制运行至光标处<br>F9，恢复程序<br>Alt+F10，定位到断点 </p>
-<p>6.————–重构—————<br>Ctrl+Alt+Shift+T，弹出重构菜单<br>Shift+F6，重命名<br>F6，移动<br>F5，复制<br>Alt+Delete，安全删除<br>Ctrl+Alt+N，内联 </p>
+        <h3 id="写在之前"><a href="#写在之前" class="headerlink" title="写在之前"></a>写在之前</h3><p>在卷积过程中，卷积大致可分为两种模式—–补0模式，不补0模式。。。。然而补0模式可以在进行细分。。<br>本文清晰展示三种模式的不同之处，其实这三种不同模式是<strong>对卷积核移动范围的不同限制</strong>。
+下面设 image的大小是7x7，filter的大小是3x3,step步长为1。</p>
+<h3 id="1-full-mode"><a href="#1-full-mode" class="headerlink" title="1.full mode"></a>1.full mode</h3><p><img src="/.com//20180515205400757.png" alt><br>橙色部分为image（既：待卷积样本），蓝色部分为filter（既：卷积核）。full模式的意思是<strong>从filter和image刚相交开始做卷积，白色部分为填0。</strong><br>*此模式卷积之后的结果为 9x9。</p>
+<h3 id="2-same-mode"><a href="#2-same-mode" class="headerlink" title="2.same mode"></a>2.same mode</h3><p><img src="/.com//20180515205624201.png" alt><br><strong>当filter的中心(K)与image的边角重合时</strong>，开始做卷积运算。<br>*此模式卷积之后的结果不变，为7x7。这种模式可以在前向传播的过程中让特征图的大小保持不变，调参师不需要精准计算其尺寸变化(因为尺寸根本就没变化)。</p>
+<h3 id="3-valid-mode"><a href="#3-valid-mode" class="headerlink" title="3.valid mode"></a>3.valid mode</h3><p><img src="/.com//20180515205946981.png" alt><br><strong>当filter全部在image里面的时候</strong>，进行卷积运算。<br>*此模式伍为常见模式，不需要补0，卷积结束之后为5x5。</p>
 
       
     </div>
@@ -548,7 +525,7 @@ CTRL+G 定位行</code></pre><hr>
       
         <div class="post-tags">
           
-            <a href="/tags/intellij-idea/" rel="tag"># intellij-idea</a>
+            <a href="/tags/CNN/" rel="tag"># CNN</a>
           
         </div>
       
@@ -561,8 +538,8 @@ CTRL+G 定位行</code></pre><hr>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/25/week1-cnn/" rel="next" title="【学习笔记】week1-cnn">
-                <i class="fa fa-chevron-left"></i> 【学习笔记】week1-cnn
+              <a href="/2019/06/01/week2/" rel="next" title="【学习笔记】week2-基础">
+                <i class="fa fa-chevron-left"></i> 【学习笔记】week2-基础
               </a>
             
           </div>
@@ -570,10 +547,6 @@ CTRL+G 定位行</code></pre><hr>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/01/week2/" rel="prev" title="【学习笔记】week2-基础">
-                【学习笔记】week2-基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -617,8 +590,17 @@ CTRL+G 定位行</code></pre><hr>
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -761,6 +743,23 @@ CTRL+G 定位行</code></pre><hr>
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在之前"><span class="nav-number">1.</span> <span class="nav-text">写在之前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-full-mode"><span class="nav-number">2.</span> <span class="nav-text">1.full mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-same-mode"><span class="nav-number">3.</span> <span class="nav-text">2.same mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-valid-mode"><span class="nav-number">4.</span> <span class="nav-text">3.valid mode</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

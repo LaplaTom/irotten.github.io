@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-01T11:21:34.088Z</updated>
+  <updated>2019-07-20T12:17:27.328Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>卷积过程的三种模式</title>
+    <link href="http://yoursite.com/2019/07/20/cnn-three-mode/"/>
+    <id>http://yoursite.com/2019/07/20/cnn-three-mode/</id>
+    <published>2019-07-20T12:17:26.000Z</published>
+    <updated>2019-07-20T12:17:27.328Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;写在之前&quot;&gt;&lt;a href=&quot;#写在之前&quot; class=&quot;headerlink&quot; title=&quot;写在之前&quot;&gt;&lt;/a&gt;写在之前&lt;/h3&gt;&lt;p&gt;在卷积过程中，卷积大致可分为两种模式—–补0模式，不补0模式。。。。然而补0模式可以在进行细分。。&lt;br&gt;本文清晰展示三种模
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+    
+  </entry>
   
   <entry>
     <title>【学习笔记】week2-基础</title>
