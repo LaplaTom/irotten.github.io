@@ -491,12 +491,10 @@
       
         <h3 id="写在之前"><a href="#写在之前" class="headerlink" title="写在之前"></a>写在之前</h3><p>众所周知，在Windows下安装各种软件都是非常非常非常非常麻烦的，而且用学校的网，就算你挂着某个东西，你也不一定能下载下来。由于生活所需，朕苦于安装anaconda，心态都被被打崩了，这时hao哥给我推荐了scoop，用完之后，感觉良好，坑踩完了之后写着记一下，以便之后不会在踩坑。</p>
 <h3 id="安装条件"><a href="#安装条件" class="headerlink" title="安装条件"></a>安装条件</h3><p>首先你要进入powershell界面，没错就是那个PS开头的那个界面，你要确保你的powershell版本是大于等于3的，你可以输入这串代码来查看你的版本：<br><code>$psversiontable.psversion.major # should be &gt;= 3</code><br>确认你已经允许powershell执行本地脚本：<br><code>et-executionpolicy remotesigned -scope currentuser</code></p>
-<h3 id="安装scoop"><a href="#安装scoop" class="headerlink" title="安装scoop"></a>安装scoop</h3><p>在powershell中运行：<br><code>iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code><br>如果你要自定义安装目录可以(假设目标目录为 <strong>C:\scoop</strong>)：<br><code>$env:SCOOP=&#39;C:\scoop&#39;
-[environment]::setEnvironmentVariable(&#39;SCOOP&#39;,$env:SCOOP,&#39;User&#39;)
-iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code><br>这样子基本上应该是success了，如果有报错自行百度= =</p>
-<h3 id="使用scoop"><a href="#使用scoop" class="headerlink" title="使用scoop"></a>使用scoop</h3><p>scoop这种傻瓜型软件你可以在help界面看到大部分操作清单，调用方式为:<br><code>scoop help</code><br>你若要搜索软件可以直接：<br><code>scoop search &lt;软件名&gt;</code><br>安装软件的话：<br><code>scoop install &lt;软件名&gt;</code><br>如果提示<em>Couldn’t find manifest for ‘&lt;软件名&gt;’</em>.这时候就需要用<em>bucket</em>，Manage Scoop buckets，是管理可以用scoop下载APP的列表，因为scoop自带的下载APP比较少一些其他第三方的软件需要添加bucket中，scoop提供了一个extras的app列表，来提供更多常用的软件下载，用如下方法添加：<br><code>scoop bucket add extras https://github.com/lukesampson/scoop-extras.git</code><br>添加成功后就能下载软件了<br><code>scoop install extras/anaconda</code><br>若你要自定义安装软件的位置的话，可以选择这个方法(假设安装目录为：C:\apps)：<br> <code>$env:SCOOP_GLOBAL=&#39;c:\apps&#39;
-[environment]::setEnvironmentVariable(&#39;SCOOP_GLOBAL&#39;,$env:SCOOP_GLOBAL,&#39;Machine&#39;)
-scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮你安装和配好环境，那是相当的厉害。</p>
+<h3 id="安装scoop"><a href="#安装scoop" class="headerlink" title="安装scoop"></a>安装scoop</h3><p>在powershell中运行：<br><code>iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code><br>如果你要自定义安装目录可以(假设目标目录为 <strong>C:\scoop</strong>)：<br>`$env:SCOOP=’C:\scoop’</p>
+<p>iex (new-object net.webclient).downloadstring(‘<a href="https://get.scoop.sh&#39;)`" target="_blank" rel="noopener">https://get.scoop.sh&#39;)`</a><br>这样子基本上应该是success了，如果有报错自行百度= =</p>
+<h3 id="使用scoop"><a href="#使用scoop" class="headerlink" title="使用scoop"></a>使用scoop</h3><p>scoop这种傻瓜型软件你可以在help界面看到大部分操作清单，调用方式为:<br><code>scoop help</code><br>你若要搜索软件可以直接：<br><code>scoop search &lt;软件名&gt;</code><br>安装软件的话：<br><code>scoop install &lt;软件名&gt;</code><br>如果提示<em>Couldn’t find manifest for ‘&lt;软件名&gt;’</em>.这时候就需要用<em>bucket</em>，Manage Scoop buckets，是管理可以用scoop下载APP的列表，因为scoop自带的下载APP比较少一些其他第三方的软件需要添加bucket中，scoop提供了一个extras的app列表，来提供更多常用的软件下载，用如下方法添加：<br><code>scoop bucket add extras https://github.com/lukesampson/scoop-extras.git</code><br>添加成功后就能下载软件了<br><code>scoop install extras/anaconda</code><br>若你要自定义安装软件的位置的话，可以选择这个方法(假设安装目录为：C:\apps)：<br> `$env:SCOOP_GLOBAL=’c:\apps’</p>
+<p>scoop install -g &lt;软件名&gt;`<br>PS:scoop安装完成后会自动帮你安装和配好环境，那是相当的厉害。</p>
 
       
     </div>
@@ -616,7 +614,7 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -664,7 +662,9 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -923,6 +923,53 @@ scoop install -g &lt;软件名&gt;</code><br>PS:scoop安装完成后会自动帮
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
 

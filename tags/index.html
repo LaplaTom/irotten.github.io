@@ -445,11 +445,15 @@
                   
                 
               
-              目前共计 4 个标签
+                
+                  
+                
+              
+              目前共计 5 个标签
             </div>
             <div class="tag-cloud-tags">
               
-                <a href="/tags/CNN/" style="font-size: 30px; color: #111">CNN</a> <a href="/tags/intellij-idea/" style="font-size: 12px; color: #ccc">intellij-idea</a> <a href="/tags/scoop/" style="font-size: 12px; color: #ccc">scoop</a> <a href="/tags/二元分类器/" style="font-size: 12px; color: #ccc">二元分类器</a>
+                <a href="/tags/CNN/" style="font-size: 30px; color: #111">CNN</a> <a href="/tags/YOLOv3/" style="font-size: 12px; color: #ccc">YOLOv3</a> <a href="/tags/intellij-idea/" style="font-size: 12px; color: #ccc">intellij-idea</a> <a href="/tags/scoop/" style="font-size: 12px; color: #ccc">scoop</a> <a href="/tags/二元分类器/" style="font-size: 12px; color: #ccc">二元分类器</a>
               
             </div>
           </div>
@@ -512,7 +516,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -560,7 +564,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -802,6 +808,53 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
 

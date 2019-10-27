@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-27T08:19:38.953Z</updated>
+  <updated>2019-10-27T08:57:46.282Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>yolo&#39;s_precision</title>
+    <link href="http://yoursite.com/2019/10/27/yolo-s-precision/"/>
+    <id>http://yoursite.com/2019/10/27/yolo-s-precision/</id>
+    <published>2019-10-27T08:28:12.000Z</published>
+    <updated>2019-10-27T08:57:46.282Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;YOLO&quot;&gt;&lt;a href=&quot;#YOLO&quot; class=&quot;headerlink&quot; title=&quot;YOLO&quot;&gt;&lt;/a&gt;YOLO&lt;/h3&gt;&lt;p&gt;YOLO是目标检测算法其中的一种，目前更新到第三代，即：YOLOv3；其官网为&lt;a href=&quot;https://pjredd
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="YOLOv3" scheme="http://yoursite.com/tags/YOLOv3/"/>
+    
+  </entry>
   
   <entry>
     <title>机器学习算法中的准确率(Precision)、召回率(Recall)、F值(F-Measure)</title>
@@ -75,7 +98,7 @@
     
       
       
-        &lt;h3 id=&quot;写在之前&quot;&gt;&lt;a href=&quot;#写在之前&quot; class=&quot;headerlink&quot; title=&quot;写在之前&quot;&gt;&lt;/a&gt;写在之前&lt;/h3&gt;&lt;p&gt;在卷积过程中，卷积大致可分为两种模式—–补0模式，不补0模式。。。。然而补0模式可以在进行细分。。&lt;br&gt;本文清晰展示三种模
+        &lt;h3 id=&quot;写在之前&quot;&gt;&lt;a href=&quot;#写在之前&quot; class=&quot;headerlink&quot; title=&quot;写在之前&quot;&gt;&lt;/a&gt;写在之前&lt;/h3&gt;&lt;p&gt;在卷积过程中，卷积大致可分为两种模式——-补0模式，不补0模式。。。。然而补0模式可以在进行细分。。&lt;br&gt;本文清晰展示三种
       
     
     </summary>
@@ -151,7 +174,7 @@ Ctrl+Alt+h：显示调
     
       
       
-        &lt;p&gt;###写在之前&lt;br&gt;我之所以开这个博客就是为了记一下我个人的学习笔记，因为最近学的信息量太多，小脑瓜又不一定记得住，所以写了个弄个这个博客。。。。言归正传，我在第一周主要了解CNN的大概模型，学着学着发现缺的非常之多，所以今天这个主要是写CNN（convolution n
+        &lt;h3 id=&quot;写在之前&quot;&gt;&lt;a href=&quot;#写在之前&quot; class=&quot;headerlink&quot; title=&quot;写在之前&quot;&gt;&lt;/a&gt;写在之前&lt;/h3&gt;&lt;p&gt;我之所以开这个博客就是为了记一下我个人的学习笔记，因为最近学的信息量太多，小脑瓜又不一定记得住，所以写了个弄个这个博客。。。
       
     
     </summary>

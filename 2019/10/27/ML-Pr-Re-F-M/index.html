@@ -498,14 +498,20 @@
 <li>此文章转载于<a href="https://www.cnblogs.com/Zhi-Z/p/8728168.html" target="_blank" rel="noopener">此大佬的博客</a>，个人有删改。</li>
 </ul>
 <h5 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h5><p>True Positive(真正，TP)：将正类预测为正类数<br>True Negative(真负，TN)：将负类预测为负类数<br>False Positive(假正，FP)：将负类预测为正类数→误报 (Type I error)<br>False Negative(假负，FN)：将正类预测为负类数→漏报 (Type II error)<br><img src="/2019/10/27/ML-Pr-Re-F-M/class.png" alt></p>
-<h4 id="1-准确率（Accuracy）"><a href="#1-准确率（Accuracy）" class="headerlink" title="1.准确率（Accuracy）"></a>1.准确率（Accuracy）</h4><p>准确率(accuracy)计算公式为：<br>$$ACC=\frac{T P+T N}{T P+T N+F P+F N}$$</p>
-<p><font color="grean">注：准确率是我们最常见的评价指标，而且很容易理解，就是被分对的样本数除以所有的样本数，通常来说，正确率越高，分类器越好。<br>准确率确实是一个很好很直观的评价指标，但是有时候准确率高并不能代表一个算法就好。比如某个地区某天地震的预测，假设我们有一堆的特征作为地震分类的属性，类别只有两个：0：不发生地震、1：发生地震。一个不加思考的分类器，对每一个测试用例都将类别划分为0，那那么它就可能达到99%的准确率，但真的地震来临时，这个分类器毫无察觉，这个分类带来的损失是巨大的。为什么99%的准确率的分类器却不是我们想要的，因为这里数据分布不均衡，类别1的数据太少，完全错分类别1依然可以达到很高的准确率却忽视了我们关注的东西。再举个例子说明下。在正负样本不平衡的情况下，准确率这个评价指标有很大的缺陷。比如在互联网广告里面，点击的数量是很少的，一般只有千分之几，如果用acc，即使全部预测成负类（不点击）acc也有 99% 以上，没有意义。因此，单纯靠准确率来评价一个算法模型是远远不够科学全面的。 </font></p>
-<h4 id="2-错误率（Error-rate）"><a href="#2-错误率（Error-rate）" class="headerlink" title="2.错误率（Error rate）"></a>2.错误率（Error rate）</h4><p>错误率则与准确率相反，描述被分类器错分的比例，<br>$$error\ rate =\frac{FP+FN}{TP+TN+FP+FN}$$<br>对某一个实例来说，分对与分错是互斥事件，所以<br>$$accuracy =1 - error\ rate$$</p>
-<h4 id="3-灵敏度（sensitive）"><a href="#3-灵敏度（sensitive）" class="headerlink" title="3.灵敏度（sensitive）"></a>3.灵敏度（sensitive）</h4><p>$$sensitive =\frac{TP}{P}$$<br>表示的是所有正例中被分对的比例，衡量了分类器对正例的识别能力。</p>
-<h4 id="4-特异性（specificity）"><a href="#4-特异性（specificity）" class="headerlink" title="4.特异性（specificity）"></a>4.特异性（specificity）</h4><p>$$specificity  =\frac{TN}{TN}$$<br>表示的是所有负例中被分对的比例，衡量了分类器对负例的识别能力。</p>
-<h4 id="5-精确度、精度（Precision）"><a href="#5-精确度、精度（Precision）" class="headerlink" title="5.精确度、精度（Precision）"></a>5.精确度、精度（Precision）</h4><p>$$Pr=\frac{TP}{TP+FP}$$<br>表示被分为正例的示例中实际为正例的比例。</p>
-<h4 id="6-召回率（recall）"><a href="#6-召回率（recall）" class="headerlink" title="6.召回率（recall）"></a>6.召回率（recall）</h4><p>$$recall =\frac{TP}{TP+FN}=\frac{TP}{P}=sensitive$$<br>表示覆盖面的度量，度量有多个正例被分为正例，通过公式发现召回率和灵敏度是一样的。</p>
-<h4 id="7-综合评价指标（F-Measure）"><a href="#7-综合评价指标（F-Measure）" class="headerlink" title="7.综合评价指标（F-Measure）"></a>7.综合评价指标（F-Measure）</h4><p>P和R指标有时候会出现的矛盾的情况，这样就需要综合考虑他们，最常见的方法就是F-Measure（又称为F-Score）。<br>F-Measure是Precision和Recall加权调和平均：<br>$$\mathrm{F}=\frac{\left(\alpha^{2}+1\right) P * R}{\alpha^{2}(P+R)}$$<br>当参数a=1时，就是最常见的F1，也即：<br>$$F1=\frac{2<em>P</em>R}{P+R}$$<br>可知F1综合了P和R的结果，当F1较高时则能说明试验方法比较有效。</p>
+<h4 id="1-准确率（Accuracy）"><a href="#1-准确率（Accuracy）" class="headerlink" title="1.准确率（Accuracy）"></a>1.准确率（Accuracy）</h4><p>准确率(accuracy)计算公式为：</p>
+<script type="math/tex; mode=display">ACC=\frac{T P+T N}{T P+T N+F P+F N}</script><font color="grean">注：准确率是我们最常见的评价指标，而且很容易理解，就是被分对的样本数除以所有的样本数，通常来说，正确率越高，分类器越好。
+准确率确实是一个很好很直观的评价指标，但是有时候准确率高并不能代表一个算法就好。比如某个地区某天地震的预测，假设我们有一堆的特征作为地震分类的属性，类别只有两个：0：不发生地震、1：发生地震。一个不加思考的分类器，对每一个测试用例都将类别划分为0，那那么它就可能达到99%的准确率，但真的地震来临时，这个分类器毫无察觉，这个分类带来的损失是巨大的。为什么99%的准确率的分类器却不是我们想要的，因为这里数据分布不均衡，类别1的数据太少，完全错分类别1依然可以达到很高的准确率却忽视了我们关注的东西。再举个例子说明下。在正负样本不平衡的情况下，准确率这个评价指标有很大的缺陷。比如在互联网广告里面，点击的数量是很少的，一般只有千分之几，如果用acc，即使全部预测成负类（不点击）acc也有 99% 以上，没有意义。因此，单纯靠准确率来评价一个算法模型是远远不够科学全面的。 </font>
+
+
+<h4 id="2-错误率（Error-rate）"><a href="#2-错误率（Error-rate）" class="headerlink" title="2.错误率（Error rate）"></a>2.错误率（Error rate）</h4><p>错误率则与准确率相反，描述被分类器错分的比例，</p>
+<script type="math/tex; mode=display">error\ rate =\frac{FP+FN}{TP+TN+FP+FN}</script><p>对某一个实例来说，分对与分错是互斥事件，所以</p>
+<script type="math/tex; mode=display">accuracy =1 - error\ rate</script><h4 id="3-灵敏度（sensitive）"><a href="#3-灵敏度（sensitive）" class="headerlink" title="3.灵敏度（sensitive）"></a>3.灵敏度（sensitive）</h4><script type="math/tex; mode=display">sensitive =\frac{TP}{P}</script><p>表示的是所有正例中被分对的比例，衡量了分类器对正例的识别能力。</p>
+<h4 id="4-特异性（specificity）"><a href="#4-特异性（specificity）" class="headerlink" title="4.特异性（specificity）"></a>4.特异性（specificity）</h4><script type="math/tex; mode=display">specificity  =\frac{TN}{TN}</script><p>表示的是所有负例中被分对的比例，衡量了分类器对负例的识别能力。</p>
+<h4 id="5-精确度、精度（Precision）"><a href="#5-精确度、精度（Precision）" class="headerlink" title="5.精确度、精度（Precision）"></a>5.精确度、精度（Precision）</h4><script type="math/tex; mode=display">Pr=\frac{TP}{TP+FP}</script><p>表示被分为正例的示例中实际为正例的比例。</p>
+<h4 id="6-召回率（recall）"><a href="#6-召回率（recall）" class="headerlink" title="6.召回率（recall）"></a>6.召回率（recall）</h4><script type="math/tex; mode=display">recall =\frac{TP}{TP+FN}=\frac{TP}{P}=sensitive</script><p>表示覆盖面的度量，度量有多个正例被分为正例，通过公式发现召回率和灵敏度是一样的。</p>
+<h4 id="7-综合评价指标（F-Measure）"><a href="#7-综合评价指标（F-Measure）" class="headerlink" title="7.综合评价指标（F-Measure）"></a>7.综合评价指标（F-Measure）</h4><p>P和R指标有时候会出现的矛盾的情况，这样就需要综合考虑他们，最常见的方法就是F-Measure（又称为F-Score）。<br>F-Measure是Precision和Recall加权调和平均：</p>
+<script type="math/tex; mode=display">\mathrm{F}=\frac{\left(\alpha^{2}+1\right) P * R}{\alpha^{2}(P+R)}</script><p>当参数a=1时，就是最常见的F1，也即：</p>
+<script type="math/tex; mode=display">F1=\frac{2*P*R}{P+R}</script><p>可知F1综合了P和R的结果，当F1较高时则能说明试验方法比较有效。</p>
 <h4 id="8-其他评价指标"><a href="#8-其他评价指标" class="headerlink" title="8.其他评价指标"></a>8.其他评价指标</h4><ul>
 <li>计算速度：分类器训练和预测需要的时间；</li>
 <li>鲁棒性：处理缺失值和异常值的能力；</li>
@@ -559,6 +565,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/27/yolo-s-precision/" rel="prev" title="yolo's_precision">
+                yolo's_precision <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -629,7 +639,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -677,7 +687,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -936,6 +948,53 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
 
