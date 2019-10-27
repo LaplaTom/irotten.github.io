@@ -145,14 +145,14 @@
   <meta name="description" content="YOLOYOLO是目标检测算法其中的一种，目前更新到第三代，即：YOLOv3；其官网为YOLO: Real-Time Object Detection。具体代码之后在解析，先把光光的问题给解决了=-= 问题1234567891011121314151617181920for (i = 0; i &amp;lt; classes; ++i) &amp;#123;        double avg_precisio">
 <meta name="keywords" content="YOLOv3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yolo&#39;s_precision">
+<meta property="og:title" content="YOLO准确率的11">
 <meta property="og:url" content="http://yoursite.com/2019/10/27/yolo-s-precision/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
 <meta property="og:description" content="YOLOYOLO是目标检测算法其中的一种，目前更新到第三代，即：YOLOv3；其官网为YOLO: Real-Time Object Detection。具体代码之后在解析，先把光光的问题给解决了=-= 问题1234567891011121314151617181920for (i = 0; i &amp;lt; classes; ++i) &amp;#123;        double avg_precisio">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-27T08:57:46.282Z">
+<meta property="og:updated_time" content="2019-10-27T09:16:20.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yolo&#39;s_precision">
+<meta name="twitter:title" content="YOLO准确率的11">
 <meta name="twitter:description" content="YOLOYOLO是目标检测算法其中的一种，目前更新到第三代，即：YOLOv3；其官网为YOLO: Real-Time Object Detection。具体代码之后在解析，先把光光的问题给解决了=-= 问题1234567891011121314151617181920for (i = 0; i &amp;lt; classes; ++i) &amp;#123;        double avg_precisio">
 
 
@@ -173,7 +173,7 @@
   };
 </script>
 
-  <title>yolo's_precision | I'm LaplaTom</title>
+  <title>YOLO准确率的11 | I'm LaplaTom</title>
   
 
 
@@ -410,7 +410,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">yolo's_precision
+          <h1 class="post-title" itemprop="name headline">YOLO准确率的11
 
               
             
@@ -436,7 +436,7 @@
                 
               
 
-              <time title="创建时间：2019-10-27 16:28:12 / 修改时间：16:57:46" itemprop="dateCreated datePublished" datetime="2019-10-27T16:28:12+08:00">2019-10-27</time>
+              <time title="创建时间：2019-10-27 16:28:12 / 修改时间：17:16:20" itemprop="dateCreated datePublished" datetime="2019-10-27T16:28:12+08:00">2019-10-27</time>
             
 
             
@@ -496,7 +496,12 @@
         <h3 id="YOLO"><a href="#YOLO" class="headerlink" title="YOLO"></a>YOLO</h3><p>YOLO是目标检测算法其中的一种，目前更新到第三代，即：YOLOv3；其官网为<a href="https://pjreddie.com/darknet/yolo/" target="_blank" rel="noopener">YOLO: Real-Time Object Detection</a>。具体代码之后在解析，先把光光的问题给解决了=-=</p>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; classes; ++i) &#123;</span><br><span class="line">        <span class="keyword">double</span> avg_precision = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> point;</span><br><span class="line">        <span class="keyword">for</span> (point = <span class="number">0</span>; point &lt; <span class="number">11</span>; ++point) &#123;</span><br><span class="line">            <span class="keyword">double</span> cur_recall = point * <span class="number">0.1</span>;</span><br><span class="line">            <span class="keyword">double</span> cur_precision = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (rank = <span class="number">0</span>; rank &lt; detections_count; ++rank)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (pr[i][rank].recall &gt;= cur_recall) &#123;    <span class="comment">// &gt; or &gt;=</span></span><br><span class="line">                    <span class="keyword">if</span> (pr[i][rank].precision &gt; cur_precision) &#123;</span><br><span class="line">                        cur_precision = pr[i][rank].precision;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            avg_precision += cur_precision;</span><br><span class="line">        &#125;</span><br><span class="line">        avg_precision = avg_precision / <span class="number">11</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"class_id = %d, name = %s, \t ap = %2.2f %% \n"</span>, i, names[i], avg_precision*<span class="number">100</span>);</span><br><span class="line">        mean_average_precision += avg_precision;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>问：<strong>为什么point要小于11，已经写死的，如果可换是一个变量= =</strong></p>
-<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>从代码上下文可知point取0~10这11个数，之后在分别乘以0.1作为cur_recall变量的取值，即：cur_recall的取值为0~1。。之后在与pr[i][rank].recall进行比较，若pr[i][rank].recall大，则进行更新cur_precision的值，否则不更新。<br>所以我们从pr[i][rank].recall入手，由前文可知pr[i][rank].recall是其的召回率，根据召回率的定义可知：召回率所有正例中被分对的比例，衡量了分类器对正例的识别能力。而准确率则是：表示被分为正例的示例中实际为正例的比例。<br>因此可以这么认为：<strong>任意一个召回率都有其准确率。</strong><br>而在YOLO算法中</p>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>从代码上下文可知point取0~10(0,1,2,3,4,5,6,7,8,9,10)这11个数，之后在分别乘以0.1作为cur_recall变量的取值，即：cur_recall的取值为0~1(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1)。。之后在与<code>pr[i][rank].recall</code>进行比较，若<code>pr[i][rank].recall</code>大，则进行更新cur_precision的值，否则不更新。<br>所以我们从<code>pr[i][rank].recall</code>入手，由前文可知<code>pr[i][rank].recall</code>是其的召回率，根据召回率的定义可知：<strong>召回率为所有正例中被分对的比例，衡量了分类器对正例的识别能力</strong>。而准确率则是：<strong>表示被分为正例的示例中实际为正例的比例</strong>。<br>因此可以这么认为：<strong>任意一个召回率都有其准确率。</strong><br>而在YOLO算法中,我们需要的是平均准确率，即：avg_precision，因此在循环中将不同召回率的准确率累加起来，在除以11作为平均准确率。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>代码中的11就是0~1<code>(0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0)</code>，这11种不同的召回率。</li>
+<li><code>if (pr[i][rank].recall &gt;= cur_recall)</code>这段代码表示不同种类预测的召回率与11个阀值进行比较，在根据<code>if (pr[i][rank].precision &gt; cur_precision)</code>进行准确率的大小判断累加。</li>
+<li>我觉得要画图解释，但我太懒了=-=</li>
+</ul>
 
       
     </div>
@@ -755,7 +760,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#YOLO"><span class="nav-number">1.</span> <span class="nav-text">YOLO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析"><span class="nav-number">3.</span> <span class="nav-text">解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#YOLO"><span class="nav-number">1.</span> <span class="nav-text">YOLO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析"><span class="nav-number">3.</span> <span class="nav-text">解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
