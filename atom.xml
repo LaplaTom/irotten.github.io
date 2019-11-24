@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-24T09:11:42.937Z</updated>
+  <updated>2019-11-24T09:34:08.733Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,14 +21,13 @@
     <link href="http://yoursite.com/2019/11/23/DiagnosisRegression/"/>
     <id>http://yoursite.com/2019/11/23/DiagnosisRegression/</id>
     <published>2019-11-23T14:55:37.000Z</published>
-    <updated>2019-11-24T09:11:42.937Z</updated>
+    <updated>2019-11-24T09:34:08.733Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;逻辑回归模型实现对急性炎症的诊断数据进行逻辑回归预测。  &lt;/p&gt;
-&lt;h3 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;hea
+        &lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;逻辑回归模型实现对急性炎症的诊断数据进行逻辑回归预测。&lt;br&gt;参考资料:&lt;a href=&quot;https://mp.weixin.qq.com/
       
     
     </summary>
