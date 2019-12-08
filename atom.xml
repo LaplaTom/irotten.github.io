@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-08T07:54:35.696Z</updated>
+  <updated>2019-12-08T08:01:25.946Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>tf_mnist</title>
+    <title>tensorflow_mnist</title>
     <link href="http://yoursite.com/2019/12/08/tf-mnist/"/>
     <id>http://yoursite.com/2019/12/08/tf-mnist/</id>
     <published>2019-12-08T07:30:15.000Z</published>
-    <updated>2019-12-08T07:54:35.696Z</updated>
+    <updated>2019-12-08T08:01:25.946Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,8 @@
       
         &lt;pre&gt;&lt;code&gt;感谢这个博客和老师的指导书=-=
 https://www.cnblogs.com/qiuhlee/p/9866222.html#_caption_0
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;一、Mnist数据载入&quot;&gt;&lt;a href=&quot;#一、Mnist数据载
+另外此代码仅限运行于tensorflow_1.9及以下，不能在tensorflow_2.0
+&lt;/code&gt;&lt;
       
     
     </summary>
