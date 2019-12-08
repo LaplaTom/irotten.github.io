@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-24T09:34:08.733Z</updated>
+  <updated>2019-12-08T07:54:35.696Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tf_mnist</title>
+    <link href="http://yoursite.com/2019/12/08/tf-mnist/"/>
+    <id>http://yoursite.com/2019/12/08/tf-mnist/</id>
+    <published>2019-12-08T07:30:15.000Z</published>
+    <updated>2019-12-08T07:54:35.696Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;感谢这个博客和老师的指导书=-=
+https://www.cnblogs.com/qiuhlee/p/9866222.html#_caption_0
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;一、Mnist数据载入&quot;&gt;&lt;a href=&quot;#一、Mnist数据载
+      
+    
+    </summary>
+    
+      <category term="人工智能导论" scheme="http://yoursite.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/"/>
+    
+    
+      <category term="mnist" scheme="http://yoursite.com/tags/mnist/"/>
+    
+  </entry>
   
   <entry>
     <title>线性分类--DiagnosisRegression</title>
