@@ -151,10 +151,10 @@
 <meta property="og:description" content="写在之前算是系统的对本身的数学基础进行查缺补漏，做个笔试记录一下，这里还是给感谢伯禹学习平台-ElitesAI·人工智能中的数学基础，这一部分为微积分的相关部分。 凸集与凸函数凸集的定义对于集合$C \subseteq R^n$，如果对于集合中任意两不同的点 $x_1$ 和 $x_2$ 和实数 $\theta \in [0,1]$，都有 $\theta x_1 + (1-\theta)x_2 \i">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/Common_convex_sets.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/Convex_fun(AB">
+<meta property="og:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/Convex_funAB.png">
 <meta property="og:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/daohanshu.png">
 <meta property="og:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/tidu.png">
-<meta property="og:updated_time" content="2020-02-10T09:25:28.001Z">
+<meta property="og:updated_time" content="2020-02-10T09:31:21.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ElitesAI·人工智能中的数学基础之微积分">
 <meta name="twitter:description" content="写在之前算是系统的对本身的数学基础进行查缺补漏，做个笔试记录一下，这里还是给感谢伯禹学习平台-ElitesAI·人工智能中的数学基础，这一部分为微积分的相关部分。 凸集与凸函数凸集的定义对于集合$C \subseteq R^n$，如果对于集合中任意两不同的点 $x_1$ 和 $x_2$ 和实数 $\theta \in [0,1]$，都有 $\theta x_1 + (1-\theta)x_2 \i">
@@ -441,7 +441,7 @@
                 
               
 
-              <time title="创建时间：2020-02-10 15:41:11 / 修改时间：17:25:28" itemprop="dateCreated datePublished" datetime="2020-02-10T15:41:11+08:00">2020-02-10</time>
+              <time title="创建时间：2020-02-10 15:41:11 / 修改时间：17:31:21" itemprop="dateCreated datePublished" datetime="2020-02-10T15:41:11+08:00">2020-02-10</time>
             
 
             
@@ -503,7 +503,7 @@
 <h4 id="常见凸集"><a href="#常见凸集" class="headerlink" title="常见凸集"></a>常见凸集</h4><p><img src="/2020/02/10/boyuAI-AImath-Calculus/Common_convex_sets.png" alt></p>
 <h4 id="凸集分离定理"><a href="#凸集分离定理" class="headerlink" title="凸集分离定理"></a>凸集分离定理</h4><p>对于两个不相交的非空凸集$C,D \subseteq R^n$，一定存在一个超平面分离这两个集合<br>PS：按二分类的思路来说，两个类别分别就是两个非空凸集，而我们计算的分类函数就是这个超平面。</p>
 <h4 id="凸函数的定义"><a href="#凸函数的定义" class="headerlink" title="凸函数的定义"></a>凸函数的定义</h4><p>如果一个函数f是凸函数，则对于任意在定义域内的点想x,y，则有： </p>
-<script type="math/tex; mode=display">f(\theta x + (1-\theta)y) \leq \theta f(x) + (1- \theta )f(y) , \theta \in [0,1]</script><p>PS:按下面的图来理解，即：$A \leq B$<br><img src="/2020/02/10/boyuAI-AImath-Calculus/Convex_fun(AB" alt>.png)  </p>
+<script type="math/tex; mode=display">f(\theta x + (1-\theta)y) \leq \theta f(x) + (1- \theta )f(y) , \theta \in [0,1]</script><p>PS:按下面的图来理解，即：$A \leq B$<br><img src="/2020/02/10/boyuAI-AImath-Calculus/Convex_funAB.png" alt>  </p>
 <h4 id="凸函数的性质"><a href="#凸函数的性质" class="headerlink" title="凸函数的性质"></a>凸函数的性质</h4><ul>
 <li>如果$x_0$是函数f的一个局部最小值，则$x_0$就是f的全局最小值。</li>
 <li>如果凸函数f可导，那么$x_0$是全局最小值当且仅当$\nabla f(x_0)=0$(具体一阶导、二阶导请百度)<h4 id="保凸运算"><a href="#保凸运算" class="headerlink" title="保凸运算"></a>保凸运算</h4><strong>定义：</strong> 对一个凸函数进行一些运算之后，依然得到凸函数。<br><strong>例子</strong></li>
