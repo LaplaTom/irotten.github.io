@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-08T08:06:38.458Z</updated>
+  <updated>2020-02-10T09:25:28.001Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ElitesAI·人工智能中的数学基础之微积分</title>
+    <link href="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/"/>
+    <id>http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/</id>
+    <published>2020-02-10T07:41:11.000Z</published>
+    <updated>2020-02-10T09:25:28.001Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;写在之前&quot;&gt;&lt;a href=&quot;#写在之前&quot; class=&quot;headerlink&quot; title=&quot;写在之前&quot;&gt;&lt;/a&gt;写在之前&lt;/h3&gt;&lt;p&gt;算是系统的对本身的数学基础进行查缺补漏，做个笔试记录一下，这里还是给感谢&lt;a href=&quot;https://www.boyua
+      
+    
+    </summary>
+    
+      <category term="人工智能" scheme="http://yoursite.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    
+      <category term="ElitesAI·人工智能中的数学基础" scheme="http://yoursite.com/tags/ElitesAI%C2%B7%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>tensorflow_mnist</title>

@@ -142,22 +142,23 @@
 
 
 
-  <meta name="description" content="写在之前在卷积过程中，卷积大致可分为两种模式——-补0模式，不补0模式。。。。然而补0模式可以在进行细分。。本文清晰展示三种模式的不同之处，其实这三种不同模式是对卷积核移动范围的不同限制。下面设 image的大小是7x7，filter的大小是3x3,step步长为1。 1.full mode橙色部分为image（既：待卷积样本），蓝色部分为filter（既：卷积核）。full模式的意思是从filt">
-<meta name="keywords" content="CNN">
+  <meta name="description" content="写在之前算是系统的对本身的数学基础进行查缺补漏，做个笔试记录一下，这里还是给感谢伯禹学习平台-ElitesAI·人工智能中的数学基础，这一部分为微积分的相关部分。 凸集与凸函数凸集的定义对于集合$C \subseteq R^n$，如果对于集合中任意两不同的点 $x_1$ 和 $x_2$ 和实数 $\theta \in [0,1]$，都有 $\theta x_1 + (1-\theta)x_2 \i">
+<meta name="keywords" content="ElitesAI·人工智能中的数学基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【学习笔记】卷积过程的三种模式">
-<meta property="og:url" content="http://yoursite.com/2019/07/20/cnn-three-mode/index.html">
+<meta property="og:title" content="ElitesAI·人工智能中的数学基础之微积分">
+<meta property="og:url" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
-<meta property="og:description" content="写在之前在卷积过程中，卷积大致可分为两种模式——-补0模式，不补0模式。。。。然而补0模式可以在进行细分。。本文清晰展示三种模式的不同之处，其实这三种不同模式是对卷积核移动范围的不同限制。下面设 image的大小是7x7，filter的大小是3x3,step步长为1。 1.full mode橙色部分为image（既：待卷积样本），蓝色部分为filter（既：卷积核）。full模式的意思是从filt">
+<meta property="og:description" content="写在之前算是系统的对本身的数学基础进行查缺补漏，做个笔试记录一下，这里还是给感谢伯禹学习平台-ElitesAI·人工智能中的数学基础，这一部分为微积分的相关部分。 凸集与凸函数凸集的定义对于集合$C \subseteq R^n$，如果对于集合中任意两不同的点 $x_1$ 和 $x_2$ 和实数 $\theta \in [0,1]$，都有 $\theta x_1 + (1-\theta)x_2 \i">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/07/20/cnn-three-mode/20180515205400757.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/20/cnn-three-mode/20180515205624201.png">
-<meta property="og:image" content="http://yoursite.com/2019/07/20/cnn-three-mode/20180515205946981.png">
-<meta property="og:updated_time" content="2019-07-20T15:39:03.329Z">
+<meta property="og:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/Common_convex_sets.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/Convex_fun(AB">
+<meta property="og:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/daohanshu.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/tidu.png">
+<meta property="og:updated_time" content="2020-02-10T09:25:28.001Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【学习笔记】卷积过程的三种模式">
-<meta name="twitter:description" content="写在之前在卷积过程中，卷积大致可分为两种模式——-补0模式，不补0模式。。。。然而补0模式可以在进行细分。。本文清晰展示三种模式的不同之处，其实这三种不同模式是对卷积核移动范围的不同限制。下面设 image的大小是7x7，filter的大小是3x3,step步长为1。 1.full mode橙色部分为image（既：待卷积样本），蓝色部分为filter（既：卷积核）。full模式的意思是从filt">
-<meta name="twitter:image" content="http://yoursite.com/2019/07/20/cnn-three-mode/20180515205400757.png">
+<meta name="twitter:title" content="ElitesAI·人工智能中的数学基础之微积分">
+<meta name="twitter:description" content="写在之前算是系统的对本身的数学基础进行查缺补漏，做个笔试记录一下，这里还是给感谢伯禹学习平台-ElitesAI·人工智能中的数学基础，这一部分为微积分的相关部分。 凸集与凸函数凸集的定义对于集合$C \subseteq R^n$，如果对于集合中任意两不同的点 $x_1$ 和 $x_2$ 和实数 $\theta \in [0,1]$，都有 $\theta x_1 + (1-\theta)x_2 \i">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/Common_convex_sets.png">
 
 
 
@@ -167,7 +168,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/20/cnn-three-mode/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/">
 
 
 
@@ -177,7 +178,7 @@
   };
 </script>
 
-  <title>【学习笔记】卷积过程的三种模式 | I'm LaplaTom</title>
+  <title>ElitesAI·人工智能中的数学基础之微积分 | I'm LaplaTom</title>
   
 
 
@@ -397,7 +398,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/cnn-three-mode/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/10/boyuAI-AImath-Calculus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCQ">
@@ -414,7 +415,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【学习笔记】卷积过程的三种模式
+          <h1 class="post-title" itemprop="name headline">ElitesAI·人工智能中的数学基础之微积分
 
               
             
@@ -440,7 +441,7 @@
                 
               
 
-              <time title="创建时间：2019-07-20 20:17:26 / 修改时间：23:39:03" itemprop="dateCreated datePublished" datetime="2019-07-20T20:17:26+08:00">2019-07-20</time>
+              <time title="创建时间：2020-02-10 15:41:11 / 修改时间：17:25:28" itemprop="dateCreated datePublished" datetime="2020-02-10T15:41:11+08:00">2020-02-10</time>
             
 
             
@@ -462,7 +463,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/深度学习/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/人工智能/" itemprop="url" rel="index"><span itemprop="name">人工智能</span></a></span>
 
                 
                 
@@ -497,11 +498,33 @@
       
 
       
-        <h3 id="写在之前"><a href="#写在之前" class="headerlink" title="写在之前"></a>写在之前</h3><p>在卷积过程中，卷积大致可分为两种模式——-补0模式，不补0模式。。。。然而补0模式可以在进行细分。。<br>本文清晰展示三种模式的不同之处，其实这三种不同模式是<strong>对卷积核移动范围的不同限制</strong>。<br>下面设 image的大小是7x7，filter的大小是3x3,step步长为1。</p>
-<h3 id="1-full-mode"><a href="#1-full-mode" class="headerlink" title="1.full mode"></a>1.full mode</h3><p><img src="/2019/07/20/cnn-three-mode/20180515205400757.png" alt><br>橙色部分为image（既：待卷积样本），蓝色部分为filter（既：卷积核）。full模式的意思是<strong>从filter和image刚相交开始做卷积，白色部分为填0。</strong><br>*此模式卷积之后的结果为 9x9。</p>
-<h3 id="2-same-mode"><a href="#2-same-mode" class="headerlink" title="2.same mode"></a>2.same mode</h3><p><img src="/2019/07/20/cnn-three-mode/20180515205624201.png" alt><br><strong>当filter的中心(K)与image的边角重合时</strong>，开始做卷积运算。<br>*此模式卷积之后的结果不变，为7x7。这种模式可以在前向传播的过程中让特征图的大小保持不变，调参师不需要精准计算其尺寸变化(因为尺寸根本就没变化)。</p>
-<h3 id="3-valid-mode"><a href="#3-valid-mode" class="headerlink" title="3.valid mode"></a>3.valid mode</h3><p><img src="/2019/07/20/cnn-three-mode/20180515205946981.png" alt><br><strong>当filter全部在image里面的时候</strong>，进行卷积运算。<br>*此模式伍为常见模式，不需要补0，卷积结束之后为5x5。</p>
-
+        <h3 id="写在之前"><a href="#写在之前" class="headerlink" title="写在之前"></a>写在之前</h3><p>算是系统的对本身的数学基础进行查缺补漏，做个笔试记录一下，这里还是给感谢<a href="https://www.boyuai.com/elites/course/D91JM0bv72Zop1D3" target="_blank" rel="noopener">伯禹学习平台-ElitesAI·人工智能中的数学基础</a>，这一部分为微积分的相关部分。</p>
+<h3 id="凸集与凸函数"><a href="#凸集与凸函数" class="headerlink" title="凸集与凸函数"></a>凸集与凸函数</h3><h4 id="凸集的定义"><a href="#凸集的定义" class="headerlink" title="凸集的定义"></a>凸集的定义</h4><p>对于集合$C \subseteq R^n$，如果对于集合中任意两不同的点 $x_1$ 和 $x_2$ 和<strong>实数</strong> $\theta \in [0,1]$，都有 $\theta x_1 + (1-\theta)x_2 \in C$，则称集合C为凸集。<br>PS:这定义说白了就是集合内任意两点之间的无数个点都在集合内。  </p>
+<h4 id="常见凸集"><a href="#常见凸集" class="headerlink" title="常见凸集"></a>常见凸集</h4><p><img src="/2020/02/10/boyuAI-AImath-Calculus/Common_convex_sets.png" alt></p>
+<h4 id="凸集分离定理"><a href="#凸集分离定理" class="headerlink" title="凸集分离定理"></a>凸集分离定理</h4><p>对于两个不相交的非空凸集$C,D \subseteq R^n$，一定存在一个超平面分离这两个集合<br>PS：按二分类的思路来说，两个类别分别就是两个非空凸集，而我们计算的分类函数就是这个超平面。</p>
+<h4 id="凸函数的定义"><a href="#凸函数的定义" class="headerlink" title="凸函数的定义"></a>凸函数的定义</h4><p>如果一个函数f是凸函数，则对于任意在定义域内的点想x,y，则有： </p>
+<script type="math/tex; mode=display">f(\theta x + (1-\theta)y) \leq \theta f(x) + (1- \theta )f(y) , \theta \in [0,1]</script><p>PS:按下面的图来理解，即：$A \leq B$<br><img src="/2020/02/10/boyuAI-AImath-Calculus/Convex_fun(AB" alt>.png)  </p>
+<h4 id="凸函数的性质"><a href="#凸函数的性质" class="headerlink" title="凸函数的性质"></a>凸函数的性质</h4><ul>
+<li>如果$x_0$是函数f的一个局部最小值，则$x_0$就是f的全局最小值。</li>
+<li>如果凸函数f可导，那么$x_0$是全局最小值当且仅当$\nabla f(x_0)=0$(具体一阶导、二阶导请百度)<h4 id="保凸运算"><a href="#保凸运算" class="headerlink" title="保凸运算"></a>保凸运算</h4><strong>定义：</strong> 对一个凸函数进行一些运算之后，依然得到凸函数。<br><strong>例子</strong></li>
+<li>非负线性组合：$f=\sum_{i=1}^m{w_if_i}$</li>
+<li>逐点最大化：$f=max(f_i)$</li>
+<li>最小化：$g(x)=inf_{y \in C}f(x,y),C是非空凸集$</li>
+</ul>
+<hr>
+<h3 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h3><h4 id="极限的直观理解"><a href="#极限的直观理解" class="headerlink" title="极限的直观理解"></a>极限的直观理解</h4><p>极限可以被用来描述一个序列的元素性质随指标的变化而逼近某个值的趋势。</p>
+<h4 id="有限初的极限的定义"><a href="#有限初的极限的定义" class="headerlink" title="有限初的极限的定义"></a>有限初的极限的定义</h4><p>对于函数$f(x),x_0 \in R$和$L\subset R$，若任给正实数$\epsilon &gt; 0$，存在正实数 $\delta &gt; 0$，使得当 $0&lt;|x-x_0|&lt; \delta$时，有$|f(x)-L|&lt;\epsilon$，则称函数$f(x)$在$x=x_0$处收敛于L，记作$\lim_{x \rightarrow x_0}{f(x)=L}$。</p>
+<hr>
+<h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><h4 id="连续的定义"><a href="#连续的定义" class="headerlink" title="连续的定义"></a>连续的定义</h4><p>设函数f(x)在$(x_0-\delta,x_0+\delta)$内有定义，若f(x)在$x_0$处的极限存在且等于它在$x_0$处的函数值$f(x_0)$，则称f(x)在$x_0$处连续。</p>
+<hr>
+<h3 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h3><h4 id="导数的定义"><a href="#导数的定义" class="headerlink" title="导数的定义"></a>导数的定义</h4><p>函数f(x)在$x=x_0$处的导数是</p>
+<script type="math/tex; mode=display">\lim_{\Delta x \rightarrow 0}{\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}}=\frac{df}{dx}|_{x=x_0}</script><p>记作$f’(x_0)$。PS：导数只与$x_0$有关。</p>
+<h4 id="导函数的定义"><a href="#导函数的定义" class="headerlink" title="导函数的定义"></a>导函数的定义</h4><p>在(a,b)内每个点处的导数构成了一个新函数，称为原函数f(x)的导函数，简称导数</p>
+<h4 id="基本的导函数"><a href="#基本的导函数" class="headerlink" title="基本的导函数"></a>基本的导函数</h4><p><img src="/2020/02/10/boyuAI-AImath-Calculus/daohanshu.png" alt></p>
+<h4 id="偏导数的直观理解"><a href="#偏导数的直观理解" class="headerlink" title="偏导数的直观理解"></a>偏导数的直观理解</h4><p>多元函数$f(x_1,x_2,…,x_d)$在$x_1$方向的瞬时变化率为此处的切线斜率大小。</p>
+<h4 id="偏导数的定义"><a href="#偏导数的定义" class="headerlink" title="偏导数的定义"></a>偏导数的定义</h4><p>多元函数$f(x_1,x_2,…,x_d)$在$Z=(Z_1,Z_2,…,Z_d)$关于$x_i$的偏导数记为：</p>
+<script type="math/tex; mode=display">\frac{\partial f}{\partial x_i}(Z)=\lim_{\Delta x \rightarrow 0}{\frac{f(Z_1,Z_2,...,Z_i+\Delta x,...,Z_d)-f(Z_1,Z_2,...,Z_i,...,Z_d)}{\Delta x}}</script><h4 id="梯度的定义"><a href="#梯度的定义" class="headerlink" title="梯度的定义"></a>梯度的定义</h4><p>多元函数$f(x_1,x_2,…,x_d)$在$Z=(Z_1,Z_2,…,Z_d)$所有偏导数组成的向量<br><img src="/2020/02/10/boyuAI-AImath-Calculus/tidu.png" alt></p>
+<h4 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h4>
       
     </div>
 
@@ -524,7 +547,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CNN/" rel="tag"># CNN</a>
+            <a href="/tags/ElitesAI·人工智能中的数学基础/" rel="tag"># ElitesAI·人工智能中的数学基础</a>
           
         </div>
       
@@ -537,8 +560,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/01/week2/" rel="next" title="【学习笔记】week2-基础">
-                <i class="fa fa-chevron-left"></i> 【学习笔记】week2-基础
+              <a href="/2019/12/08/tf-mnist/" rel="next" title="tensorflow_mnist">
+                <i class="fa fa-chevron-left"></i> tensorflow_mnist
               </a>
             
           </div>
@@ -546,10 +569,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/21/cnn-two-pool/" rel="prev" title="【学习笔记】池化">
-                【学习笔记】池化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -773,7 +792,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在之前"><span class="nav-number">1.</span> <span class="nav-text">写在之前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-full-mode"><span class="nav-number">2.</span> <span class="nav-text">1.full mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-same-mode"><span class="nav-number">3.</span> <span class="nav-text">2.same mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-valid-mode"><span class="nav-number">4.</span> <span class="nav-text">3.valid mode</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在之前"><span class="nav-number">1.</span> <span class="nav-text">写在之前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#凸集与凸函数"><span class="nav-number">2.</span> <span class="nav-text">凸集与凸函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#凸集的定义"><span class="nav-number">2.1.</span> <span class="nav-text">凸集的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见凸集"><span class="nav-number">2.2.</span> <span class="nav-text">常见凸集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#凸集分离定理"><span class="nav-number">2.3.</span> <span class="nav-text">凸集分离定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#凸函数的定义"><span class="nav-number">2.4.</span> <span class="nav-text">凸函数的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#凸函数的性质"><span class="nav-number">2.5.</span> <span class="nav-text">凸函数的性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#保凸运算"><span class="nav-number">2.6.</span> <span class="nav-text">保凸运算</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#极限"><span class="nav-number">3.</span> <span class="nav-text">极限</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#极限的直观理解"><span class="nav-number">3.1.</span> <span class="nav-text">极限的直观理解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有限初的极限的定义"><span class="nav-number">3.2.</span> <span class="nav-text">有限初的极限的定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连续"><span class="nav-number">4.</span> <span class="nav-text">连续</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#连续的定义"><span class="nav-number">4.1.</span> <span class="nav-text">连续的定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导数"><span class="nav-number">5.</span> <span class="nav-text">导数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#导数的定义"><span class="nav-number">5.1.</span> <span class="nav-text">导数的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导函数的定义"><span class="nav-number">5.2.</span> <span class="nav-text">导函数的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本的导函数"><span class="nav-number">5.3.</span> <span class="nav-text">基本的导函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#偏导数的直观理解"><span class="nav-number">5.4.</span> <span class="nav-text">偏导数的直观理解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#偏导数的定义"><span class="nav-number">5.5.</span> <span class="nav-text">偏导数的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度的定义"><span class="nav-number">5.6.</span> <span class="nav-text">梯度的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链式法则"><span class="nav-number">5.7.</span> <span class="nav-text">链式法则</span></a></li></ol></li></ol></div>
             
 
           </div>
