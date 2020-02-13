@@ -142,18 +142,18 @@
 
 
 
-  <meta name="description" content="写在之前众所周知，在Windows下安装各种软件都是非常非常非常非常麻烦的，而且用学校的网，就算你挂着某个东西，你也不一定能下载下来。由于生活所需，朕苦于安装anaconda，心态都被被打崩了，这时hao哥给我推荐了scoop，用完之后，感觉良好，坑踩完了之后写着记一下，以便之后不会在踩坑。 安装条件首先你要进入powershell界面，没错就是那个PS开头的那个界面，你要确保你的powershe">
-<meta name="keywords" content="scoop">
+  <meta name="description" content="导入PyTorch包12345678import torchfrom torch import nnimport numpy as nptorch.manual_seed(1)  #设置随机数种子print(torch.__version__)   #查看PyTorch版本torch.set_default_tensor_type(&apos;torch.FloatTensor&apos;)#设置默认的向量类型 生成">
+<meta name="keywords" content="《动手学深度学习》">
 <meta property="og:type" content="article">
-<meta property="og:title" content="scoop快速开始">
-<meta property="og:url" content="http://yoursite.com/2019/05/18/scoop/index.html">
+<meta property="og:title" content="线性回归——PyTorch版代码">
+<meta property="og:url" content="http://yoursite.com/2020/02/13/linear-regression-PyTorch/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
-<meta property="og:description" content="写在之前众所周知，在Windows下安装各种软件都是非常非常非常非常麻烦的，而且用学校的网，就算你挂着某个东西，你也不一定能下载下来。由于生活所需，朕苦于安装anaconda，心态都被被打崩了，这时hao哥给我推荐了scoop，用完之后，感觉良好，坑踩完了之后写着记一下，以便之后不会在踩坑。 安装条件首先你要进入powershell界面，没错就是那个PS开头的那个界面，你要确保你的powershe">
+<meta property="og:description" content="导入PyTorch包12345678import torchfrom torch import nnimport numpy as nptorch.manual_seed(1)  #设置随机数种子print(torch.__version__)   #查看PyTorch版本torch.set_default_tensor_type(&apos;torch.FloatTensor&apos;)#设置默认的向量类型 生成">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-18T13:35:47.241Z">
+<meta property="og:updated_time" content="2020-02-13T15:00:49.086Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="scoop快速开始">
-<meta name="twitter:description" content="写在之前众所周知，在Windows下安装各种软件都是非常非常非常非常麻烦的，而且用学校的网，就算你挂着某个东西，你也不一定能下载下来。由于生活所需，朕苦于安装anaconda，心态都被被打崩了，这时hao哥给我推荐了scoop，用完之后，感觉良好，坑踩完了之后写着记一下，以便之后不会在踩坑。 安装条件首先你要进入powershell界面，没错就是那个PS开头的那个界面，你要确保你的powershe">
+<meta name="twitter:title" content="线性回归——PyTorch版代码">
+<meta name="twitter:description" content="导入PyTorch包12345678import torchfrom torch import nnimport numpy as nptorch.manual_seed(1)  #设置随机数种子print(torch.__version__)   #查看PyTorch版本torch.set_default_tensor_type(&apos;torch.FloatTensor&apos;)#设置默认的向量类型 生成">
 
 
 
@@ -163,7 +163,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/18/scoop/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/13/linear-regression-PyTorch/">
 
 
 
@@ -173,7 +173,7 @@
   };
 </script>
 
-  <title>scoop快速开始 | I'm LaplaTom</title>
+  <title>线性回归——PyTorch版代码 | I'm LaplaTom</title>
   
 
 
@@ -393,7 +393,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/18/scoop/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/13/linear-regression-PyTorch/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCQ">
@@ -410,7 +410,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">scoop快速开始
+          <h1 class="post-title" itemprop="name headline">线性回归——PyTorch版代码
 
               
             
@@ -436,9 +436,13 @@
                 
               
 
-              <time title="创建时间：2019-05-18 21:35:47" itemprop="dateCreated datePublished" datetime="2019-05-18T21:35:47+08:00">2019-05-18</time>
+              <time title="创建时间：2020-02-13 22:39:59 / 修改时间：23:00:49" itemprop="dateCreated datePublished" datetime="2020-02-13T22:39:59+08:00">2020-02-13</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -454,7 +458,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/杂七杂八/" itemprop="url" rel="index"><span itemprop="name">杂七杂八</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PyTorch/" itemprop="url" rel="index"><span itemprop="name">PyTorch</span></a></span>
 
                 
                 
@@ -489,12 +493,15 @@
       
 
       
-        <h3 id="写在之前"><a href="#写在之前" class="headerlink" title="写在之前"></a>写在之前</h3><p>众所周知，在Windows下安装各种软件都是非常非常非常非常麻烦的，而且用学校的网，就算你挂着某个东西，你也不一定能下载下来。由于生活所需，朕苦于安装anaconda，心态都被被打崩了，这时hao哥给我推荐了scoop，用完之后，感觉良好，坑踩完了之后写着记一下，以便之后不会在踩坑。</p>
-<h3 id="安装条件"><a href="#安装条件" class="headerlink" title="安装条件"></a>安装条件</h3><p>首先你要进入powershell界面，没错就是那个PS开头的那个界面，你要确保你的powershell版本是大于等于3的，你可以输入这串代码来查看你的版本：<br><code>$psversiontable.psversion.major # should be &gt;= 3</code><br>确认你已经允许powershell执行本地脚本：<br><code>et-executionpolicy remotesigned -scope currentuser</code></p>
-<h3 id="安装scoop"><a href="#安装scoop" class="headerlink" title="安装scoop"></a>安装scoop</h3><p>在powershell中运行：<br><code>iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code><br>如果你要自定义安装目录可以(假设目标目录为 <strong>C:\scoop</strong>)：<br>`$env:SCOOP=’C:\scoop’</p>
-<p>iex (new-object net.webclient).downloadstring(‘<a href="https://get.scoop.sh&#39;)`" target="_blank" rel="noopener">https://get.scoop.sh&#39;)`</a><br>这样子基本上应该是success了，如果有报错自行百度= =</p>
-<h3 id="使用scoop"><a href="#使用scoop" class="headerlink" title="使用scoop"></a>使用scoop</h3><p>scoop这种傻瓜型软件你可以在help界面看到大部分操作清单，调用方式为:<br><code>scoop help</code><br>你若要搜索软件可以直接：<br><code>scoop search &lt;软件名&gt;</code><br>安装软件的话：<br><code>scoop install &lt;软件名&gt;</code><br>如果提示<em>Couldn’t find manifest for ‘&lt;软件名&gt;’</em>.这时候就需要用<em>bucket</em>，Manage Scoop buckets，是管理可以用scoop下载APP的列表，因为scoop自带的下载APP比较少一些其他第三方的软件需要添加bucket中，scoop提供了一个extras的app列表，来提供更多常用的软件下载，用如下方法添加：<br><code>scoop bucket add extras https://github.com/lukesampson/scoop-extras.git</code><br>添加成功后就能下载软件了<br><code>scoop install extras/anaconda</code><br>若你要自定义安装软件的位置的话，可以选择这个方法(假设安装目录为：C:\apps)：<br> `$env:SCOOP_GLOBAL=’c:\apps’</p>
-<p>scoop install -g &lt;软件名&gt;`<br>PS:scoop安装完成后会自动帮你安装和配好环境，那是相当的厉害。</p>
+        <h2 id="导入PyTorch包"><a href="#导入PyTorch包" class="headerlink" title="导入PyTorch包"></a>导入PyTorch包</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch <span class="keyword">import</span> nn</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">torch.manual_seed(<span class="number">1</span>)  <span class="comment">#设置随机数种子</span></span><br><span class="line"></span><br><span class="line">print(torch.__version__)   <span class="comment">#查看PyTorch版本</span></span><br><span class="line">torch.set_default_tensor_type(<span class="string">'torch.FloatTensor'</span>)<span class="comment">#设置默认的向量类型</span></span><br></pre></td></tr></table></figure>
+<h2 id="生成数据集"><a href="#生成数据集" class="headerlink" title="生成数据集"></a>生成数据集</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生成数据集</span></span><br><span class="line"></span><br><span class="line">num_inputs = <span class="number">2</span></span><br><span class="line">num_examples = <span class="number">1000</span></span><br><span class="line"></span><br><span class="line">true_w = [<span class="number">2</span>, <span class="number">-3.4</span>]</span><br><span class="line">true_b = <span class="number">4.2</span></span><br><span class="line"></span><br><span class="line">features = torch.tensor(np.random.normal(<span class="number">0</span>, <span class="number">1</span>, (num_examples, num_inputs)), dtype=torch.float)</span><br><span class="line">labels = true_w[<span class="number">0</span>] * features[:, <span class="number">0</span>] + true_w[<span class="number">1</span>] * features[:, <span class="number">1</span>] + true_b</span><br><span class="line">labels += torch.tensor(np.random.normal(<span class="number">0</span>, <span class="number">0.01</span>, size=labels.size()), dtype=torch.float)</span><br></pre></td></tr></table></figure>
+<h2 id="读取数据集"><a href="#读取数据集" class="headerlink" title="读取数据集"></a>读取数据集</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取数据集</span></span><br><span class="line"><span class="keyword">import</span> torch.utils.data <span class="keyword">as</span> Data</span><br><span class="line"></span><br><span class="line">batch_size = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># combine featues and labels of dataset</span></span><br><span class="line">dataset = Data.TensorDataset(features, labels)</span><br><span class="line"></span><br><span class="line"><span class="comment"># put dataset into DataLoader</span></span><br><span class="line">data_iter = Data.DataLoader(</span><br><span class="line">    dataset=dataset,  <span class="comment"># torch TensorDataset format</span></span><br><span class="line">    batch_size=batch_size,  <span class="comment"># mini batch size</span></span><br><span class="line">    shuffle=<span class="literal">True</span>,  <span class="comment"># whether shuffle the data or not</span></span><br><span class="line">    num_workers=<span class="number">2</span>,  <span class="comment"># read data in multithreading</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:</span><br><span class="line">    print(X, <span class="string">'\n'</span>, y)</span><br><span class="line">    <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<h2 id="定义模型"><a href="#定义模型" class="headerlink" title="定义模型"></a>定义模型</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义模型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinearNet</span><span class="params">(nn.Module)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, n_feature)</span>:</span></span><br><span class="line">        super(LinearNet, self).__init__()  <span class="comment"># call father function to init</span></span><br><span class="line">        self.linear = nn.Linear(n_feature,</span><br><span class="line">                                <span class="number">1</span>)  <span class="comment"># function prototype: `torch.nn.Linear(in_features, out_features, bias=True)`</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        y = self.linear(x)</span><br><span class="line">        <span class="keyword">return</span> y</span><br><span class="line"></span><br><span class="line">net = LinearNet(num_inputs)</span><br><span class="line">print(net)</span><br><span class="line"><span class="comment"># ways to init a multilayer network</span></span><br><span class="line"><span class="comment">#添加网络层的三种方法</span></span><br><span class="line"><span class="comment"># method one     #</span></span><br><span class="line">net = nn.Sequential(</span><br><span class="line">    nn.Linear(num_inputs, <span class="number">1</span>)</span><br><span class="line">    <span class="comment"># other layers can be added here</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># method two</span></span><br><span class="line">net = nn.Sequential()</span><br><span class="line">net.add_module(<span class="string">'linear'</span>, nn.Linear(num_inputs, <span class="number">1</span>))</span><br><span class="line"><span class="comment"># net.add_module ......</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># method three</span></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line">net = nn.Sequential(OrderedDict([</span><br><span class="line">    (<span class="string">'linear'</span>, nn.Linear(num_inputs, <span class="number">1</span>))</span><br><span class="line">    <span class="comment"># ......</span></span><br><span class="line">]))</span><br><span class="line"></span><br><span class="line">print(net)</span><br><span class="line">print(net[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<h2 id="初始化模型参数"><a href="#初始化模型参数" class="headerlink" title="初始化模型参数"></a>初始化模型参数</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#初始化模型参数</span></span><br><span class="line"><span class="keyword">from</span> torch.nn <span class="keyword">import</span> init</span><br><span class="line"></span><br><span class="line">init.normal_(net[<span class="number">0</span>].weight, mean=<span class="number">0.0</span>, std=<span class="number">0.01</span>)</span><br><span class="line">init.constant_(net[<span class="number">0</span>].bias, val=<span class="number">0.0</span>)  <span class="comment"># or you can use `net[0].bias.data.fill_(0)` to modify it directly</span></span><br><span class="line"><span class="keyword">for</span> param <span class="keyword">in</span> net.parameters():</span><br><span class="line">    print(param)</span><br></pre></td></tr></table></figure>
+<h2 id="定义损失函数"><a href="#定义损失函数" class="headerlink" title="定义损失函数"></a>定义损失函数</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义损失函数</span></span><br><span class="line">loss = nn.MSELoss()  <span class="comment"># nn built-in squared loss function</span></span><br><span class="line"><span class="comment"># function prototype: `torch.nn.MSELoss(size_average=None, reduce=None, reduction='mean')`</span></span><br></pre></td></tr></table></figure>
+<h2 id="定义优化函数"><a href="#定义优化函数" class="headerlink" title="定义优化函数"></a>定义优化函数</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义优化函数</span></span><br><span class="line"><span class="keyword">import</span> torch.optim <span class="keyword">as</span> optim</span><br><span class="line"></span><br><span class="line">optimizer = optim.SGD(net.parameters(), lr=<span class="number">0.03</span>)  <span class="comment"># built-in random gradient descent function</span></span><br><span class="line">print(optimizer)  <span class="comment"># function prototype: `torch.optim.SGD(params, lr=, momentum=0, dampening=0, weight_decay=0, nesterov=False)`</span></span><br></pre></td></tr></table></figure>
+<h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#训练</span></span><br><span class="line">num_epochs = <span class="number">3</span></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(<span class="number">1</span>, num_epochs + <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:</span><br><span class="line">        output = net(X)</span><br><span class="line">        l = loss(output, y.view(<span class="number">-1</span>, <span class="number">1</span>))</span><br><span class="line">        optimizer.zero_grad()  <span class="comment"># reset gradient, equal to net.zero_grad()</span></span><br><span class="line">        l.backward()</span><br><span class="line">        optimizer.step()</span><br><span class="line">    print(<span class="string">'epoch %d, loss: %f'</span> % (epoch, l.item()))</span><br><span class="line"><span class="comment"># result comparision</span></span><br><span class="line">dense = net[<span class="number">0</span>]</span><br><span class="line">print(true_w, dense.weight.data)</span><br><span class="line">print(true_b, dense.bias.data)</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>看着浅显易懂，并且没有TensorFlow那么复杂。</p>
 
       
     </div>
@@ -518,7 +525,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/scoop/" rel="tag"># scoop</a>
+            <a href="/tags/《动手学深度学习》/" rel="tag"># 《动手学深度学习》</a>
           
         </div>
       
@@ -531,8 +538,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/08/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2020/02/13/dive-into-DL-PyTorch-task01/" rel="next" title="《动手学》打卡挑战-task01">
+                <i class="fa fa-chevron-left"></i> 《动手学》打卡挑战-task01
               </a>
             
           </div>
@@ -540,10 +547,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/25/week1-cnn/" rel="prev" title="【学习笔记】week1-cnn">
-                【学习笔记】week1-cnn <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -771,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在之前"><span class="nav-number">1.</span> <span class="nav-text">写在之前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装条件"><span class="nav-number">2.</span> <span class="nav-text">安装条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装scoop"><span class="nav-number">3.</span> <span class="nav-text">安装scoop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用scoop"><span class="nav-number">4.</span> <span class="nav-text">使用scoop</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#导入PyTorch包"><span class="nav-number">1.</span> <span class="nav-text">导入PyTorch包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成数据集"><span class="nav-number">2.</span> <span class="nav-text">生成数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取数据集"><span class="nav-number">3.</span> <span class="nav-text">读取数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义模型"><span class="nav-number">4.</span> <span class="nav-text">定义模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化模型参数"><span class="nav-number">5.</span> <span class="nav-text">初始化模型参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义损失函数"><span class="nav-number">6.</span> <span class="nav-text">定义损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义优化函数"><span class="nav-number">7.</span> <span class="nav-text">定义优化函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练"><span class="nav-number">8.</span> <span class="nav-text">训练</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number"></span> <span class="nav-text">总结</span></a></li></div>
             
 
           </div>
