@@ -142,18 +142,20 @@
 
 
 
-  <meta name="description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task01：线性回归；Softmax与分类模型、多层感知机，在深度学习当中比较基础的几个小知识点，下面分开来讲述。 线性回归什么是线性回归？举个例子，给你多栋房屋的真实出售价格和它们对应的面积和房龄，你通过一个数学公式来表示它们的关系，不需要考虑太多，会先给出一个数学公式： 房屋价格=w_{面积">
+  <meta name="description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task02：文本预处理；语言模型、循环神经网络基础，在一部分是我比较不擅长的内容= = 文本预处理所谓文本，其本质是一类序列数据，一篇文章可以看作是字符串或者单词的序列。而常见的文本预处理通常包括四个步骤：1读入文本-&amp;gt;分词-&amp;gt;建立字典，将每个词映射到一个唯一的索引(index)-&amp;">
 <meta name="keywords" content="《动手学深度学习》">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《动手学》打卡挑战-task01">
-<meta property="og:url" content="http://yoursite.com/2020/02/13/dive-into-DL-PyTorch-task01/index.html">
+<meta property="og:title" content="《动手学》打卡挑战-task02">
+<meta property="og:url" content="http://yoursite.com/2020/02/14/dive-into-DL-PyTorch-task02/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
-<meta property="og:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task01：线性回归；Softmax与分类模型、多层感知机，在深度学习当中比较基础的几个小知识点，下面分开来讲述。 线性回归什么是线性回归？举个例子，给你多栋房屋的真实出售价格和它们对应的面积和房龄，你通过一个数学公式来表示它们的关系，不需要考虑太多，会先给出一个数学公式： 房屋价格=w_{面积">
+<meta property="og:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task02：文本预处理；语言模型、循环神经网络基础，在一部分是我比较不擅长的内容= = 文本预处理所谓文本，其本质是一类序列数据，一篇文章可以看作是字符串或者单词的序列。而常见的文本预处理通常包括四个步骤：1读入文本-&amp;gt;分词-&amp;gt;建立字典，将每个词映射到一个唯一的索引(index)-&amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-14T09:19:37.559Z">
+<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5jkm0v44i.png?imageView2/0/w/640/h/640">
+<meta property="og:updated_time" content="2020-02-14T09:18:53.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《动手学》打卡挑战-task01">
-<meta name="twitter:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task01：线性回归；Softmax与分类模型、多层感知机，在深度学习当中比较基础的几个小知识点，下面分开来讲述。 线性回归什么是线性回归？举个例子，给你多栋房屋的真实出售价格和它们对应的面积和房龄，你通过一个数学公式来表示它们的关系，不需要考虑太多，会先给出一个数学公式： 房屋价格=w_{面积">
+<meta name="twitter:title" content="《动手学》打卡挑战-task02">
+<meta name="twitter:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task02：文本预处理；语言模型、循环神经网络基础，在一部分是我比较不擅长的内容= = 文本预处理所谓文本，其本质是一类序列数据，一篇文章可以看作是字符串或者单词的序列。而常见的文本预处理通常包括四个步骤：1读入文本-&amp;gt;分词-&amp;gt;建立字典，将每个词映射到一个唯一的索引(index)-&amp;">
+<meta name="twitter:image" content="https://cdn.kesci.com/upload/image/q5jkm0v44i.png?imageView2/0/w/640/h/640">
 
 
 
@@ -163,7 +165,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2020/02/13/dive-into-DL-PyTorch-task01/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/14/dive-into-DL-PyTorch-task02/">
 
 
 
@@ -173,7 +175,7 @@
   };
 </script>
 
-  <title>《动手学》打卡挑战-task01 | I'm LaplaTom</title>
+  <title>《动手学》打卡挑战-task02 | I'm LaplaTom</title>
   
 
 
@@ -393,7 +395,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/13/dive-into-DL-PyTorch-task01/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/14/dive-into-DL-PyTorch-task02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCQ">
@@ -410,7 +412,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《动手学》打卡挑战-task01
+          <h1 class="post-title" itemprop="name headline">《动手学》打卡挑战-task02
 
               
             
@@ -436,24 +438,12 @@
                 
               
 
-              <time title="创建时间：2020-02-13 21:01:55" itemprop="dateCreated datePublished" datetime="2020-02-13T21:01:55+08:00">2020-02-13</time>
+              <time title="创建时间：2020-02-14 16:06:28 / 修改时间：17:18:53" itemprop="dateCreated datePublished" datetime="2020-02-14T16:06:28+08:00">2020-02-14</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-14 17:19:37" itemprop="dateModified" datetime="2020-02-14T17:19:37+08:00">2020-02-14</time>
               
             
           </span>
@@ -505,44 +495,71 @@
       
 
       
-        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://www.boyuai.com/elites/course/cZu18YmweLv10OeV" target="_blank" rel="noopener">ElitesAI·动手学深度学习PyTorch版</a><br><a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/" target="_blank" rel="noopener">《动手学深度学习PyTorch版》在线书籍</a><br>本部分为Task01：<code>线性回归</code>；<code>Softmax与分类模型</code>、<code>多层感知机</code>，在深度学习当中比较基础的几个小知识点，下面分开来讲述。</p>
-<h3 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h3><p>什么是线性回归？举个例子，给你多栋房屋的真实出售价格和它们对应的面积和房龄，你通过一个数学公式来表示它们的关系，不需要考虑太多，会先给出一个数学公式：</p>
-<script type="math/tex; mode=display">房屋价格=w_{面积} \times 面积大小 + w_{房龄} \times 房龄 + b</script><p>如果你脑子里第一反应是给出这个公式，那么恭喜你，是个可造之材， <strong>线性回归表示着输出和各个输入之间是线性关系。</strong> 接下来就是第二问，这个数学公式中的未知数的数值怎么来？从深度学习方面来说，我们需要做到以下方面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">收集数据-&gt;模型建立-&gt;训练模型-&gt;数据预测-&gt;模型评估</span><br></pre></td></tr></table></figure></p>
-<h4 id="数据集的概念"><a href="#数据集的概念" class="headerlink" title="数据集的概念"></a>数据集的概念</h4><p>以房屋数据集为例，该数据集被称为<code>训练数据集（training data set）</code>或<code>训练集（training set）</code>，一栋房屋被称为一个<code>样本（sample）</code>，其真实售出价格叫作<code>标签（label）</code>，用来预测标签的两个因素叫作<code>特征（feature）</code>。<strong>特征用来表征样本的特点。</strong></p>
-<h4 id="优化函数-随机梯度下降"><a href="#优化函数-随机梯度下降" class="headerlink" title="优化函数-随机梯度下降"></a>优化函数-随机梯度下降</h4><p>当模型和损失函数形式较为简单时，其误差最小化问题的解可以直接用公式表达出来。这类解叫作<code>解析解（analytical solution）</code>。然而，大多数深度学习模型并没有解析解，只能通过优化算法有限次迭代模型参数来尽可能降低损失函数的值。这类解叫作<code>数值解（numerical solution）</code>。</p>
-<p>在求数值解的优化算法中，<code>`小批量随机梯度下降（mini-batch stochastic gradient descent）</code>在深度学习中被广泛使用。它的算法很简单：<strong>先选取一组模型参数的初始值，如随机选取；接下来对参数进行多次迭代，使每次迭代都可能降低损失函数的值。在每次迭代中，先随机均匀采样一个由固定数目训练数据样本所组成的<code>小批量（mini-batch）</code>$\mathcal{B}$，然后求小批量中数据样本的平均损失有关模型参数的导数（梯度），最后用此结果与预先设定的一个正数的乘积作为模型参数在本次迭代的减小量。</strong></p>
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://www.boyuai.com/elites/course/cZu18YmweLv10OeV" target="_blank" rel="noopener">ElitesAI·动手学深度学习PyTorch版</a><br><a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/" target="_blank" rel="noopener">《动手学深度学习PyTorch版》在线书籍</a><br>本部分为Task02：<code>文本预处理</code>；<code>语言模型</code>、<code>循环神经网络基础</code>，在一部分是我比较不擅长的内容= =</p>
+<h3 id="文本预处理"><a href="#文本预处理" class="headerlink" title="文本预处理"></a>文本预处理</h3><p>所谓文本，其本质是一类序列数据，一篇文章可以看作是字符串或者单词的序列。而常见的文本预处理通常包括四个步骤：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">读入文本-&gt;分词-&gt;建立字典，将每个词映射到一个唯一的索引(index)-&gt;将文本从词的序列转换为索引的序列，方便输入模型</span><br></pre></td></tr></table></figure></p>
+<h4 id="分词"><a href="#分词" class="headerlink" title="分词"></a>分词</h4><p>对每个句子进行分词，也就是将一个句子划分成若干个词(token)，转换为一个词的序列。<br>PS：如果是英文文本，可以直接根据空格进行分词，而如果是中文日文啥的，就需要相关的分词工具（spaCy，NLTK）了（其实我觉得jieba应该也可以用在PyTorch上）。</p>
+<h4 id="建立字典"><a href="#建立字典" class="headerlink" title="建立字典"></a>建立字典</h4><p>为了方便模型处理，我们需要将字符串转换为数字。因此我们需要先构建一个字典（vocabulary），将每个词映射到一个唯一的索引编号。<br>举个例子：<br>[(‘’, 0), (‘the’, 1), (‘time’, 2), (‘machine’, 3), (‘by’, 4), (‘h’, 5), (‘g’, 6), (‘wells’, 7), (‘i’, 8), (‘traveller’, 9)]</p>
+<h4 id="将词转为索引"><a href="#将词转为索引" class="headerlink" title="将词转为索引"></a>将词转为索引</h4><p>使用字典，将单词序列转换为索引序列<br>还是一个例子：<br>words: [‘was’, ‘expounding’, ‘a’, ‘recondite’, ‘matter’, ‘to’, ‘us’, ‘his’, ‘grey’, ‘eyes’, ‘shone’, ‘and’]<br>indices: [20, 21, 22, 23, 24, 16, 25, 26, 27, 28, 29, 30]</p>
+<h4 id="PyTorch代码"><a href="#PyTorch代码" class="headerlink" title="PyTorch代码"></a>PyTorch代码</h4><h3 id="语言模型"><a href="#语言模型" class="headerlink" title="语言模型"></a>语言模型</h3><p>一段自然语言文本可以看作是一个离散时间序列，给定一个长度为$T$的词的序列$w_1, w_2, \ldots, w_T$，语言模型的目标就是评估该序列是否合理，即计算该序列的概率：</p>
 <script type="math/tex; mode=display">
-(\mathbf{w},b) \leftarrow (\mathbf{w},b) - \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \partial_{(\mathbf{w},b)} l^{(i)}(\mathbf{w},b)</script><p>学习率: $\eta$代表在每次优化中，能够学习的步长的大小<br>批量大小: $\mathcal{B}$是小批量计算中的批量大小batch size   </p>
-<p>总结一下，优化函数的有以下两个步骤：</p>
+P(w_1, w_2, \ldots, w_T).</script><h4 id="基于统计的语言模型"><a href="#基于统计的语言模型" class="headerlink" title="基于统计的语言模型"></a>基于统计的语言模型</h4><p>假设序列$w_1, w_2, \ldots, w_T$中的每个词是依次生成的，我们有</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+P(w_1, w_2, \ldots, w_T)
+&= \prod_{t=1}^T P(w_t \mid w_1, \ldots, w_{t-1})\\
+&= P(w_1)P(w_2 \mid w_1) \cdots P(w_T \mid w_1w_2\cdots w_{T-1})
+\end{align*}</script><p>语言模型的参数就是词的概率以及给定前几个词情况下的条件概率。设训练数据集为一个大型文本语料库，如维基百科的所有条目，词的概率可以通过该词在训练数据集中的相对词频来计算，例如，$w_1$的概率可以计算为：</p>
+<script type="math/tex; mode=display">
+\hat P(w_1) = \frac{n(w_1)}{n}</script><p>其中$n(w_1)$为语料库中以$w_1$作为第一个词的文本的数量，$n$为语料库中文本的总数量。<br>类似的，给定$w_1$情况下，$w_2$的条件概率可以计算为：</p>
+<script type="math/tex; mode=display">
+\hat P(w_2 \mid w_1) = \frac{n(w_1, w_2)}{n(w_1)}</script><p>其中$n(w_1, w_2)$为语料库中以$w_1$作为第一个词，$w_2$作为第二个词的文本的数量。</p>
+<h4 id="n元语法"><a href="#n元语法" class="headerlink" title="n元语法"></a>n元语法</h4><p>序列长度增加，计算和存储多个词共同出现的概率的复杂度会呈指数级增加。$n$元语法通过马尔可夫假设简化模型，马尔科夫假设是指一个词的出现只与前面$n$个词相关，即$n$阶马尔可夫链（Markov chain of order $n$），如果$n=1$，那么有$P(w_3 \mid w_1, w_2) = P(w_3 \mid w_2)$。基于$n-1$阶马尔可夫链，我们可以将语言模型改写为</p>
+<script type="math/tex; mode=display">
+P(w_1, w_2, \ldots, w_T) = \prod_{t=1}^T P(w_t \mid w_{t-(n-1)}, \ldots, w_{t-1}) .</script><p>以上也叫$n$元语法（$n$-grams），它是基于$n - 1$阶马尔可夫链的概率语言模型。例如，当$n=2$时，含有4个词的文本序列的概率就可以改写为：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+P(w_1, w_2, w_3, w_4)
+&= P(w_1) P(w_2 \mid w_1) P(w_3 \mid w_1, w_2) P(w_4 \mid w_1, w_2, w_3)\\
+&= P(w_1) P(w_2 \mid w_1) P(w_3 \mid w_2) P(w_4 \mid w_3)
+\end{align*}</script><p>当$n$分别为1、2和3时，我们将其分别称作一元语法（unigram）、二元语法（bigram）和三元语法（trigram）。例如，长度为4的序列$w_1, w_2, w_3, w_4$在一元语法、二元语法和三元语法中的概率分别为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+P(w_1, w_2, w_3, w_4) &=  P(w_1) P(w_2) P(w_3) P(w_4) ,\\
+P(w_1, w_2, w_3, w_4) &=  P(w_1) P(w_2 \mid w_1) P(w_3 \mid w_2) P(w_4 \mid w_3) ,\\
+P(w_1, w_2, w_3, w_4) &=  P(w_1) P(w_2 \mid w_1) P(w_3 \mid w_1, w_2) P(w_4 \mid w_2, w_3) .
+\end{aligned}</script><p>当$n$较小时，$n$元语法往往并不准确。例如，在一元语法中，由三个词组成的句子“你走先”和“你先走”的概率是一样的。然而，当$n$较大时，$n$元语法需要计算并存储大量的词频和多词相邻频率。<br><strong>PS：n-1阶马尔科夫链表示着从第n个词开始，每个词只与其前n-1词有关</strong><br><strong>n元语法有参数空间过大和数据稀疏的缺陷。</strong></p>
+<h4 id="时序数据的采样"><a href="#时序数据的采样" class="headerlink" title="时序数据的采样"></a>时序数据的采样</h4><p>在训练中我们需要每次随机读取小批量样本和标签。与之前章节的实验数据不同的是，时序数据的一个样本通常包含连续的字符。假设时间步数为5，样本序列为5个字符，即“想”“要”“有”“直”“升”。该样本的标签序列为这些字符分别在训练集中的下一个字符，即“要”“有”“直”“升”“机”，即$X$=“想要有直升”，$Y$=“要有直升机”。</p>
+<p>现在我们考虑序列“想要有直升机，想要和你飞到宇宙去”，如果时间步数为5，有以下可能的样本和标签：</p>
 <ul>
-<li>(i)初始化模型参数，一般来说使用随机初始化；</li>
-<li>(ii)我们在数据上迭代多次，通过在负梯度方向移动参数来更新每个参数。</li>
+<li>$X$：“想要有直升”，$Y$：“要有直升机”</li>
+<li>$X$：“要有直升机”，$Y$：“有直升机，”</li>
+<li>$X$：“有直升机，”，$Y$：“直升机，想”</li>
+<li>…</li>
+<li>$X$：“要和你飞到”，$Y$：“和你飞到宇”</li>
+<li>$X$：“和你飞到宇”，$Y$：“你飞到宇宙”</li>
+<li>$X$：“你飞到宇宙”，$Y$：“飞到宇宙去”</li>
 </ul>
-<h4 id="PyTorch代码"><a href="#PyTorch代码" class="headerlink" title="PyTorch代码"></a>PyTorch代码</h4><h3 id="softmax和分类模型"><a href="#softmax和分类模型" class="headerlink" title="softmax和分类模型"></a>softmax和分类模型</h3><p>上面提到，线性回归是基于连续的输出，如果我们要的输出不是连续的，而是离散的呢？就像是要输出0或者1，这种离散的值呢？一个简单的办法是将输出值$o_i$当作预测类别是$i$的置信度，并将值最大的输出所对应的类作为预测输出，即输出 $\underset{i}{\arg\max} o_i$。例如，如果$o_1,o_2,o_3$分别为$0.1,10,0.1$，由于$o_2$最大，那么预测类别为2，其代表猫。<br>但是直接使用输出层的输出有两个问题：</p>
-<pre><code>1. 一方面，由于输出层的输出值的范围不确定，我们难以直观上判断这些值的意义。例如，刚才举的例子中的输出值10表示“很置信”图像类别为猫，因为该输出值是其他两类的输出值的100倍。但如果$o_1=o_3=10^3$，那么输出值10却又表示图像类别为猫的概率很低。
-2. 另一方面，由于真实标签是离散值，这些离散值与不确定范围的输出值之间的误差难以衡量。
-</code></pre><p>softmax运算符（softmax operator）解决了以上两个问题。它通过下式将输出值变换成值为正且和为1的概率分布：</p>
+<p>可以看到，如果序列的长度为$T$，时间步数为$n$，那么一共有$T-n$个合法的样本，但是这些样本有大量的重合，我们通常采用更加高效的采样方式。我们有两种方式对时序数据进行采样，分别是随机采样和相邻采样。其中批量大小<code>batch_size</code>是每个小批量的样本数，<code>num_steps</code>是每个样本所包含的时间步数。</p>
+<h4 id="随机采样"><a href="#随机采样" class="headerlink" title="随机采样"></a>随机采样</h4><p>随机采样表示着每次从数据里随机采样一个小批量。在随机采样中，每个样本是原始序列上任意截取的一段序列，相邻的两个随机小批量在原始序列上的位置不一定相毗邻。</p>
+<h4 id="相邻采样"><a href="#相邻采样" class="headerlink" title="相邻采样"></a>相邻采样</h4><p>在相邻采样中，相邻的两个随机小批量在原始序列上的位置相毗邻。</p>
+<h4 id="PyTorch实现"><a href="#PyTorch实现" class="headerlink" title="PyTorch实现"></a>PyTorch实现</h4><h3 id="循环神经网络基础"><a href="#循环神经网络基础" class="headerlink" title="循环神经网络基础"></a>循环神经网络基础</h3><p>下图展示了如何基于循环神经网络实现语言模型。循环神经网络的本质是基于当前的输入与过去的输入序列，预测序列的下一个字符。循环神经网络引入一个隐藏变量$H$，用$H_{t}$表示$H$在时间步$t$的值。$H_{t}$的计算基于$X_{t}$和$H_{t-1}$，可以认为$H_{t}$记录了到当前字符为止的序列信息，利用$H_{t}$对序列的下一个字符进行预测。<br><img src="https://cdn.kesci.com/upload/image/q5jkm0v44i.png?imageView2/0/w/640/h/640" alt="Image Name"></p>
+<h4 id="循环神经网络的构造"><a href="#循环神经网络的构造" class="headerlink" title="循环神经网络的构造"></a>循环神经网络的构造</h4><p>我们先看循环神经网络的具体构造。假设$\boldsymbol{X}_t \in \mathbb{R}^{n \times d}$是时间步$t$的小批量输入，$\boldsymbol{H}_t  \in \mathbb{R}^{n \times h}$是该时间步的隐藏变量，则：</p>
 <script type="math/tex; mode=display">
- \hat{y}_1, \hat{y}_2, \hat{y}_3 = \text{softmax}(o_1, o_2, o_3)</script><p>其中</p>
+\boldsymbol{H}_t = \phi(\boldsymbol{X}_t \boldsymbol{W}_{xh} + \boldsymbol{H}_{t-1} \boldsymbol{W}_{hh}  + \boldsymbol{b}_h).</script><p>其中，$\boldsymbol{W}_{xh} \in \mathbb{R}^{d \times h}$，$\boldsymbol{W}_{hh} \in \mathbb{R}^{h \times h}$，$\boldsymbol{b}_{h} \in \mathbb{R}^{1 \times h}$，$\phi$函数是非线性激活函数。由于引入了$\boldsymbol{H}_{t-1} \boldsymbol{W}_{hh}$，$H_{t}$能够捕捉截至当前时间步的序列的历史信息，就像是神经网络当前时间步的状态或记忆一样。由于$H_{t}$的计算基于$H_{t-1}$，上式的计算是循环的，使用循环计算的网络即循环神经网络（recurrent neural network）。<br>在时间步$t$，输出层的输出为：</p>
 <script type="math/tex; mode=display">
- \hat{y}1 = \frac{ \exp(o_1)}{\sum_{i=1}^3 \exp(o_i)},\quad \hat{y}2 = \frac{ \exp(o_2)}{\sum_{i=1}^3 \exp(o_i)},\quad \hat{y}3 = \frac{ \exp(o_3)}{\sum_{i=1}^3 \exp(o_i)}.</script><p>因此，分类模型在回归模型的基础上，添加了softmax运算符，使之回归模型成为了分类模型，但值得注意的是，在损失函数当中，其损失值的计算是拿标签值与softmax之后的值进行计算，例如有猫、狗两个种类，我们预测出来的猫和狗的概率分别为0.3、0.7，而实际上的标签是猫，即：猫的概率为，狗的概率为0.因此其交叉熵损失函数(cross entropy)的值为$\frac{(1-0.3)^2}{2}=0.245$</p>
-<h4 id="交叉熵损失函数"><a href="#交叉熵损失函数" class="headerlink" title="交叉熵损失函数"></a>交叉熵损失函数</h4><p>对于样本$i$，我们构造向量$\boldsymbol{y}^{(i)}\in \mathbb{R}^{q}$ ，使其第$y^{(i)}$（样本$i$类别的离散数值）个元素为1，其余为0。这样我们的训练目标可以设为使预测概率分布$\boldsymbol{\hat y}^{(i)}$尽可能接近真实的标签概率分布$\boldsymbol{y}^{(i)}$。</p>
+\boldsymbol{O}_t = \boldsymbol{H}_t \boldsymbol{W}_{hq} + \boldsymbol{b}_q.</script><p>其中$\boldsymbol{W}_{hq} \in \mathbb{R}^{h \times q}$，$\boldsymbol{b}_q \in \mathbb{R}^{1 \times q}$。</p>
+<h4 id="one-hot向量"><a href="#one-hot向量" class="headerlink" title="one-hot向量"></a>one-hot向量</h4><p>假设词典大小是$N$，每次字符对应一个从$0$到$N-1$的唯一的索引，则该字符的向量是一个长度为$N$的向量，若字符的索引是$i$，则该向量的第$i$个位置为$1$，其他位置为$0$。</p>
+<h4 id="裁剪梯度"><a href="#裁剪梯度" class="headerlink" title="裁剪梯度"></a>裁剪梯度</h4><p><strong>循环神经网络中较容易出现梯度衰减或梯度爆炸，这会导致网络几乎无法训练。</strong> 裁剪梯度（clip gradient）是一种应对梯度爆炸的方法。假设我们把所有模型参数的梯度拼接成一个向量 $\boldsymbol{g}$，并设裁剪的阈值是$\theta$。裁剪后的梯度</p>
+<script type="math/tex; mode=display">
+ \min\left(\frac{\theta}{\|\boldsymbol{g}\|}, 1\right)\boldsymbol{g}</script><p>的$L_2$范数不超过$\theta$。</p>
+<h4 id="困惑度"><a href="#困惑度" class="headerlink" title="困惑度"></a>困惑度</h4><p>我们通常使用困惑度（perplexity）来评价语言模型的好坏。回忆一下<a href="../chapter_deep-learning-basics/softmax-regression.ipynb">“softmax回归”</a>一节中交叉熵损失函数的定义。困惑度是对交叉熵损失函数做指数运算后得到的值。特别地，</p>
 <ul>
-<li>平方损失估计  </li>
+<li>最佳情况下，模型总是把标签类别的概率预测为1，此时困惑度为1；</li>
+<li>最坏情况下，模型总是把标签类别的概率预测为0，此时困惑度为正无穷；</li>
+<li>基线情况下，模型总是预测所有类别的概率都相同，此时困惑度为类别个数。</li>
 </ul>
-<script type="math/tex; mode=display">
-\begin{aligned}Loss = |\boldsymbol{\hat y}^{(i)}-\boldsymbol{y}^{(i)}|^2/2\end{aligned}</script><p>然而，想要预测分类结果正确，我们其实并不需要预测概率完全等于标签概率。例如，在图像分类的例子里，如果$y^{(i)}=3$，那么我们只需要$\hat{y}^{(i)}_3$比其他两个预测值$\hat{y}^{(i)}_1$和$\hat{y}^{(i)}_2$大就行了。即使$\hat{y}^{(i)}_3$值为0.6，不管其他两个预测值为多少，类别预测均正确。而平方损失则过于严格，例如$\hat y^{(i)}_1=\hat y^{(i)}_2=0.2$比$\hat y^{(i)}_1=0, \hat y^{(i)}_2=0.4$的损失要小很多，虽然两者都有同样正确的分类预测结果。</p>
-<p>改善上述问题的一个方法是使用更适合衡量两个概率分布差异的测量函数。其中，交叉熵（cross entropy）是一个常用的衡量方法：</p>
-<script type="math/tex; mode=display">
-H\left(\boldsymbol y^{(i)}, \boldsymbol {\hat y}^{(i)}\right ) = -\sum_{j=1}^q y_j^{(i)} \log \hat y_j^{(i)},</script><p>其中带下标的$y_j^{(i)}$是向量$\boldsymbol y^{(i)}$中非0即1的元素，需要注意将它与样本$i$类别的离散数值，即不带下标的$y^{(i)}$区分。在上式中，我们知道向量$\boldsymbol y^{(i)}$中只有第$y^{(i)}$个元素$y^{(i)}{y^{(i)}}$为1，其余全为0，于是$H(\boldsymbol y^{(i)}, \boldsymbol {\hat y}^{(i)}) = -\log \hat y_{y^{(i)}}^{(i)}$。也就是说，交叉熵只关心对正确类别的预测概率，因为只要其值足够大，就可以确保分类结果正确。当然，遇到一个样本有多个标签时，例如图像里含有不止一个物体时，我们并不能做这一步简化。但即便对于这种情况，交叉熵同样只关心对图像中出现的物体类别的预测概率。</p>
-<p>假设训练数据集的样本数为$n$，交叉熵损失函数定义为 </p>
-<script type="math/tex; mode=display">
-\ell(\boldsymbol{\Theta}) = \frac{1}{n} \sum_{i=1}^n H\left(\boldsymbol y^{(i)}, \boldsymbol {\hat y}^{(i)}\right ),</script><p>其中$\boldsymbol{\Theta}$代表模型参数。同样地，如果每个样本只有一个标签，那么交叉熵损失可以简写成$\ell(\boldsymbol{\Theta}) = -(1/n) \sum_{i=1}^n \log \hat y_{y^{(i)}}^{(i)}$。从另一个角度来看，我们知道最小化$\ell(\boldsymbol{\Theta})$等价于最大化$\exp(-n\ell(\boldsymbol{\Theta}))=\prod_{i=1}^n \hat y_{y^{(i)}}^{(i)}$，即最小化交叉熵损失函数等价于最大化训练数据集所有标签类别的联合预测概率。</p>
-<h4 id="PyTorch代码-1"><a href="#PyTorch代码-1" class="headerlink" title="PyTorch代码"></a>PyTorch代码</h4><h3 id="多层感知机"><a href="#多层感知机" class="headerlink" title="多层感知机"></a>多层感知机</h3><p>多层感知机就是含有至少一个隐藏层的由全连接层组成的神经网络，且每个隐藏层的输出通过激活函数进行变换。多层感知机的层数和各隐藏层中隐藏单元个数都是超参数。以单隐藏层为例并沿用本节之前定义的符号，多层感知机按以下方式计算输出：</p>
-<script type="math/tex; mode=display">
- \begin{aligned} \boldsymbol{H} &= \phi(\boldsymbol{X} \boldsymbol{W}_h + \boldsymbol{b}_h),\\ \boldsymbol{O} &= \boldsymbol{H} \boldsymbol{W}_o + \boldsymbol{b}_o, \end{aligned}</script><p>其中$\phi$表示激活函数。</p>
-<h4 id="关于激活函数的选择"><a href="#关于激活函数的选择" class="headerlink" title="关于激活函数的选择"></a>关于激活函数的选择</h4><p>ReLu函数是一个通用的激活函数，目前在大多数情况下使用。但是，ReLU函数只能在隐藏层中使用。<br>用于分类器时，sigmoid函数及其组合通常效果更好。由于梯度消失问题，有时要避免使用sigmoid和tanh函数。<br>在神经网络层数较多的时候，最好使用ReLu函数，ReLu函数比较简单计算量少，而sigmoid和tanh函数计算量大很多。<br>在选择激活函数的时候可以先选用ReLu函数如果效果不理想可以尝试其他激活函数。</p>
-<h4 id="PyTorch代码-2"><a href="#PyTorch代码-2" class="headerlink" title="PyTorch代码"></a>PyTorch代码</h4>
+<p>显然，任何一个有效模型的困惑度必须小于类别个数。</p>
+<h4 id="PyTorch代码-1"><a href="#PyTorch代码-1" class="headerlink" title="PyTorch代码"></a>PyTorch代码</h4>
       
     </div>
 
@@ -578,8 +595,8 @@ H\left(\boldsymbol y^{(i)}, \boldsymbol {\hat y}^{(i)}\right ) = -\sum_{j=1}^q y
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/10/boyuAI-AImath-Calculus/" rel="next" title="ElitesAI·人工智能中的数学基础之微积分">
-                <i class="fa fa-chevron-left"></i> ElitesAI·人工智能中的数学基础之微积分
+              <a href="/2020/02/13/linear-regression-PyTorch/" rel="next" title="线性回归——PyTorch版代码">
+                <i class="fa fa-chevron-left"></i> 线性回归——PyTorch版代码
               </a>
             
           </div>
@@ -587,10 +604,6 @@ H\left(\boldsymbol y^{(i)}, \boldsymbol {\hat y}^{(i)}\right ) = -\sum_{j=1}^q y
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/13/linear-regression-PyTorch/" rel="prev" title="线性回归——PyTorch版代码">
-                线性回归——PyTorch版代码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -818,7 +831,7 @@ H\left(\boldsymbol y^{(i)}, \boldsymbol {\hat y}^{(i)}\right ) = -\sum_{j=1}^q y
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性回归"><span class="nav-number">2.</span> <span class="nav-text">线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集的概念"><span class="nav-number">2.1.</span> <span class="nav-text">数据集的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优化函数-随机梯度下降"><span class="nav-number">2.2.</span> <span class="nav-text">优化函数-随机梯度下降</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyTorch代码"><span class="nav-number">2.3.</span> <span class="nav-text">PyTorch代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#softmax和分类模型"><span class="nav-number">3.</span> <span class="nav-text">softmax和分类模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#交叉熵损失函数"><span class="nav-number">3.1.</span> <span class="nav-text">交叉熵损失函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyTorch代码-1"><span class="nav-number">3.2.</span> <span class="nav-text">PyTorch代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多层感知机"><span class="nav-number">4.</span> <span class="nav-text">多层感知机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于激活函数的选择"><span class="nav-number">4.1.</span> <span class="nav-text">关于激活函数的选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyTorch代码-2"><span class="nav-number">4.2.</span> <span class="nav-text">PyTorch代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本预处理"><span class="nav-number">2.</span> <span class="nav-text">文本预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分词"><span class="nav-number">2.1.</span> <span class="nav-text">分词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建立字典"><span class="nav-number">2.2.</span> <span class="nav-text">建立字典</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将词转为索引"><span class="nav-number">2.3.</span> <span class="nav-text">将词转为索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyTorch代码"><span class="nav-number">2.4.</span> <span class="nav-text">PyTorch代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语言模型"><span class="nav-number">3.</span> <span class="nav-text">语言模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基于统计的语言模型"><span class="nav-number">3.1.</span> <span class="nav-text">基于统计的语言模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#n元语法"><span class="nav-number">3.2.</span> <span class="nav-text">n元语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时序数据的采样"><span class="nav-number">3.3.</span> <span class="nav-text">时序数据的采样</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#随机采样"><span class="nav-number">3.4.</span> <span class="nav-text">随机采样</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相邻采样"><span class="nav-number">3.5.</span> <span class="nav-text">相邻采样</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyTorch实现"><span class="nav-number">3.6.</span> <span class="nav-text">PyTorch实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环神经网络基础"><span class="nav-number">4.</span> <span class="nav-text">循环神经网络基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#循环神经网络的构造"><span class="nav-number">4.1.</span> <span class="nav-text">循环神经网络的构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#one-hot向量"><span class="nav-number">4.2.</span> <span class="nav-text">one-hot向量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#裁剪梯度"><span class="nav-number">4.3.</span> <span class="nav-text">裁剪梯度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#困惑度"><span class="nav-number">4.4.</span> <span class="nav-text">困惑度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyTorch代码-1"><span class="nav-number">4.5.</span> <span class="nav-text">PyTorch代码</span></a></li></ol></li></ol></div>
             
 
           </div>
