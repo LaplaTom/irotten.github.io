@@ -142,18 +142,20 @@
 
 
 
-  <meta name="description" content="导入PyTorch包12345678import torchfrom torch import nnimport numpy as nptorch.manual_seed(1)  #设置随机数种子print(torch.__version__)   #查看PyTorch版本torch.set_default_tensor_type(&apos;torch.FloatTensor&apos;)#设置默认的向量类型 生成">
+  <meta name="description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task03：欠拟合、过拟合及其解决办法；梯度消失、梯度爆炸、循环神经网络进阶，在前两个部分还是比较理解的，但是在最后一部分还是得多努力= = 欠拟合、过拟合及其解决办法训练误差和泛化误差训练误差（training error）指模型在训练数据集上表现出的误差。泛化误差（generalizatio">
 <meta name="keywords" content="《动手学深度学习》">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性回归——PyTorch版代码">
-<meta property="og:url" content="http://yoursite.com/2020/02/13/linear-regression-PyTorch/index.html">
+<meta property="og:title" content="《动手学》打卡挑战-task03">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/dive-into-DL-PyTorch-task03/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
-<meta property="og:description" content="导入PyTorch包12345678import torchfrom torch import nnimport numpy as nptorch.manual_seed(1)  #设置随机数种子print(torch.__version__)   #查看PyTorch版本torch.set_default_tensor_type(&apos;torch.FloatTensor&apos;)#设置默认的向量类型 生成">
+<meta property="og:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task03：欠拟合、过拟合及其解决办法；梯度消失、梯度爆炸、循环神经网络进阶，在前两个部分还是比较理解的，但是在最后一部分还是得多努力= = 欠拟合、过拟合及其解决办法训练误差和泛化误差训练误差（training error）指模型在训练数据集上表现出的误差。泛化误差（generalizatio">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-13T15:00:49.086Z">
+<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5jd69in3m.png?imageView2/0/w/960/h/960">
+<meta property="og:updated_time" content="2020-02-18T08:54:12.503Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性回归——PyTorch版代码">
-<meta name="twitter:description" content="导入PyTorch包12345678import torchfrom torch import nnimport numpy as nptorch.manual_seed(1)  #设置随机数种子print(torch.__version__)   #查看PyTorch版本torch.set_default_tensor_type(&apos;torch.FloatTensor&apos;)#设置默认的向量类型 生成">
+<meta name="twitter:title" content="《动手学》打卡挑战-task03">
+<meta name="twitter:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task03：欠拟合、过拟合及其解决办法；梯度消失、梯度爆炸、循环神经网络进阶，在前两个部分还是比较理解的，但是在最后一部分还是得多努力= = 欠拟合、过拟合及其解决办法训练误差和泛化误差训练误差（training error）指模型在训练数据集上表现出的误差。泛化误差（generalizatio">
+<meta name="twitter:image" content="https://cdn.kesci.com/upload/image/q5jd69in3m.png?imageView2/0/w/960/h/960">
 
 
 
@@ -163,7 +165,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2020/02/13/linear-regression-PyTorch/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/18/dive-into-DL-PyTorch-task03/">
 
 
 
@@ -173,7 +175,7 @@
   };
 </script>
 
-  <title>线性回归——PyTorch版代码 | I'm LaplaTom</title>
+  <title>《动手学》打卡挑战-task03 | I'm LaplaTom</title>
   
 
 
@@ -393,7 +395,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/13/linear-regression-PyTorch/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/dive-into-DL-PyTorch-task03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCQ">
@@ -410,7 +412,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">线性回归——PyTorch版代码
+          <h1 class="post-title" itemprop="name headline">《动手学》打卡挑战-task03
 
               
             
@@ -436,7 +438,7 @@
                 
               
 
-              <time title="创建时间：2020-02-13 22:39:59 / 修改时间：23:00:49" itemprop="dateCreated datePublished" datetime="2020-02-13T22:39:59+08:00">2020-02-13</time>
+              <time title="创建时间：2020-02-18 16:12:22 / 修改时间：16:54:12" itemprop="dateCreated datePublished" datetime="2020-02-18T16:12:22+08:00">2020-02-18</time>
             
 
             
@@ -493,15 +495,38 @@
       
 
       
-        <h2 id="导入PyTorch包"><a href="#导入PyTorch包" class="headerlink" title="导入PyTorch包"></a>导入PyTorch包</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch <span class="keyword">import</span> nn</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">torch.manual_seed(<span class="number">1</span>)  <span class="comment">#设置随机数种子</span></span><br><span class="line"></span><br><span class="line">print(torch.__version__)   <span class="comment">#查看PyTorch版本</span></span><br><span class="line">torch.set_default_tensor_type(<span class="string">'torch.FloatTensor'</span>)<span class="comment">#设置默认的向量类型</span></span><br></pre></td></tr></table></figure>
-<h2 id="生成数据集"><a href="#生成数据集" class="headerlink" title="生成数据集"></a>生成数据集</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生成数据集</span></span><br><span class="line"></span><br><span class="line">num_inputs = <span class="number">2</span></span><br><span class="line">num_examples = <span class="number">1000</span></span><br><span class="line"></span><br><span class="line">true_w = [<span class="number">2</span>, <span class="number">-3.4</span>]</span><br><span class="line">true_b = <span class="number">4.2</span></span><br><span class="line"></span><br><span class="line">features = torch.tensor(np.random.normal(<span class="number">0</span>, <span class="number">1</span>, (num_examples, num_inputs)), dtype=torch.float)</span><br><span class="line">labels = true_w[<span class="number">0</span>] * features[:, <span class="number">0</span>] + true_w[<span class="number">1</span>] * features[:, <span class="number">1</span>] + true_b</span><br><span class="line">labels += torch.tensor(np.random.normal(<span class="number">0</span>, <span class="number">0.01</span>, size=labels.size()), dtype=torch.float)</span><br></pre></td></tr></table></figure>
-<h2 id="读取数据集"><a href="#读取数据集" class="headerlink" title="读取数据集"></a>读取数据集</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取数据集</span></span><br><span class="line"><span class="keyword">import</span> torch.utils.data <span class="keyword">as</span> Data</span><br><span class="line"></span><br><span class="line">batch_size = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># combine featues and labels of dataset</span></span><br><span class="line">dataset = Data.TensorDataset(features, labels)</span><br><span class="line"></span><br><span class="line"><span class="comment"># put dataset into DataLoader</span></span><br><span class="line">data_iter = Data.DataLoader(</span><br><span class="line">    dataset=dataset,  <span class="comment"># torch TensorDataset format</span></span><br><span class="line">    batch_size=batch_size,  <span class="comment"># mini batch size</span></span><br><span class="line">    shuffle=<span class="literal">True</span>,  <span class="comment"># whether shuffle the data or not</span></span><br><span class="line">    num_workers=<span class="number">2</span>,  <span class="comment"># read data in multithreading</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:</span><br><span class="line">    print(X, <span class="string">'\n'</span>, y)</span><br><span class="line">    <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-<h2 id="定义模型"><a href="#定义模型" class="headerlink" title="定义模型"></a>定义模型</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义模型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinearNet</span><span class="params">(nn.Module)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, n_feature)</span>:</span></span><br><span class="line">        super(LinearNet, self).__init__()  <span class="comment"># call father function to init</span></span><br><span class="line">        self.linear = nn.Linear(n_feature,</span><br><span class="line">                                <span class="number">1</span>)  <span class="comment"># function prototype: `torch.nn.Linear(in_features, out_features, bias=True)`</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        y = self.linear(x)</span><br><span class="line">        <span class="keyword">return</span> y</span><br><span class="line"></span><br><span class="line">net = LinearNet(num_inputs)</span><br><span class="line">print(net)</span><br><span class="line"><span class="comment"># ways to init a multilayer network</span></span><br><span class="line"><span class="comment">#添加网络层的三种方法</span></span><br><span class="line"><span class="comment"># method one     #</span></span><br><span class="line">net = nn.Sequential(</span><br><span class="line">    nn.Linear(num_inputs, <span class="number">1</span>)</span><br><span class="line">    <span class="comment"># other layers can be added here</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># method two</span></span><br><span class="line">net = nn.Sequential()</span><br><span class="line">net.add_module(<span class="string">'linear'</span>, nn.Linear(num_inputs, <span class="number">1</span>))</span><br><span class="line"><span class="comment"># net.add_module ......</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># method three</span></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line">net = nn.Sequential(OrderedDict([</span><br><span class="line">    (<span class="string">'linear'</span>, nn.Linear(num_inputs, <span class="number">1</span>))</span><br><span class="line">    <span class="comment"># ......</span></span><br><span class="line">]))</span><br><span class="line"></span><br><span class="line">print(net)</span><br><span class="line">print(net[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
-<h2 id="初始化模型参数"><a href="#初始化模型参数" class="headerlink" title="初始化模型参数"></a>初始化模型参数</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#初始化模型参数</span></span><br><span class="line"><span class="keyword">from</span> torch.nn <span class="keyword">import</span> init</span><br><span class="line"></span><br><span class="line">init.normal_(net[<span class="number">0</span>].weight, mean=<span class="number">0.0</span>, std=<span class="number">0.01</span>)</span><br><span class="line">init.constant_(net[<span class="number">0</span>].bias, val=<span class="number">0.0</span>)  <span class="comment"># or you can use `net[0].bias.data.fill_(0)` to modify it directly</span></span><br><span class="line"><span class="keyword">for</span> param <span class="keyword">in</span> net.parameters():</span><br><span class="line">    print(param)</span><br></pre></td></tr></table></figure>
-<h2 id="定义损失函数"><a href="#定义损失函数" class="headerlink" title="定义损失函数"></a>定义损失函数</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义损失函数</span></span><br><span class="line">loss = nn.MSELoss()  <span class="comment"># nn built-in squared loss function</span></span><br><span class="line"><span class="comment"># function prototype: `torch.nn.MSELoss(size_average=None, reduce=None, reduction='mean')`</span></span><br></pre></td></tr></table></figure>
-<h2 id="定义优化函数"><a href="#定义优化函数" class="headerlink" title="定义优化函数"></a>定义优化函数</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义优化函数</span></span><br><span class="line"><span class="keyword">import</span> torch.optim <span class="keyword">as</span> optim</span><br><span class="line"></span><br><span class="line">optimizer = optim.SGD(net.parameters(), lr=<span class="number">0.03</span>)  <span class="comment"># built-in random gradient descent function</span></span><br><span class="line">print(optimizer)  <span class="comment"># function prototype: `torch.optim.SGD(params, lr=, momentum=0, dampening=0, weight_decay=0, nesterov=False)`</span></span><br></pre></td></tr></table></figure>
-<h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#训练</span></span><br><span class="line">num_epochs = <span class="number">3</span></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(<span class="number">1</span>, num_epochs + <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:</span><br><span class="line">        output = net(X)</span><br><span class="line">        l = loss(output, y.view(<span class="number">-1</span>, <span class="number">1</span>))</span><br><span class="line">        optimizer.zero_grad()  <span class="comment"># reset gradient, equal to net.zero_grad()</span></span><br><span class="line">        l.backward()</span><br><span class="line">        optimizer.step()</span><br><span class="line">    print(<span class="string">'epoch %d, loss: %f'</span> % (epoch, l.item()))</span><br><span class="line"><span class="comment"># result comparision</span></span><br><span class="line">dense = net[<span class="number">0</span>]</span><br><span class="line">print(true_w, dense.weight.data)</span><br><span class="line">print(true_b, dense.bias.data)</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>看着浅显易懂，并且没有TensorFlow那么复杂。</p>
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://www.boyuai.com/elites/course/cZu18YmweLv10OeV" target="_blank" rel="noopener">ElitesAI·动手学深度学习PyTorch版</a><br><a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/" target="_blank" rel="noopener">《动手学深度学习PyTorch版》在线书籍</a><br>本部分为Task03：<code>欠拟合、过拟合及其解决办法</code>；<code>梯度消失、梯度爆炸</code>、<code>循环神经网络进阶</code>，在前两个部分还是比较理解的，但是在最后一部分还是得多努力= =</p>
+<h3 id="欠拟合、过拟合及其解决办法"><a href="#欠拟合、过拟合及其解决办法" class="headerlink" title="欠拟合、过拟合及其解决办法"></a>欠拟合、过拟合及其解决办法</h3><h4 id="训练误差和泛化误差"><a href="#训练误差和泛化误差" class="headerlink" title="训练误差和泛化误差"></a>训练误差和泛化误差</h4><p><strong>训练误差（training error）</strong>指模型在训练数据集上表现出的误差。<br><strong>泛化误差（generalization error）</strong>指模型在任意一个测试数据样本上表现出的误差的期望，并常常通过测试数据集上的误差来近似。</p>
+<h4 id="过拟合和欠拟合"><a href="#过拟合和欠拟合" class="headerlink" title="过拟合和欠拟合"></a>过拟合和欠拟合</h4><ul>
+<li>模型无法得到较低的训练误差，我们将这一现象称作欠拟合（underfitting）；</li>
+<li>模型的训练误差远小于它在测试数据集上的误差，我们称该现象为过拟合（overfitting）。</li>
+<li>欠拟合现象：模型无法达到一个较低的误差 </li>
+<li>过拟合现象：训练误差较低但是泛化误差依然较高，二者相差较大<br>在实践中，我们要尽可能同时应对欠拟合和过拟合。虽然有很多因素可能导致这两种拟合问题，重点是两个因素：<strong>模型复杂度</strong>和<strong>训练数据集大小</strong>。</li>
+</ul>
+<h4 id="L2范数正则化（regularization）"><a href="#L2范数正则化（regularization）" class="headerlink" title="L2范数正则化（regularization）"></a>L2范数正则化（regularization）</h4><p>权重衰减等价于 $L_2$ 范数正则化（regularization）。正则化通过为模型损失函数添加惩罚项使学出的模型参数值较小，是应对<strong>过拟合</strong>的常用手段。<br>$L_2$范数正则化在模型原损失函数基础上添加$L_2$范数惩罚项，从而得到训练所需要最小化的函数。$L_2$范数惩罚项指的是模型权重参数每个元素的平方和与一个正的常数的乘积。以线性回归中的线性回归损失函数为例</p>
+<script type="math/tex; mode=display">
+ \ell(w_1, w_2, b) = \frac{1}{n} \sum_{i=1}^n \frac{1}{2}\left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right)^2</script><p>其中$w_1, w_2$是权重参数，$b$是偏差参数，样本$i$的输入为$x_1^{(i)}, x_2^{(i)}$，标签为$y^{(i)}$，样本数为$n$。将权重参数用向量$\boldsymbol{w} = [w_1, w_2]$表示，带有$L_2$范数惩罚项的新损失函数为</p>
+<script type="math/tex; mode=display">
+\ell(w_1, w_2, b) + \frac{\lambda}{2n} |\boldsymbol{w}|^2,</script><p>其中超参数$\lambda &gt; 0$。当权重参数均为0时，惩罚项最小。当$\lambda$较大时，惩罚项在损失函数中的比重较大，这通常会使学到的权重参数的元素较接近0。当$\lambda$设为0时，惩罚项完全不起作用。上式中$L_2$范数平方$|\boldsymbol{w}|^2$展开后得到$w_1^2 + w_2^2$。<br>有了$L_2$范数惩罚项后，在小批量随机梯度下降中，我们将线性回归一节中权重$w_1$和$w_2$的迭代方式更改为</p>
+<script type="math/tex; mode=display">
+ \begin{aligned} w_1 &\leftarrow \left(1- \frac{\eta\lambda}{|\mathcal{B}|} \right)w_1 - \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}x_1^{(i)} \left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right),\\ w_2 &\leftarrow \left(1- \frac{\eta\lambda}{|\mathcal{B}|} \right)w_2 - \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}x_2^{(i)} \left(x_1^{(i)} w_1 + x_2^{(i)} w_2 + b - y^{(i)}\right). \end{aligned}</script><p>可见，$L_2$范数正则化令权重$w_1$和$w_2$先自乘小于1的数，再减去不含惩罚项的梯度。因此，$L_2$范数正则化又叫权重衰减。权重衰减通过惩罚绝对值较大的模型参数为需要学习的模型增加了限制，这可能对过拟合有效。</p>
+<h4 id="丢弃法"><a href="#丢弃法" class="headerlink" title="丢弃法"></a>丢弃法</h4><p>多层感知机中神经网络图描述了一个单隐藏层的多层感知机。其中输入个数为4，隐藏单元个数为5，且隐藏单元$h_i$（$i=1, \ldots, 5$）的计算表达式为</p>
+<script type="math/tex; mode=display">
+ h_i = \phi\left(x_1 w_{1i} + x_2 w_{2i} + x_3 w_{3i} + x_4 w_{4i} + b_i\right)</script><p>这里$\phi$是激活函数，$x_1, \ldots, x_4$是输入，隐藏单元$i$的权重参数为$w_{1i}, \ldots, w_{4i}$，偏差参数为$b_i$。当对该隐藏层使用丢弃法时，该层的隐藏单元将有一定概率被丢弃掉。设丢弃概率为$p$，那么有$p$的概率$h_i$会被清零，有$1-p$的概率$h_i$会除以$1-p$做拉伸。丢弃概率是丢弃法的超参数。具体来说，设随机变量$\xi_i$为0和1的概率分别为$p$和$1-p$。使用丢弃法时我们计算新的隐藏单元$h_i’$</p>
+<script type="math/tex; mode=display">
+ h_i' = \frac{\xi_i}{1-p} h_i</script><p>由于$E(\xi_i) = 1-p$，因此</p>
+<script type="math/tex; mode=display">
+ E(h_i') = \frac{E(\xi_i)}{1-p}h_i = h_i</script><p>即丢弃法不改变其输入的期望值。让我们对之前多层感知机的神经网络中的隐藏层使用丢弃法，一种可能的结果如图所示，其中$h_2$和$h_5$被清零。这时输出值的计算不再依赖$h_2$和$h_5$，在反向传播时，与这两个隐藏单元相关的权重的梯度均为0。由于在训练中隐藏层神经元的丢弃是随机的，即$h_1, \ldots, h_5$都有可能被清零，输出层的计算无法过度依赖$h_1, \ldots, h_5$中的任一个，从而在训练模型时起到正则化的作用，并可以用来应对过拟合。在测试模型时，我们为了拿到更加确定性的结果，一般不使用丢弃法<br><img src="https://cdn.kesci.com/upload/image/q5jd69in3m.png?imageView2/0/w/960/h/960" alt="Image Name"></p>
+<h4 id="PyTorch代码"><a href="#PyTorch代码" class="headerlink" title="PyTorch代码"></a>PyTorch代码</h4><h3 id="梯度消失、梯度爆炸"><a href="#梯度消失、梯度爆炸" class="headerlink" title="梯度消失、梯度爆炸"></a>梯度消失、梯度爆炸</h3><h4 id="消失或爆炸"><a href="#消失或爆炸" class="headerlink" title="消失或爆炸"></a>消失或爆炸</h4><p><strong>当神经网络的层数较多时，模型的数值稳定性容易变差。</strong><br>假设一个层数为$L$的多层感知机的第$l$层$\boldsymbol{H}^{(l)}$的权重参数为$\boldsymbol{W}^{(l)}$，输出层$\boldsymbol{H}^{(L)}$的权重参数为$\boldsymbol{W}^{(L)}$。为了便于讨论，不考虑偏差参数，且设所有隐藏层的激活函数为恒等映射（identity mapping）$\phi(x) = x$。给定输入$\boldsymbol{X}$，多层感知机的第$l$层的输出$\boldsymbol{H}^{(l)} = \boldsymbol{X} \boldsymbol{W}^{(1)} \boldsymbol{W}^{(2)} \ldots \boldsymbol{W}^{(l)}$。此时，如果层数$l$较大，$\boldsymbol{H}^{(l)}$的计算可能会出现衰减或爆炸。举个例子，假设输入和所有层的权重参数都是标量，如权重参数为0.2和5，多层感知机的第30层输出为输入$\boldsymbol{X}$分别与$0.2^{30} \approx 1 \times 10^{-21}$（消失）和$5^{30} \approx 9 \times 10^{20}$（爆炸）的乘积。当层数较多时，梯度的计算也容易出现消失或爆炸</p>
+<h4 id="协变量偏移"><a href="#协变量偏移" class="headerlink" title="协变量偏移"></a>协变量偏移</h4><p><strong>表现：</strong>在一个看起来与测试集有着本质不同的数据集上进行训练，而不考虑如何适应新的情况。<br>统计学家称这种协变量变化是因为问题的根源在于特征分布的变化（即协变量的变化）。数学上，我们可以说P（x）改变了，但P（y∣x）保持不变。尽管它的有用性并不局限于此，当我们认为x导致y时，协变量移位通常是正确的假设。</p>
+<h4 id="标签偏移"><a href="#标签偏移" class="headerlink" title="标签偏移"></a>标签偏移</h4><p>标签偏移可以简单理解为测试时出现了训练时没有的标签。</p>
+<h4 id="概念偏移"><a href="#概念偏移" class="headerlink" title="概念偏移"></a>概念偏移</h4><p>标签本身的定义发生变化的情况。</p>
+<h4 id="PyTorch代码-1"><a href="#PyTorch代码-1" class="headerlink" title="PyTorch代码"></a>PyTorch代码</h4><h3 id="循环神经网络进阶（具体之后开个专门的）"><a href="#循环神经网络进阶（具体之后开个专门的）" class="headerlink" title="循环神经网络进阶（具体之后开个专门的）"></a>循环神经网络进阶（具体之后开个专门的）</h3><ul>
+<li>GRU</li>
+<li>LSTM(long short-term memory)</li>
+<li>深度循环神经网络</li>
+<li>双向循环神经网络</li>
+</ul>
 
       
     </div>
@@ -538,8 +563,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/13/dive-into-DL-PyTorch-task01/" rel="next" title="《动手学》打卡挑战-task01">
-                <i class="fa fa-chevron-left"></i> 《动手学》打卡挑战-task01
+              <a href="/2020/02/14/dive-into-DL-PyTorch-task02/" rel="next" title="《动手学》打卡挑战-task02">
+                <i class="fa fa-chevron-left"></i> 《动手学》打卡挑战-task02
               </a>
             
           </div>
@@ -548,8 +573,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/02/14/dive-into-DL-PyTorch-task02/" rel="prev" title="《动手学》打卡挑战-task02">
-                《动手学》打卡挑战-task02 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/18/dive-into-DL-PyTorch-task04/" rel="prev" title="《动手学》打卡挑战-task04">
+                《动手学》打卡挑战-task04 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -778,7 +803,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#导入PyTorch包"><span class="nav-number">1.</span> <span class="nav-text">导入PyTorch包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成数据集"><span class="nav-number">2.</span> <span class="nav-text">生成数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取数据集"><span class="nav-number">3.</span> <span class="nav-text">读取数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义模型"><span class="nav-number">4.</span> <span class="nav-text">定义模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化模型参数"><span class="nav-number">5.</span> <span class="nav-text">初始化模型参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义损失函数"><span class="nav-number">6.</span> <span class="nav-text">定义损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义优化函数"><span class="nav-number">7.</span> <span class="nav-text">定义优化函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练"><span class="nav-number">8.</span> <span class="nav-text">训练</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number"></span> <span class="nav-text">总结</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欠拟合、过拟合及其解决办法"><span class="nav-number">2.</span> <span class="nav-text">欠拟合、过拟合及其解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#训练误差和泛化误差"><span class="nav-number">2.1.</span> <span class="nav-text">训练误差和泛化误差</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过拟合和欠拟合"><span class="nav-number">2.2.</span> <span class="nav-text">过拟合和欠拟合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#L2范数正则化（regularization）"><span class="nav-number">2.3.</span> <span class="nav-text">L2范数正则化（regularization）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#丢弃法"><span class="nav-number">2.4.</span> <span class="nav-text">丢弃法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyTorch代码"><span class="nav-number">2.5.</span> <span class="nav-text">PyTorch代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度消失、梯度爆炸"><span class="nav-number">3.</span> <span class="nav-text">梯度消失、梯度爆炸</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#消失或爆炸"><span class="nav-number">3.1.</span> <span class="nav-text">消失或爆炸</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#协变量偏移"><span class="nav-number">3.2.</span> <span class="nav-text">协变量偏移</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签偏移"><span class="nav-number">3.3.</span> <span class="nav-text">标签偏移</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#概念偏移"><span class="nav-number">3.4.</span> <span class="nav-text">概念偏移</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyTorch代码-1"><span class="nav-number">3.5.</span> <span class="nav-text">PyTorch代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环神经网络进阶（具体之后开个专门的）"><span class="nav-number">4.</span> <span class="nav-text">循环神经网络进阶（具体之后开个专门的）</span></a></li></ol></div>
             
 
           </div>
