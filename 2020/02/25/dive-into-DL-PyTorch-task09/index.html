@@ -142,25 +142,21 @@
 
 
 
-  <meta name="description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task05：卷积神经网络基础；leNet;卷积神经网络进阶，这一task都是卷积方面的，这是我比较熟的，所以我只要记一下一些基础，仍然会进阶方面的之后在整体写一份。 二维互相关运算二维互相关（cross-correlation）运算的输入是一个二维输入数组和一个二维核（kernel）数组，输出也">
+  <meta name="description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task09：目标检测基础；图像风格迁移；图像分类案例1，这一task还是比较基础的，主要还是前两个部分的内容，后一个是动手的例子。。 目标检测基础锚框目标检测算法通常会在输入图像中采样大量的区域，然后判断这些区域中是否包含我们感兴趣的目标，并调整区域边缘从而更准确地预测目标的真实边界框（grou">
 <meta name="keywords" content="《动手学深度学习》">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《动手学》打卡挑战-task05">
-<meta property="og:url" content="http://yoursite.com/2020/02/18/dive-into-DL-PyTorch-task05/index.html">
+<meta property="og:title" content="《动手学》打卡挑战-task09">
+<meta property="og:url" content="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task09/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
-<meta property="og:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task05：卷积神经网络基础；leNet;卷积神经网络进阶，这一task都是卷积方面的，这是我比较熟的，所以我只要记一下一些基础，仍然会进阶方面的之后在整体写一份。 二维互相关运算二维互相关（cross-correlation）运算的输入是一个二维输入数组和一个二维核（kernel）数组，输出也">
+<meta property="og:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task09：目标检测基础；图像风格迁移；图像分类案例1，这一task还是比较基础的，主要还是前两个部分的内容，后一个是动手的例子。。 目标检测基础锚框目标检测算法通常会在输入图像中采样大量的区域，然后判断这些区域中是否包含我们感兴趣的目标，并调整区域边缘从而更准确地预测目标的真实边界框（grou">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfdbhcw5.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfl6ejy4.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nflohnqg.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfmdnwbq.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfmq980r.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfob3odo.png?imageView2/0/w/640/h/640">
-<meta property="og:updated_time" content="2020-02-18T09:50:19.170Z">
+<meta property="og:image" content="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task09/dog.svg">
+<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5vs9jkw9f.png?imageView2/0/w/640/h/640">
+<meta property="og:updated_time" content="2020-02-25T09:16:27.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《动手学》打卡挑战-task05">
-<meta name="twitter:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task05：卷积神经网络基础；leNet;卷积神经网络进阶，这一task都是卷积方面的，这是我比较熟的，所以我只要记一下一些基础，仍然会进阶方面的之后在整体写一份。 二维互相关运算二维互相关（cross-correlation）运算的输入是一个二维输入数组和一个二维核（kernel）数组，输出也">
-<meta name="twitter:image" content="https://cdn.kesci.com/upload/image/q5nfdbhcw5.png?imageView2/0/w/640/h/640">
+<meta name="twitter:title" content="《动手学》打卡挑战-task09">
+<meta name="twitter:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task09：目标检测基础；图像风格迁移；图像分类案例1，这一task还是比较基础的，主要还是前两个部分的内容，后一个是动手的例子。。 目标检测基础锚框目标检测算法通常会在输入图像中采样大量的区域，然后判断这些区域中是否包含我们感兴趣的目标，并调整区域边缘从而更准确地预测目标的真实边界框（grou">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task09/dog.svg">
 
 
 
@@ -170,7 +166,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2020/02/18/dive-into-DL-PyTorch-task05/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task09/">
 
 
 
@@ -180,7 +176,7 @@
   };
 </script>
 
-  <title>《动手学》打卡挑战-task05 | I'm LaplaTom</title>
+  <title>《动手学》打卡挑战-task09 | I'm LaplaTom</title>
   
 
 
@@ -400,7 +396,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/dive-into-DL-PyTorch-task05/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task09/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCQ">
@@ -417,7 +413,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《动手学》打卡挑战-task05
+          <h1 class="post-title" itemprop="name headline">《动手学》打卡挑战-task09
 
               
             
@@ -443,7 +439,7 @@
                 
               
 
-              <time title="创建时间：2020-02-18 16:22:19 / 修改时间：17:50:19" itemprop="dateCreated datePublished" datetime="2020-02-18T16:22:19+08:00">2020-02-18</time>
+              <time title="创建时间：2020-02-25 15:47:04 / 修改时间：17:16:27" itemprop="dateCreated datePublished" datetime="2020-02-25T15:47:04+08:00">2020-02-25</time>
             
 
             
@@ -500,28 +496,28 @@
       
 
       
-        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://www.boyuai.com/elites/course/cZu18YmweLv10OeV" target="_blank" rel="noopener">ElitesAI·动手学深度学习PyTorch版</a><br><a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/" target="_blank" rel="noopener">《动手学深度学习PyTorch版》在线书籍</a><br>本部分为Task05：<code>卷积神经网络基础</code>；<code>leNet</code>;<code>卷积神经网络进阶</code>，这一task都是卷积方面的，这是我比较熟的，所以我只要记一下一些基础，仍然会进阶方面的之后在整体写一份。</p>
-<h3 id="二维互相关运算"><a href="#二维互相关运算" class="headerlink" title="二维互相关运算"></a>二维互相关运算</h3><p>二维互相关（cross-correlation）运算的输入是一个二维输入数组和一个二维核（kernel）数组，输出也是一个二维数组，其中核数组通常称为卷积核或过滤器（filter）。卷积核的尺寸通常小于输入数组，卷积核在输入数组上滑动，在每个位置上，卷积核与该位置处的输入子数组按元素相乘并求和，得到输出数组中相应位置的元素。图1展示了一个互相关运算的例子，阴影部分分别是输入的第一个计算区域、核数组以及对应的输出。<br><img src="https://cdn.kesci.com/upload/image/q5nfdbhcw5.png?imageView2/0/w/640/h/640" alt="Image Name"><br>二维卷积层将输入和卷积核做互相关运算，并加上一个标量偏置来得到输出。卷积层的模型参数包括卷积核和标量偏置，其中偏置为一个卷积核一个偏置。</p>
-<h3 id="特征图与感受野"><a href="#特征图与感受野" class="headerlink" title="特征图与感受野"></a>特征图与感受野</h3><p>二维卷积层输出的二维数组可以看作是输入在空间维度（宽和高）上某一级的表征，也叫特征图（feature map）。影响元素$x$的前向计算的所有可能输入区域（可能大于输入的实际尺寸）叫做$x$的感受野（receptive field）。<br>以上图为例，输入中阴影部分的四个元素是输出中阴影部分元素的感受野。我们将图中形状为$2 \times 2$的输出记为$Y$，将$Y$与另一个形状为$2 \times 2$的核数组做互相关运算，输出单个元素$z$。那么，$z$在$Y$上的感受野包括$Y$的全部四个元素，在输入上的感受野包括其中全部9个元素。可见，我们可以通过更深的卷积神经网络使特征图中单个元素的感受野变得更加广阔，从而捕捉输入上更大尺寸的特征。</p>
-<h3 id="填充和步幅"><a href="#填充和步幅" class="headerlink" title="填充和步幅"></a>填充和步幅</h3><p>填充和步幅是卷积层的两个超参数，它们可以对给定形状的输入和卷积核改变输出形状。</p>
-<h4 id="填充"><a href="#填充" class="headerlink" title="填充"></a>填充</h4><p>填充（padding）是指在输入高和宽的两侧填充元素（通常是0元素），下图里我们在原输入高和宽的两侧分别添加了值为0的元素。<br><img src="https://cdn.kesci.com/upload/image/q5nfl6ejy4.png?imageView2/0/w/640/h/640" alt="Image Name"><br>如果原输入的高和宽是$n_h$和$n_w$，卷积核的高和宽是$k_h$和$k_w$，在高的两侧一共填充$p_h$行，在宽的两侧一共填充$p_w$列，则输出形状为：</p>
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://www.boyuai.com/elites/course/cZu18YmweLv10OeV" target="_blank" rel="noopener">ElitesAI·动手学深度学习PyTorch版</a><br><a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/" target="_blank" rel="noopener">《动手学深度学习PyTorch版》在线书籍</a><br>本部分为Task09：<code>目标检测基础</code>；<code>图像风格迁移</code>；<code>图像分类案例1</code>，这一task还是比较基础的，主要还是前两个部分的内容，后一个是动手的例子。。</p>
+<h3 id="目标检测基础"><a href="#目标检测基础" class="headerlink" title="目标检测基础"></a>目标检测基础</h3><h4 id="锚框"><a href="#锚框" class="headerlink" title="锚框"></a>锚框</h4><p>目标检测算法通常会在输入图像中采样大量的区域，然后判断这些区域中是否包含我们感兴趣的目标，并调整区域边缘从而更准确地预测目标的真实边界框（ground-truth bounding box）。不同的模型使用的区域采样方法可能不同。这里我们介绍其中的一种方法：<strong>它以每个像素为中心生成多个大小和宽高比（aspect ratio）不同的边界框。这些边界框被称为锚框（anchor box）。</strong></p>
+<h4 id="多个锚框"><a href="#多个锚框" class="headerlink" title="多个锚框"></a>多个锚框</h4><p>假设输入图像高为 $h$，宽为$w$。我们分别以图像的每个像素为中心生成不同形状的锚框。设大小为$s\in (0,1]$且宽高比为$r &gt; 0$，那么锚框的宽和高将分别为$ws\sqrt{r}$和$hs/\sqrt{r}$。当中心位置给定时，已知宽和高的锚框是确定的。<br>下面我们分别设定好一组大小$s_1,\ldots,s_n$和一组宽高比$r_1,\ldots,r_m$。如果以每个像素为中心时使用所有的大小与宽高比的组合，输入图像将一共得到$whnm$个锚框。虽然这些锚框可能覆盖了所有的真实边界框，但计算复杂度容易过高。因此，我们通常只对包含$s_1$或$r_1$的大小与宽高比的组合感兴趣，即</p>
 <script type="math/tex; mode=display">
-(n_h+p_h-k_h+1)\times(n_w+p_w-k_w+1)</script><p>我们在卷积神经网络中使用奇数高宽的核，比如$3 \times 3$，$5 \times 5$的卷积核，对于高度（或宽度）为大小为$2 k + 1$的核，令步幅为1，在高（或宽）两侧选择大小为$k$的填充，便可保持输入与输出尺寸相同。</p>
-<h4 id="步幅"><a href="#步幅" class="headerlink" title="步幅"></a>步幅</h4><p>在互相关运算中，卷积核在输入数组上滑动，每次滑动的行数与列数即是步幅（stride）。此前我们使用的步幅都是1，下图展示了在高上步幅为3、在宽上步幅为2的二维互相关运算。<br><img src="https://cdn.kesci.com/upload/image/q5nflohnqg.png?imageView2/0/w/640/h/640" alt="Image Name"><br>一般来说，当高上步幅为$s_h$，宽上步幅为$s_w$时，输出形状为：</p>
+(s_1, r_1), (s_1, r_2), \ldots, (s_1, r_m), (s_2, r_1), (s_3, r_1), \ldots, (s_n, r_1).</script><p>也就是说，以相同像素为中心的锚框的数量为$n+m-1$。对于整个输入图像，我们将一共生成$wh(n+m-1)$个锚框。<br><img src="/2020/02/25/dive-into-DL-PyTorch-task09/dog.svg" alt="dog"></p>
+<h4 id="交并比-IOU"><a href="#交并比-IOU" class="headerlink" title="交并比(IOU)"></a>交并比(IOU)</h4><p>我们刚刚提到某个锚框较好地覆盖了图像中的狗。如果该目标的真实边界框已知，这里的“较好”该如何量化呢？一种直观的方法是衡量锚框和真实边界框之间的相似度。我们知道，Jaccard系数（Jaccard index）可以衡量两个集合的相似度。给定集合$\mathcal{A}$和$\mathcal{B}$，它们的Jaccard系数即二者交集大小除以二者并集大小：</p>
 <script type="math/tex; mode=display">
-\lfloor(n_h+p_h-k_h+s_h)/s_h\rfloor \times \lfloor(n_w+p_w-k_w+s_w)/s_w\rfloor</script><p>如果$p_h=k_h-1$，$p_w=k_w-1$，那么输出形状将简化为$\lfloor(n_h+s_h-1)/s_h\rfloor \times \lfloor(n_w+s_w-1)/s_w\rfloor$。更进一步，如果输入的高和宽能分别被高和宽上的步幅整除，那么输出形状将是$(n_h / s_h) \times (n_w/s_w)$。<br>当$p_h = p_w = p$时，我们称填充为$p$；当$s_h = s_w = s$时，我们称步幅为$s$。</p>
-<h3 id="多输入通道和多输出通道"><a href="#多输入通道和多输出通道" class="headerlink" title="多输入通道和多输出通道"></a>多输入通道和多输出通道</h3><p>之前的输入和输出都是二维数组，但真实数据的维度经常更高。例如，彩色图像在高和宽2个维度外还有RGB（红、绿、蓝）3个颜色通道。假设彩色图像的高和宽分别是$h$和$w$（像素），那么它可以表示为一个$3 \times h \times w$的多维数组，我们将大小为3的这一维称为通道（channel）维。</p>
-<h4 id="多输入通道"><a href="#多输入通道" class="headerlink" title="多输入通道"></a>多输入通道</h4><p>卷积层的输入可以包含多个通道，下图展示了一个含2个输入通道的二维互相关计算的例子。<br><img src="https://cdn.kesci.com/upload/image/q5nfmdnwbq.png?imageView2/0/w/640/h/640" alt="Image Name"><br>假设输入数据的通道数为$c_i$，卷积核形状为$k_h\times k_w$，我们为每个输入通道各分配一个形状为$k_h\times k_w$的核数组，将$c_i$个互相关运算的二维输出按通道相加，得到一个二维数组作为输出。我们把$c_i$个核数组在通道维上连结，即得到一个形状为$c_i\times k_h\times k_w$的卷积核。即：输出的有几个通道的图片，卷积核就需要几个，简单地说就是一个卷积核对应一个维度。</p>
-<h4 id="多输出通道"><a href="#多输出通道" class="headerlink" title="多输出通道"></a>多输出通道</h4><p>卷积层的输出也可以包含多个通道，设卷积核输入通道数和输出通道数分别为$c_i$和$c_o$，高和宽分别为$k_h$和$k_w$。如果希望得到含多个通道的输出，我们可以为每个输出通道分别创建形状为$c_i\times k_h\times k_w$的核数组，将它们在输出通道维上连结，卷积核的形状即$c_o\times c_i\times k_h\times k_w$。<br>对于输出通道的卷积核，我们提供这样一种理解，一个$c_i \times k_h \times k_w$的核数组可以提取某种局部特征，但是输入可能具有相当丰富的特征，我们需要有多个这样的$c_i \times k_h \times k_w$的核数组，不同的核数组提取的是不同的特征。</p>
-<h4 id="1x1卷积层"><a href="#1x1卷积层" class="headerlink" title="1x1卷积层"></a>1x1卷积层</h4><p>最后讨论形状为$1 \times 1$的卷积核，我们通常称这样的卷积运算为$1 \times 1$卷积，称包含这种卷积核的卷积层为$1 \times 1$卷积层。图5展示了使用输入通道数为3、输出通道数为2的$1\times 1$卷积核的互相关计算。<br><img src="https://cdn.kesci.com/upload/image/q5nfmq980r.png?imageView2/0/w/640/h/640" alt="Image Name"><br>$1 \times 1$卷积核可在不改变高宽的情况下，调整通道数。$1 \times 1$卷积核不识别高和宽维度上相邻元素构成的模式，其主要计算发生在通道维上。假设我们将通道维当作特征维，将高和宽维度上的元素当成数据样本，那么$1\times 1$卷积层的作用与全连接层等价。<br><strong>1×1卷积核作用：</strong></p>
-<ul>
-<li>1.放缩通道数：通过控制卷积核的数量达到通道数的放缩。</li>
-<li>2.增加非线性。1×1卷积核的卷积过程相当于全连接层的计算过程，并且还加入了非线性激活函数，从而可以增加网络的非线性。</li>
-<li>3.计算参数少<h3 id="池化"><a href="#池化" class="headerlink" title="池化"></a>池化</h3><h4 id="二维池化层"><a href="#二维池化层" class="headerlink" title="二维池化层"></a>二维池化层</h4>池化层主要用于缓解卷积层对位置的过度敏感性。同卷积层一样，池化层每次对输入数据的一个固定形状窗口（又称池化窗口）中的元素计算输出，池化层直接计算池化窗口内元素的最大值或者平均值，该运算也分别叫做最大池化或平均池化。下图展示了池化窗口形状为$2\times 2$的最大池化。<br><img src="https://cdn.kesci.com/upload/image/q5nfob3odo.png?imageView2/0/w/640/h/640" alt="Image Name"></li>
+J(\mathcal{A},\mathcal{B}) = \frac{\left|\mathcal{A} \cap \mathcal{B}\right|}{\left| \mathcal{A} \cup \mathcal{B}\right|}.</script><p>实际上，我们可以把边界框内的像素区域看成是像素的集合。如此一来，我们可以用两个边界框的像素集合的Jaccard系数衡量这两个边界框的相似度。当衡量两个边界框的相似度时，我们通常将Jaccard系数称为交并比（Intersection over Union，IoU），即两个边界框相交面积与相并面积之比，如图9.2所示。交并比的取值范围在0和1之间：0表示两个边界框无重合像素，1表示两个边界框相等。<br><img src="https://cdn.kesci.com/upload/image/q5vs9jkw9f.png?imageView2/0/w/640/h/640" alt="Image Name"></p>
+<h4 id="非极大值预制"><a href="#非极大值预制" class="headerlink" title="非极大值预制"></a>非极大值预制</h4><p>非极大值抑制的工作原理：对于一个预测边界框$B$，模型会计算各个类别的预测概率。设其中最大的预测概率为$p$，该概率所对应的类别即$B$的预测类别。我们也将$p$称为预测边界框$B$的置信度。在同一图像上，我们将预测类别非背景的预测边界框按置信度从高到低排序，得到列表$L$。从$L$中选取置信度最高的预测边界框$B_1$作为基准，将所有与$B_1$的交并比大于某阈值的非基准预测边界框从$L$中移除。这里的阈值是预先设定的超参数。此时，$L$保留了置信度最高的预测边界框并移除了与其相似的其他预测边界框。<br>接下来，从$L$中选取置信度第二高的预测边界框$B_2$作为基准，将所有与$B_2$的交并比大于某阈值的非基准预测边界框从$L$中移除。重复这一过程，直到$L$中所有的预测边界框都曾作为基准。此时$L$中任意一对预测边界框的交并比都小于阈值。最终，输出列表$L$中的所有预测边界框。</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>以每个像素为中心，生成多个大小和宽高比不同的锚框。</li>
+<li>交并比是两个边界框相交面积与相并面积之比。</li>
+<li>在训练集中，为每个锚框标注两类标签：一是锚框所含目标的类别；二是真实边界框相对锚框的偏移量。</li>
+<li>预测时，可以使用非极大值抑制来移除相似的预测边界框，从而令结果简洁。</li>
 </ul>
-<p>二维平均池化的工作原理与二维最大池化类似，但将最大运算符替换成平均运算符。池化窗口形状为$p \times q$的池化层称为$p \times q$池化层，其中的池化运算叫作$p \times q$池化。</p>
-<p>池化层也可以在输入的高和宽两侧填充并调整窗口的移动步幅来改变输出形状。池化层填充和步幅与卷积层填充和步幅的工作机制一样。</p>
-<p>在处理多通道输入数据时，池化层对每个输入通道分别池化，但不会像卷积层那样将各通道的结果按通道相加。这意味着池化层的输出通道数与输入通道数相等。</p>
+<h3 id="图像风格迁移"><a href="#图像风格迁移" class="headerlink" title="图像风格迁移"></a>图像风格迁移</h3><p>使用卷积神经网络自动将某图像中的样式应用在另一图像之上，即样式迁移（style transfer）。这里我们需要两张输入图像，一张是内容图像，另一张是样式图像，我们将使用神经网络修改内容图像使其在样式上接近样式图像。</p>
+<h4 id="图像风格迁移方法"><a href="#图像风格迁移方法" class="headerlink" title="图像风格迁移方法"></a>图像风格迁移方法</h4><p>首先，我们初始化合成图像，例如将其初始化成内容图像。该合成图像是样式迁移过程中唯一需要更新的变量，即样式迁移所需迭代的模型参数。然后，我们选择一个预训练的卷积神经网络来抽取图像的特征，其中的模型参数在训练中无须更新。深度卷积神经网络凭借多个层逐级抽取图像的特征。我们可以选择其中某些层的输出作为内容特征或样式特征。以图9.13为例，这里选取的预训练的神经网络含有3个卷积层，其中第二层输出图像的内容特征，而第一层和第三层的输出被作为图像的样式特征。接下来，我们通过正向传播（实线箭头方向）计算样式迁移的损失函数，并通过反向传播（虚线箭头方向）迭代模型参数，即不断更新合成图像。样式迁移常用的损失函数由3部分组成：内容损失（content loss）使合成图像与内容图像在内容特征上接近，样式损失（style loss）令合成图像与样式图像在样式特征上接近，而总变差损失（total variation loss）则有助于减少合成图像中的噪点。最后，当模型训练结束时，我们输出样式迁移的模型参数，即得到最终的合成图像。<br>![Image Name](<a href="https://cdn.kesci.com/upload/image/q5w2jrvuc9.png?imageView2/0/w/640/h" target="_blank" rel="noopener">https://cdn.kesci.com/upload/image/q5w2jrvuc9.png?imageView2/0/w/640/h</a></p>
+<h4 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>样式迁移常用的损失函数由3部分组成：内容损失使合成图像与内容图像在内容特征上接近，样式损失令合成图像与样式图像在样式特征上接近，而总变差损失则有助于减少合成图像中的噪点。</li>
+<li>可以通过预训练的卷积神经网络来抽取图像的特征，并通过最小化损失函数来不断更新合成图像。</li>
+<li>用格拉姆矩阵表达样式层输出的样式。</li>
+</ul>
 
       
     </div>
@@ -558,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/18/dive-into-DL-PyTorch-task04/" rel="next" title="《动手学》打卡挑战-task04">
-                <i class="fa fa-chevron-left"></i> 《动手学》打卡挑战-task04
+              <a href="/2020/02/25/dive-into-DL-PyTorch-task06/" rel="next" title="《动手学》打卡挑战-task06">
+                <i class="fa fa-chevron-left"></i> 《动手学》打卡挑战-task06
               </a>
             
           </div>
@@ -568,8 +564,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/02/25/dive-into-DL-PyTorch-task06/" rel="prev" title="《动手学》打卡挑战-task06">
-                《动手学》打卡挑战-task06 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/25/dive-into-DL-PyTorch-task10/" rel="prev" title="《动手学》打卡挑战-task10">
+                《动手学》打卡挑战-task10 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -798,7 +794,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二维互相关运算"><span class="nav-number">2.</span> <span class="nav-text">二维互相关运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征图与感受野"><span class="nav-number">3.</span> <span class="nav-text">特征图与感受野</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#填充和步幅"><span class="nav-number">4.</span> <span class="nav-text">填充和步幅</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#填充"><span class="nav-number">4.1.</span> <span class="nav-text">填充</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#步幅"><span class="nav-number">4.2.</span> <span class="nav-text">步幅</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多输入通道和多输出通道"><span class="nav-number">5.</span> <span class="nav-text">多输入通道和多输出通道</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多输入通道"><span class="nav-number">5.1.</span> <span class="nav-text">多输入通道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多输出通道"><span class="nav-number">5.2.</span> <span class="nav-text">多输出通道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1x1卷积层"><span class="nav-number">5.3.</span> <span class="nav-text">1x1卷积层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#池化"><span class="nav-number">6.</span> <span class="nav-text">池化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#二维池化层"><span class="nav-number">6.1.</span> <span class="nav-text">二维池化层</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目标检测基础"><span class="nav-number">2.</span> <span class="nav-text">目标检测基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#锚框"><span class="nav-number">2.1.</span> <span class="nav-text">锚框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多个锚框"><span class="nav-number">2.2.</span> <span class="nav-text">多个锚框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交并比-IOU"><span class="nav-number">2.3.</span> <span class="nav-text">交并比(IOU)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非极大值预制"><span class="nav-number">2.4.</span> <span class="nav-text">非极大值预制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">2.5.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图像风格迁移"><span class="nav-number">3.</span> <span class="nav-text">图像风格迁移</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图像风格迁移方法"><span class="nav-number">3.1.</span> <span class="nav-text">图像风格迁移方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结-1"><span class="nav-number">3.2.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></div>
             
 
           </div>

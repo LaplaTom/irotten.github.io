@@ -142,25 +142,23 @@
 
 
 
-  <meta name="description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task05：卷积神经网络基础；leNet;卷积神经网络进阶，这一task都是卷积方面的，这是我比较熟的，所以我只要记一下一些基础，仍然会进阶方面的之后在整体写一份。 二维互相关运算二维互相关（cross-correlation）运算的输入是一个二维输入数组和一个二维核（kernel）数组，输出也">
+  <meta name="description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task05：图像案例分类2；GAN;DCGAN，这一task只能说是在赶时间吧= = GAN DCGANDCGAN是将CNN与GAN的一种结合。 其将卷积网络引入到生成式模型当中来做无监督的训练，利用卷积网络强大的特征提取能力来提高生成网络的学习效果。 DCGAN的原理和GAN对抗生成是一样的。">
 <meta name="keywords" content="《动手学深度学习》">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《动手学》打卡挑战-task05">
-<meta property="og:url" content="http://yoursite.com/2020/02/18/dive-into-DL-PyTorch-task05/index.html">
+<meta property="og:title" content="《动手学》打卡挑战-task10">
+<meta property="og:url" content="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task10/index.html">
 <meta property="og:site_name" content="I&#39;m LaplaTom">
-<meta property="og:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task05：卷积神经网络基础；leNet;卷积神经网络进阶，这一task都是卷积方面的，这是我比较熟的，所以我只要记一下一些基础，仍然会进阶方面的之后在整体写一份。 二维互相关运算二维互相关（cross-correlation）运算的输入是一个二维输入数组和一个二维核（kernel）数组，输出也">
+<meta property="og:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task05：图像案例分类2；GAN;DCGAN，这一task只能说是在赶时间吧= = GAN DCGANDCGAN是将CNN与GAN的一种结合。 其将卷积网络引入到生成式模型当中来做无监督的训练，利用卷积网络强大的特征提取能力来提高生成网络的学习效果。 DCGAN的原理和GAN对抗生成是一样的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfdbhcw5.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfl6ejy4.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nflohnqg.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfmdnwbq.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfmq980r.png?imageView2/0/w/640/h/640">
-<meta property="og:image" content="https://cdn.kesci.com/upload/image/q5nfob3odo.png?imageView2/0/w/640/h/640">
-<meta property="og:updated_time" content="2020-02-18T09:50:19.170Z">
+<meta property="og:image" content="https://zhuanlan.zhihu.com/p/43843694">
+<meta property="og:image" content="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task10/v2-e61726058d9ea32199420104bd9d1806_r.jpg">
+<meta property="og:image" content="https://www.cnblogs.com/wmr95/p/9551490.html">
+<meta property="og:image" content="http://www.360doc.com/content/19/0507/12/57110788_834069126.shtml">
+<meta property="og:updated_time" content="2020-02-25T09:46:10.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《动手学》打卡挑战-task05">
-<meta name="twitter:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task05：卷积神经网络基础；leNet;卷积神经网络进阶，这一task都是卷积方面的，这是我比较熟的，所以我只要记一下一些基础，仍然会进阶方面的之后在整体写一份。 二维互相关运算二维互相关（cross-correlation）运算的输入是一个二维输入数组和一个二维核（kernel）数组，输出也">
-<meta name="twitter:image" content="https://cdn.kesci.com/upload/image/q5nfdbhcw5.png?imageView2/0/w/640/h/640">
+<meta name="twitter:title" content="《动手学》打卡挑战-task10">
+<meta name="twitter:description" content="简介ElitesAI·动手学深度学习PyTorch版《动手学深度学习PyTorch版》在线书籍本部分为Task05：图像案例分类2；GAN;DCGAN，这一task只能说是在赶时间吧= = GAN DCGANDCGAN是将CNN与GAN的一种结合。 其将卷积网络引入到生成式模型当中来做无监督的训练，利用卷积网络强大的特征提取能力来提高生成网络的学习效果。 DCGAN的原理和GAN对抗生成是一样的。">
+<meta name="twitter:image" content="https://zhuanlan.zhihu.com/p/43843694">
 
 
 
@@ -170,7 +168,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2020/02/18/dive-into-DL-PyTorch-task05/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task10/">
 
 
 
@@ -180,7 +178,7 @@
   };
 </script>
 
-  <title>《动手学》打卡挑战-task05 | I'm LaplaTom</title>
+  <title>《动手学》打卡挑战-task10 | I'm LaplaTom</title>
   
 
 
@@ -400,7 +398,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/dive-into-DL-PyTorch-task05/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task10/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LCQ">
@@ -417,7 +415,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《动手学》打卡挑战-task05
+          <h1 class="post-title" itemprop="name headline">《动手学》打卡挑战-task10
 
               
             
@@ -443,7 +441,7 @@
                 
               
 
-              <time title="创建时间：2020-02-18 16:22:19 / 修改时间：17:50:19" itemprop="dateCreated datePublished" datetime="2020-02-18T16:22:19+08:00">2020-02-18</time>
+              <time title="创建时间：2020-02-25 15:47:11 / 修改时间：17:46:10" itemprop="dateCreated datePublished" datetime="2020-02-25T15:47:11+08:00">2020-02-25</time>
             
 
             
@@ -500,28 +498,23 @@
       
 
       
-        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://www.boyuai.com/elites/course/cZu18YmweLv10OeV" target="_blank" rel="noopener">ElitesAI·动手学深度学习PyTorch版</a><br><a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/" target="_blank" rel="noopener">《动手学深度学习PyTorch版》在线书籍</a><br>本部分为Task05：<code>卷积神经网络基础</code>；<code>leNet</code>;<code>卷积神经网络进阶</code>，这一task都是卷积方面的，这是我比较熟的，所以我只要记一下一些基础，仍然会进阶方面的之后在整体写一份。</p>
-<h3 id="二维互相关运算"><a href="#二维互相关运算" class="headerlink" title="二维互相关运算"></a>二维互相关运算</h3><p>二维互相关（cross-correlation）运算的输入是一个二维输入数组和一个二维核（kernel）数组，输出也是一个二维数组，其中核数组通常称为卷积核或过滤器（filter）。卷积核的尺寸通常小于输入数组，卷积核在输入数组上滑动，在每个位置上，卷积核与该位置处的输入子数组按元素相乘并求和，得到输出数组中相应位置的元素。图1展示了一个互相关运算的例子，阴影部分分别是输入的第一个计算区域、核数组以及对应的输出。<br><img src="https://cdn.kesci.com/upload/image/q5nfdbhcw5.png?imageView2/0/w/640/h/640" alt="Image Name"><br>二维卷积层将输入和卷积核做互相关运算，并加上一个标量偏置来得到输出。卷积层的模型参数包括卷积核和标量偏置，其中偏置为一个卷积核一个偏置。</p>
-<h3 id="特征图与感受野"><a href="#特征图与感受野" class="headerlink" title="特征图与感受野"></a>特征图与感受野</h3><p>二维卷积层输出的二维数组可以看作是输入在空间维度（宽和高）上某一级的表征，也叫特征图（feature map）。影响元素$x$的前向计算的所有可能输入区域（可能大于输入的实际尺寸）叫做$x$的感受野（receptive field）。<br>以上图为例，输入中阴影部分的四个元素是输出中阴影部分元素的感受野。我们将图中形状为$2 \times 2$的输出记为$Y$，将$Y$与另一个形状为$2 \times 2$的核数组做互相关运算，输出单个元素$z$。那么，$z$在$Y$上的感受野包括$Y$的全部四个元素，在输入上的感受野包括其中全部9个元素。可见，我们可以通过更深的卷积神经网络使特征图中单个元素的感受野变得更加广阔，从而捕捉输入上更大尺寸的特征。</p>
-<h3 id="填充和步幅"><a href="#填充和步幅" class="headerlink" title="填充和步幅"></a>填充和步幅</h3><p>填充和步幅是卷积层的两个超参数，它们可以对给定形状的输入和卷积核改变输出形状。</p>
-<h4 id="填充"><a href="#填充" class="headerlink" title="填充"></a>填充</h4><p>填充（padding）是指在输入高和宽的两侧填充元素（通常是0元素），下图里我们在原输入高和宽的两侧分别添加了值为0的元素。<br><img src="https://cdn.kesci.com/upload/image/q5nfl6ejy4.png?imageView2/0/w/640/h/640" alt="Image Name"><br>如果原输入的高和宽是$n_h$和$n_w$，卷积核的高和宽是$k_h$和$k_w$，在高的两侧一共填充$p_h$行，在宽的两侧一共填充$p_w$列，则输出形状为：</p>
-<script type="math/tex; mode=display">
-(n_h+p_h-k_h+1)\times(n_w+p_w-k_w+1)</script><p>我们在卷积神经网络中使用奇数高宽的核，比如$3 \times 3$，$5 \times 5$的卷积核，对于高度（或宽度）为大小为$2 k + 1$的核，令步幅为1，在高（或宽）两侧选择大小为$k$的填充，便可保持输入与输出尺寸相同。</p>
-<h4 id="步幅"><a href="#步幅" class="headerlink" title="步幅"></a>步幅</h4><p>在互相关运算中，卷积核在输入数组上滑动，每次滑动的行数与列数即是步幅（stride）。此前我们使用的步幅都是1，下图展示了在高上步幅为3、在宽上步幅为2的二维互相关运算。<br><img src="https://cdn.kesci.com/upload/image/q5nflohnqg.png?imageView2/0/w/640/h/640" alt="Image Name"><br>一般来说，当高上步幅为$s_h$，宽上步幅为$s_w$时，输出形状为：</p>
-<script type="math/tex; mode=display">
-\lfloor(n_h+p_h-k_h+s_h)/s_h\rfloor \times \lfloor(n_w+p_w-k_w+s_w)/s_w\rfloor</script><p>如果$p_h=k_h-1$，$p_w=k_w-1$，那么输出形状将简化为$\lfloor(n_h+s_h-1)/s_h\rfloor \times \lfloor(n_w+s_w-1)/s_w\rfloor$。更进一步，如果输入的高和宽能分别被高和宽上的步幅整除，那么输出形状将是$(n_h / s_h) \times (n_w/s_w)$。<br>当$p_h = p_w = p$时，我们称填充为$p$；当$s_h = s_w = s$时，我们称步幅为$s$。</p>
-<h3 id="多输入通道和多输出通道"><a href="#多输入通道和多输出通道" class="headerlink" title="多输入通道和多输出通道"></a>多输入通道和多输出通道</h3><p>之前的输入和输出都是二维数组，但真实数据的维度经常更高。例如，彩色图像在高和宽2个维度外还有RGB（红、绿、蓝）3个颜色通道。假设彩色图像的高和宽分别是$h$和$w$（像素），那么它可以表示为一个$3 \times h \times w$的多维数组，我们将大小为3的这一维称为通道（channel）维。</p>
-<h4 id="多输入通道"><a href="#多输入通道" class="headerlink" title="多输入通道"></a>多输入通道</h4><p>卷积层的输入可以包含多个通道，下图展示了一个含2个输入通道的二维互相关计算的例子。<br><img src="https://cdn.kesci.com/upload/image/q5nfmdnwbq.png?imageView2/0/w/640/h/640" alt="Image Name"><br>假设输入数据的通道数为$c_i$，卷积核形状为$k_h\times k_w$，我们为每个输入通道各分配一个形状为$k_h\times k_w$的核数组，将$c_i$个互相关运算的二维输出按通道相加，得到一个二维数组作为输出。我们把$c_i$个核数组在通道维上连结，即得到一个形状为$c_i\times k_h\times k_w$的卷积核。即：输出的有几个通道的图片，卷积核就需要几个，简单地说就是一个卷积核对应一个维度。</p>
-<h4 id="多输出通道"><a href="#多输出通道" class="headerlink" title="多输出通道"></a>多输出通道</h4><p>卷积层的输出也可以包含多个通道，设卷积核输入通道数和输出通道数分别为$c_i$和$c_o$，高和宽分别为$k_h$和$k_w$。如果希望得到含多个通道的输出，我们可以为每个输出通道分别创建形状为$c_i\times k_h\times k_w$的核数组，将它们在输出通道维上连结，卷积核的形状即$c_o\times c_i\times k_h\times k_w$。<br>对于输出通道的卷积核，我们提供这样一种理解，一个$c_i \times k_h \times k_w$的核数组可以提取某种局部特征，但是输入可能具有相当丰富的特征，我们需要有多个这样的$c_i \times k_h \times k_w$的核数组，不同的核数组提取的是不同的特征。</p>
-<h4 id="1x1卷积层"><a href="#1x1卷积层" class="headerlink" title="1x1卷积层"></a>1x1卷积层</h4><p>最后讨论形状为$1 \times 1$的卷积核，我们通常称这样的卷积运算为$1 \times 1$卷积，称包含这种卷积核的卷积层为$1 \times 1$卷积层。图5展示了使用输入通道数为3、输出通道数为2的$1\times 1$卷积核的互相关计算。<br><img src="https://cdn.kesci.com/upload/image/q5nfmq980r.png?imageView2/0/w/640/h/640" alt="Image Name"><br>$1 \times 1$卷积核可在不改变高宽的情况下，调整通道数。$1 \times 1$卷积核不识别高和宽维度上相邻元素构成的模式，其主要计算发生在通道维上。假设我们将通道维当作特征维，将高和宽维度上的元素当成数据样本，那么$1\times 1$卷积层的作用与全连接层等价。<br><strong>1×1卷积核作用：</strong></p>
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://www.boyuai.com/elites/course/cZu18YmweLv10OeV" target="_blank" rel="noopener">ElitesAI·动手学深度学习PyTorch版</a><br><a href="https://tangshusen.me/Dive-into-DL-PyTorch/#/" target="_blank" rel="noopener">《动手学深度学习PyTorch版》在线书籍</a><br>本部分为Task05：<code>图像案例分类2</code>；<code>GAN</code>;<code>DCGAN</code>，这一task只能说是在赶时间吧= =</p>
+<h3 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h3><p><img src="https://zhuanlan.zhihu.com/p/43843694" alt="丢。。这个好"></p>
+<h3 id="DCGAN"><a href="#DCGAN" class="headerlink" title="DCGAN"></a>DCGAN</h3><p>DCGAN是将CNN与GAN的一种结合。 其将卷积网络引入到生成式模型当中来做无监督的训练，<strong>利用卷积网络强大的特征提取能力来提高生成网络的学习效果。</strong></p>
+<p>DCGAN的原理和GAN对抗生成是一样的。它只是把GAN的G和D换成了两个卷积神经网络（CNN）。但不是直接换就可以了.</p>
+<ol>
+<li>取消所有pooling层。G网络中使用转置卷积（transposed convolutional layer）进行上采样，D网络中用加入stride的卷积代替pooling。<br><img src="/2020/02/25/dive-into-DL-PyTorch-task10/v2-e61726058d9ea32199420104bd9d1806_r.jpg" alt></li>
+<li>除了生成器模型的输出层和判别器模型的输入层，在网络其它层上都使用了Batch Normalization，使用BN可以稳定学习，有助于处理初始化不良导致的训练问题。</li>
+<li>去掉全连接层，使网络变为全卷积网络</li>
+<li>G网络中使用ReLU作为激活函数，最后一层使用tanh</li>
+<li>D网络中使用LeakyReLU作为激活函数<h4 id="转置卷积-反卷积"><a href="#转置卷积-反卷积" class="headerlink" title="转置卷积(反卷积)"></a>转置卷积(反卷积)</h4>普通的卷积操作其实可以看成是矩阵相乘，输入A被reshape为一个列向量A’，kernel可以转化为一个Toeplitz matrix B，这样子相乘之后得到一个列向量C’，再经过reshape变成输出C。</li>
+</ol>
+<p>那其实转置卷积就是把上面的那个操作反过来，将Toeplitz matrix B转置后，就能和C‘相乘，得到列向量A’，再经过reshape变成A。</p>
+<p>详细点可以看:</p>
 <ul>
-<li>1.放缩通道数：通过控制卷积核的数量达到通道数的放缩。</li>
-<li>2.增加非线性。1×1卷积核的卷积过程相当于全连接层的计算过程，并且还加入了非线性激活函数，从而可以增加网络的非线性。</li>
-<li>3.计算参数少<h3 id="池化"><a href="#池化" class="headerlink" title="池化"></a>池化</h3><h4 id="二维池化层"><a href="#二维池化层" class="headerlink" title="二维池化层"></a>二维池化层</h4>池化层主要用于缓解卷积层对位置的过度敏感性。同卷积层一样，池化层每次对输入数据的一个固定形状窗口（又称池化窗口）中的元素计算输出，池化层直接计算池化窗口内元素的最大值或者平均值，该运算也分别叫做最大池化或平均池化。下图展示了池化窗口形状为$2\times 2$的最大池化。<br><img src="https://cdn.kesci.com/upload/image/q5nfob3odo.png?imageView2/0/w/640/h/640" alt="Image Name"></li>
+<li><img src="https://www.cnblogs.com/wmr95/p/9551490.html" alt="反卷积 转置卷积的理解"></li>
+<li><img src="http://www.360doc.com/content/19/0507/12/57110788_834069126.shtml" alt="一文让你看懂转置卷积(反卷积,分数卷积),非常详细的图解描述"></li>
 </ul>
-<p>二维平均池化的工作原理与二维最大池化类似，但将最大运算符替换成平均运算符。池化窗口形状为$p \times q$的池化层称为$p \times q$池化层，其中的池化运算叫作$p \times q$池化。</p>
-<p>池化层也可以在输入的高和宽两侧填充并调整窗口的移动步幅来改变输出形状。池化层填充和步幅与卷积层填充和步幅的工作机制一样。</p>
-<p>在处理多通道输入数据时，池化层对每个输入通道分别池化，但不会像卷积层那样将各通道的结果按通道相加。这意味着池化层的输出通道数与输入通道数相等。</p>
 
       
     </div>
@@ -558,8 +551,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/18/dive-into-DL-PyTorch-task04/" rel="next" title="《动手学》打卡挑战-task04">
-                <i class="fa fa-chevron-left"></i> 《动手学》打卡挑战-task04
+              <a href="/2020/02/25/dive-into-DL-PyTorch-task09/" rel="next" title="《动手学》打卡挑战-task09">
+                <i class="fa fa-chevron-left"></i> 《动手学》打卡挑战-task09
               </a>
             
           </div>
@@ -567,10 +560,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/25/dive-into-DL-PyTorch-task06/" rel="prev" title="《动手学》打卡挑战-task06">
-                《动手学》打卡挑战-task06 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -798,7 +787,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二维互相关运算"><span class="nav-number">2.</span> <span class="nav-text">二维互相关运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征图与感受野"><span class="nav-number">3.</span> <span class="nav-text">特征图与感受野</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#填充和步幅"><span class="nav-number">4.</span> <span class="nav-text">填充和步幅</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#填充"><span class="nav-number">4.1.</span> <span class="nav-text">填充</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#步幅"><span class="nav-number">4.2.</span> <span class="nav-text">步幅</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多输入通道和多输出通道"><span class="nav-number">5.</span> <span class="nav-text">多输入通道和多输出通道</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多输入通道"><span class="nav-number">5.1.</span> <span class="nav-text">多输入通道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多输出通道"><span class="nav-number">5.2.</span> <span class="nav-text">多输出通道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1x1卷积层"><span class="nav-number">5.3.</span> <span class="nav-text">1x1卷积层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#池化"><span class="nav-number">6.</span> <span class="nav-text">池化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#二维池化层"><span class="nav-number">6.1.</span> <span class="nav-text">二维池化层</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GAN"><span class="nav-number">2.</span> <span class="nav-text">GAN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DCGAN"><span class="nav-number">3.</span> <span class="nav-text">DCGAN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#转置卷积-反卷积"><span class="nav-number">3.1.</span> <span class="nav-text">转置卷积(反卷积)</span></a></li></ol></li></ol></div>
             
 
           </div>

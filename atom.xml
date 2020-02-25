@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-18T09:50:19.170Z</updated>
+  <updated>2020-02-25T09:46:10.941Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《动手学》打卡挑战-task10</title>
+    <link href="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task10/"/>
+    <id>http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task10/</id>
+    <published>2020-02-25T07:47:11.000Z</published>
+    <updated>2020-02-25T09:46:10.941Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.boyuai.com/elites/course/cZu18YmweLv10OeV&quot; target
+      
+    
+    </summary>
+    
+      <category term="PyTorch" scheme="http://yoursite.com/categories/PyTorch/"/>
+    
+    
+      <category term="《动手学深度学习》" scheme="http://yoursite.com/tags/%E3%80%8A%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E3%80%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《动手学》打卡挑战-task09</title>
+    <link href="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task09/"/>
+    <id>http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task09/</id>
+    <published>2020-02-25T07:47:04.000Z</published>
+    <updated>2020-02-25T09:16:27.808Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.boyuai.com/elites/course/cZu18YmweLv10OeV&quot; target
+      
+    
+    </summary>
+    
+      <category term="PyTorch" scheme="http://yoursite.com/categories/PyTorch/"/>
+    
+    
+      <category term="《动手学深度学习》" scheme="http://yoursite.com/tags/%E3%80%8A%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E3%80%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《动手学》打卡挑战-task06</title>
+    <link href="http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task06/"/>
+    <id>http://yoursite.com/2020/02/25/dive-into-DL-PyTorch-task06/</id>
+    <published>2020-02-25T07:46:58.000Z</published>
+    <updated>2020-02-25T09:00:34.402Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.boyuai.com/elites/course/cZu18YmweLv10OeV&quot; target
+      
+    
+    </summary>
+    
+      <category term="PyTorch" scheme="http://yoursite.com/categories/PyTorch/"/>
+    
+    
+      <category term="《动手学深度学习》" scheme="http://yoursite.com/tags/%E3%80%8A%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E3%80%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>《动手学》打卡挑战-task05</title>
@@ -414,25 +483,6 @@ Ctrl+Alt+h：显示调
     
     
       <category term="scoop" scheme="http://yoursite.com/tags/scoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2019/05/08/hello-world/"/>
-    <id>http://yoursite.com/2019/05/08/hello-world/</id>
-    <published>2019-05-08T11:44:38.861Z</published>
-    <updated>2019-05-08T11:44:38.862Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
     
   </entry>
   
